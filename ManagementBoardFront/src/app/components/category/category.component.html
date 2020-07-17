@@ -1,1 +1,8 @@
-<p>category works!</p>
+<div class="categoryDiv">
+    <h2>{{ title }}</h2>
+    <div class="categoryCardDiv">
+        <app-card *ngFor="let val of cards" 
+        [card]="val"
+        ></app-card>
+    </div>
+</div>

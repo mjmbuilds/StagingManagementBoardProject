@@ -1,0 +1,12 @@
+.categoryDiv {
+    display: inline-block;
+    background-color: lightgray;
+    width: 200px;
+    min-height: 300px;
+    margin: 4px;
+}
+
+h2 {
+    margin: 0px;
+    border: 1px solid grey;
+}

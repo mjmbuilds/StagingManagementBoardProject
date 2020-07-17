@@ -1,10 +1,12 @@
-<div *ngIf="boardActive" id="board">
+<div *ngIf="showBoard" id="board">
     <h1>{{ boardTitle }}</h1>
     <div id="boardContents">
-
+        <app-category *ngFor="let val of categories" 
+        [category]="val"
+        ></app-category>
     </div>
 </div>
-<div *ngIf="!boardActive" id="noBoard">
+<div *ngIf="!showBoard" id="noBoard">
     <span id="noBoardMessage">
         There is no active board.
     </span>

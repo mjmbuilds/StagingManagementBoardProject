@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Category } from 'src/app/models/Category';
+import { Card } from 'src/app/models/Card';
 
 @Component({
   selector: 'app-category',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  @Input() category: Category;
+  title = 'Category';
+  cards: Card[];
+
+  constructor() {  }
 
   ngOnInit(): void {
+    if (this.category) {
+      this.title = this.category.title;
+      this.cards = this.category.cards;
+    }
   }
 
 }

@@ -1,0 +1,13 @@
+.cardDiv {
+    padding-top: 2px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+
+.cardDesc {
+    color: rgb(50, 50, 50);
+}

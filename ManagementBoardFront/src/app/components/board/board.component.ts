@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Board } from 'src/app/models/Board';
+import { Category } from 'src/app/models/Category';
 
 @Component({
   selector: 'app-board',
@@ -8,10 +9,11 @@ import { Board } from 'src/app/models/Board';
 })
 export class BoardComponent implements OnInit {
 
+  showBoard = false;
   activeBoard: Board;
-  boardActive = false;
   boardID: string;
   boardTitle: string;
+  categories: Category[];
 
   constructor() { }
 
@@ -22,14 +24,18 @@ export class BoardComponent implements OnInit {
     this.activeBoard = board;
     this.boardID = board.id;
     this.boardTitle = board.title;
-    this.boardActive = true;
+    this.showBoard = true;
+    if (board.categories) {
+      this.categories = board.categories;
+    }
   }
 
   closeBoard() {
-    this.boardActive = false;
+    this.showBoard = false;
     this.activeBoard = null;
     this.boardID = null;
     this.boardTitle = null;
+    this.categories = null;
   }
 
 }
