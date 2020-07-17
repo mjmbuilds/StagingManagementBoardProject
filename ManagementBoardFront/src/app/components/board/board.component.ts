@@ -10,10 +10,15 @@ import { Category } from 'src/app/models/Category';
 export class BoardComponent implements OnInit {
 
   showBoard = false;
+  showSignup = false;
   activeBoard: Board;
   boardID: string;
   boardTitle: string;
   categories: Category[];
+  signupFirstname: string;
+  signupLastname: string;
+  signupUsername: string;
+  signupPassword: string;
 
   constructor() { }
 
@@ -36,6 +41,18 @@ export class BoardComponent implements OnInit {
     this.boardID = null;
     this.boardTitle = null;
     this.categories = null;
+  }
+
+  openSignup() {
+    this.showSignup = true;
+  }
+
+  closeSignup() {
+    this.showSignup = false;
+  }
+
+  submitSignup() {
+    // TODO
   }
 
 }

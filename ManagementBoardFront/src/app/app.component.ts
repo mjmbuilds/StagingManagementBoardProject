@@ -23,4 +23,12 @@ export class AppComponent {
     this.boardComp.closeBoard();
   }
 
+  openSignup() {
+    this.boardComp.openSignup();
+  }
+
+  closeSignup() {
+    this.boardComp.closeSignup();
+  }
+
 }

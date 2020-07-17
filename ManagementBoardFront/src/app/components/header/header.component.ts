@@ -48,4 +48,12 @@ export class HeaderComponent implements OnInit {
     this.appComponent.closeBoard();
   }
 
+  openSignup() {
+    this.appComponent.openSignup();
+  }
+
+  closeSignup() {
+    this.appComponent.closeSignup();
+  }
+
 }

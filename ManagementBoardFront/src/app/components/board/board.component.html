@@ -6,8 +6,35 @@
         ></app-category>
     </div>
 </div>
-<div *ngIf="!showBoard" id="noBoard">
+
+<div *ngIf="!showBoard && !showSignup" id="noBoard">
     <span id="noBoardMessage">
         There is no active board.
     </span>
+</div>
+
+<div *ngIf="showSignup" id="signup">
+    <form method="POST" onsubmit="return false;">
+        <h2>Sign Up</h2>
+        <div class="signupRow">
+            <label for="signupFirstname">Username</label>
+            <input [(ngModel)]='signupFirstname' type="text" name="signupFirstname" placeholder="First Name" required>
+        </div>
+        <div class="signupRow">
+            <label for="signupLastname">Password</label>
+            <input [(ngModel)]='signupLastname' type="text" name="signupLastname" placeholder="Last Name" required>
+        </div>
+        <div class="signupRow">
+            <label for="signupUsername">Username</label>
+            <input [(ngModel)]='signupUsername' type="text" name="signupUsername" placeholder="Username" required>
+        </div>
+        <div class="signupRow">
+            <label for="signupPassword">Password</label>
+            <input [(ngModel)]='signupPassword' type="text" name="signupPassword" placeholder="Password" required>
+        </div>
+        <div>
+            <input type="submit" name="submitSignupBtn" value="Submit" (click)="submitSignup()">
+            <input type="submit" name="closeSignupBtn" value="Cancel" (click)="closeSignup()">
+        </div>
+    </form>
 </div>
