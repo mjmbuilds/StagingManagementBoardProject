@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Board } from './models/Board';
+import { BoardComponent } from './components/board/board.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ManagementBoardFront';
+
+  title = 'Management Board';
+
+  @ViewChild(BoardComponent) boardComp: BoardComponent;
+
+  constructor() {  }
+
+  openBoard(board: Board) {
+    this.boardComp.openBoard(board);
+  }
+
+  closeBoard() {
+    this.boardComp.closeBoard();
+  }
+
 }

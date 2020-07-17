@@ -1,0 +1,21 @@
+<div id="header">
+
+    <span id="titleSpan">
+        Management Board Staging Project
+    </span>
+
+    <span *ngIf="!logedIn" id="loginSpan">
+        <form method="POST" onsubmit="return false;">
+            <label for="username">Username</label>
+            <input [(ngModel)]='username' type="text" name="username" placeholder="Username" required>
+            <label for="password">Password</label>
+            <input [(ngModel)]='password' type="text" name="password" type="password" placeholder="Password" required>
+            <input type="submit" name="loginBtn" value="Log In" (click)="login()">
+        </form>
+    </span>
+
+    <span *ngIf="logedIn" id="logedInNameSpan">
+        Hello {{ logedInUserName }}
+        <input type="submit" name="logoutBtn" value="Log Out" (click)="logout()">
+    </span>
+</div>

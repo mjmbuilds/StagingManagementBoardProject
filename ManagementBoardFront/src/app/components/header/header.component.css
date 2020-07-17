@@ -1,0 +1,29 @@
+#header {
+    background-color: lightgrey;
+    text-align: left;
+    padding: 12px;
+}
+
+#titleSpan {
+    float: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#logedInNameSpan {
+    float: right;
+    padding-right: 30px;
+}
+
+#loginSpan {
+    float: right;
+}
+
+#loginSpan label {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+#loginSpan input[type=submit] {
+    margin-left: 2px;
+}

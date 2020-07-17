@@ -1,0 +1,27 @@
+#board {
+    text-align: center;
+}
+
+#board H1 {
+    margin: 0px;
+}
+
+#boardContents {
+    background-color: rgb(148, 166, 180);
+    position: absolute;
+    top: 85px;
+    bottom: 26px;
+    width: 100%;
+}
+
+#noBoard {
+    text-align: center;  
+}
+
+#noBoardMessage {
+    font-size: larger;
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 20px;
+}

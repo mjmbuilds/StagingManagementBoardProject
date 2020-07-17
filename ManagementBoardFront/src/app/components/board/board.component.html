@@ -1,0 +1,11 @@
+<div *ngIf="boardActive" id="board">
+    <h1>{{ boardTitle }}</h1>
+    <div id="boardContents">
+
+    </div>
+</div>
+<div *ngIf="!boardActive" id="noBoard">
+    <span id="noBoardMessage">
+        There is no active board.
+    </span>
+</div>
