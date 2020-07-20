@@ -17,4 +17,11 @@ export class UserService {
     const body = { username: `${username}`, password: `${password}`};
     return this.http.post<IUser>(url, body);
   }
+
+  signup(firstName: string, lastName: string, username: string, password: string): void {
+    const url: string = this.urlService.getUrl() + 'user';
+    const body = { firstName: `${firstName}`, lastName: `${lastName}`, username: `${username}`, password: `${password}`};
+    this.http.post<IUser>(url, body);
+  }
+
 }

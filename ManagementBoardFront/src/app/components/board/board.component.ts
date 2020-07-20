@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Board } from 'src/app/models/Board';
 import { Category } from 'src/app/models/Category';
+import { UserService } from 'src/app/user.service';
 
 @Component({
   selector: 'app-board',
@@ -20,7 +21,7 @@ export class BoardComponent implements OnInit {
   signupUsername: string;
   signupPassword: string;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -52,7 +53,10 @@ export class BoardComponent implements OnInit {
   }
 
   submitSignup() {
-    // TODO
+    if (this.signupFirstname && this.signupLastname && this.signupUsername && this.signupPassword) {
+      this.userService.signup(this.signupFirstname, this.signupLastname, this.signupUsername, this.signupPassword);
+      this.closeSignup();
+    }
   }
 
 }
