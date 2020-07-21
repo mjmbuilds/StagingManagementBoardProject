@@ -1,0 +1,17 @@
+#signup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    margin: 10px;
+}
+
+.signupRow {
+    margin-bottom: 6px;
+}
+
+#signup label {
+    display: inline-block;
+    width: 80px;
+}

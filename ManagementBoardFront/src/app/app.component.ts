@@ -15,20 +15,4 @@ export class AppComponent {
 
   constructor() {  }
 
-  openBoard(board: Board) {
-    this.boardComp.openBoard(board);
-  }
-
-  closeBoard() {
-    this.boardComp.closeBoard();
-  }
-
-  openSignup() {
-    this.boardComp.openSignup();
-  }
-
-  closeSignup() {
-    this.boardComp.closeSignup();
-  }
-
 }

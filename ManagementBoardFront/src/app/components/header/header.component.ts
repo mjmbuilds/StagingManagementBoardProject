@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
 import { IUser } from 'src/app/models/iUser';
-import { AppComponent } from 'src/app/app.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,10 +13,13 @@ export class HeaderComponent implements OnInit {
   loggedInUser: IUser;
   username: string;
   password: string;
-  logedIn = false;
   logedInUserName = null;
 
-  constructor(private appComponent: AppComponent, private userService: UserService) { }
+  get logedIn() {
+    return this.loggedInUser ? true : false;
+  }
+
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -26,13 +29,11 @@ export class HeaderComponent implements OnInit {
       resp => {
         if (resp) {
           this.loggedInUser = resp;
+          this.userService.loggedUser = resp;
           this.logedInUserName = resp.firstName;
-          this.logedIn = true;
           this.username = null;
           this.password = null;
-          if (resp.boards.length >= 1) {
-            this.appComponent.openBoard(resp.boards[0]);
-          }
+          this.router.navigateByUrl('board');
         } else {
           alert('Incorrect Username or Password');
         }
@@ -41,18 +42,14 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
+    this.userService.loggedUser = null;
     this.loggedInUser = null;
     this.logedInUserName = null;
-    this.logedIn = false;
-    this.appComponent.closeBoard();
+    this.router.navigateByUrl('');
   }
 
   openSignup() {
-    this.appComponent.openSignup();
-  }
-
-  closeSignup() {
-    this.appComponent.closeSignup();
+    location.href = '/signup';
   }
 
 }

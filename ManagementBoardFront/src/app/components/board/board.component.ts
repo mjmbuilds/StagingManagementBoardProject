@@ -11,19 +11,23 @@ import { UserService } from 'src/app/user.service';
 export class BoardComponent implements OnInit {
 
   showBoard = false;
-  showSignup = false;
+  boards: Board[];
   activeBoard: Board;
   boardID: string;
   boardTitle: string;
   categories: Category[];
-  signupFirstname: string;
-  signupLastname: string;
-  signupUsername: string;
-  signupPassword: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userServ: UserService) { }
 
   ngOnInit(): void {
+    if (this.userServ.isLoggedIn) {
+      this.boards = this.userServ.loggedUser.boards;
+
+      // hard coded open 1st board... should add selection later
+      if (this.boards && this.boards.length >= 1) {
+        this.openBoard(this.boards[1]);
+      }
+    }
   }
 
   openBoard(board: Board) {
@@ -42,21 +46,6 @@ export class BoardComponent implements OnInit {
     this.boardID = null;
     this.boardTitle = null;
     this.categories = null;
-  }
-
-  openSignup() {
-    this.showSignup = true;
-  }
-
-  closeSignup() {
-    this.showSignup = false;
-  }
-
-  submitSignup() {
-    if (this.signupFirstname && this.signupLastname && this.signupUsername && this.signupPassword) {
-      this.userService.signup(this.signupFirstname, this.signupLastname, this.signupUsername, this.signupPassword);
-      this.closeSignup();
-    }
   }
 
 }
