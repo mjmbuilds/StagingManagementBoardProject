@@ -1,3 +1,16 @@
+<div id="boardSelect">
+    <select id="boards" name="boards" (change)="selectBoard($event.target.value)">
+        <option value="-1" selected="selected">Select a board</option>
+        <option *ngFor="let board of boards; let i = index" value="{{ i }}">{{ board.title }}</option>
+    </select>
+</div>
+
+<div *ngIf="!showBoard" id="noBoard">
+    <span id="noBoardMessage">
+        There is no active board.
+    </span>
+</div>
+
 <div *ngIf="showBoard" id="board">
     <h1>{{ boardTitle }}</h1>
     <div id="boardContents">
@@ -7,8 +20,4 @@
     </div>
 </div>
 
-<div *ngIf="!showBoard" id="noBoard">
-    <span id="noBoardMessage">
-        There is no active board.
-    </span>
-</div>
+

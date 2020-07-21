@@ -4,7 +4,12 @@
     padding: 12px;
 }
 
-#titleSpan {
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#title {
     float: none;
     font-size: larger;
     font-weight: bold;

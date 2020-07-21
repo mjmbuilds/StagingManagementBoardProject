@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/user.service';
 import { IUser } from 'src/app/models/iUser';
 import { Router } from '@angular/router';
+import { AuthSimpleService } from 'src/app/auth-simple.service';
 
 @Component({
   selector: 'app-header',
@@ -19,17 +19,26 @@ export class HeaderComponent implements OnInit {
     return this.loggedInUser ? true : false;
   }
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
+    /*
+    // Was going to check if logged in, but authServ loses data on reload
+    // will need to persist data of some sort when logged in
+    if (this.authServ.isLoggedIn) {
+      this.username = this.authServ.loggedInUser.username;
+      this.password = this.authServ.loggedInUser.password;
+      this.login();
+    }
+    */
   }
 
   login(): void {
-    this.userService.login(this.username, this.password).subscribe(
+    this.authServ.login(this.username, this.password).subscribe(
       resp => {
         if (resp) {
           this.loggedInUser = resp;
-          this.userService.loggedUser = resp;
+          this.authServ.loggedInUser = resp;
           this.logedInUserName = resp.firstName;
           this.username = null;
           this.password = null;
@@ -42,13 +51,13 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
-    this.userService.loggedUser = null;
+    this.authServ.loggedInUser = null;
     this.loggedInUser = null;
     this.logedInUserName = null;
     this.router.navigateByUrl('');
   }
 
-  openSignup() {
+  signup() {
     location.href = '/signup';
   }
 

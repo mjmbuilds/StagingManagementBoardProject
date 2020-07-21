@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Board } from 'src/app/models/Board';
 import { Category } from 'src/app/models/Category';
-import { UserService } from 'src/app/user.service';
+import { Router } from '@angular/router';
+import { AuthSimpleService } from 'src/app/auth-simple.service';
 
 @Component({
   selector: 'app-board',
@@ -13,26 +14,29 @@ export class BoardComponent implements OnInit {
   showBoard = false;
   boards: Board[];
   activeBoard: Board;
-  boardID: string;
   boardTitle: string;
   categories: Category[];
 
-  constructor(private userServ: UserService) { }
+  constructor(private router: Router, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
-    if (this.userServ.isLoggedIn) {
-      this.boards = this.userServ.loggedUser.boards;
+    if (this.authServ.isLoggedIn) {
+      this.boards = this.authServ.loggedInUser.boards;
+    } else {
+      this.router.navigateByUrl(''); // if not logged in, navigate to home page
+    }
+  }
 
-      // hard coded open 1st board... should add selection later
-      if (this.boards && this.boards.length >= 1) {
-        this.openBoard(this.boards[1]);
-      }
+  selectBoard(selected: string) {
+    if (selected === '-1') {
+      this.closeBoard();
+    } else {
+      this.openBoard(this.boards[selected]);
     }
   }
 
   openBoard(board: Board) {
     this.activeBoard = board;
-    this.boardID = board.id;
     this.boardTitle = board.title;
     this.showBoard = true;
     if (board.categories) {
@@ -43,7 +47,6 @@ export class BoardComponent implements OnInit {
   closeBoard() {
     this.showBoard = false;
     this.activeBoard = null;
-    this.boardID = null;
     this.boardTitle = null;
     this.categories = null;
   }

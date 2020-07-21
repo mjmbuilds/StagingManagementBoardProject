@@ -19,31 +19,28 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 	
 	//-------------------------------------------- Sample Data setup
 	public FakeDataImpl() {
+		int numBoards = 3;
+		int numCategories = 4;
+		int numCards = 5;
 		User sampleUser = new User("Joe", "Smith", "jsmith", "j123");
-		List<Board> sampleBoards = new ArrayList<Board>();
-		Board sampleBoard = new Board("Board 1");
-		List<Category> sampleCategories = new ArrayList<Category>();
-		Category catToDo = new Category("To Do");
-		List<Card> cards1 = new ArrayList<Card>();
-		cards1.add(new Card("Task 1", "description of task 1"));
-		cards1.add(new Card("Task 2", "description of task 2"));
-		catToDo.setCards(cards1);
-		Category catDoing = new Category("Doing");
-		List<Card> cards2 = new ArrayList<Card>();
-		cards2.add(new Card("Task 3", "description of task 3"));
-		cards2.add(new Card("Task 4", "description of task 4"));
-		catDoing.setCards(cards2);
-		Category catDone = new Category("Done");
-		List<Card> cards3 = new ArrayList<Card>();
-		cards3.add(new Card("Task 5", "description of task 5"));
-		cards3.add(new Card("Task 6", "description of task 6"));
-		catDone.setCards(cards3);
-		sampleCategories.add(catToDo);
-		sampleCategories.add(catDoing);
-		sampleCategories.add(catDone);
-		sampleBoard.setCategories(sampleCategories);
-		sampleBoards.add(sampleBoard);
-		sampleUser.setBoards(sampleBoards);
+		
+		List<Board> boards = new ArrayList<Board>();
+		for (int i = 1; i <= numBoards; i++) {
+			Board board  = new Board("Board " + i);
+			List<Category> categories = new ArrayList<Category>();
+			for (int j = 1; j <= numCategories; j++) {
+				Category category = new Category("Category " + i + "-" + j);
+				List<Card> cards = new ArrayList<Card>();
+				for (int k = 1; k <= numCards; k++) {
+					cards.add(new Card("Task " + k, "Description of task " + i + j + k));
+				}
+				category.setCards(cards);
+				categories.add(category);
+			}
+			board.setCategories(categories);
+			boards.add(board);
+		}
+		sampleUser.setBoards(boards);
 		DB.add(sampleUser);
 	}
 	

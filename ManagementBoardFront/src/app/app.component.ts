@@ -1,6 +1,4 @@
 import { Component, ViewChild } from '@angular/core';
-import { Board } from './models/Board';
-import { BoardComponent } from './components/board/board.component';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +8,6 @@ import { BoardComponent } from './components/board/board.component';
 export class AppComponent {
 
   title = 'Management Board';
-
-  @ViewChild(BoardComponent) boardComp: BoardComponent;
 
   constructor() {  }
 

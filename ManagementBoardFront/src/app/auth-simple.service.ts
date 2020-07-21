@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { UrlService } from './url.service';
 import { IUser } from './models/iUser';
 import { User } from './models/User';
@@ -8,22 +8,22 @@ import { User } from './models/User';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class AuthSimpleService {
 
-  private loggedInUser: User = null;
+  private loggedUser: User = null;
 
   constructor(private http: HttpClient, private urlService: UrlService) { }
 
-  get loggedUser() {
-    return this.loggedInUser;
+  get loggedInUser() {
+    return this.loggedUser;
   }
 
-  set loggedUser(user: User) {
-    this.loggedInUser = user;
+  set loggedInUser(user: User) {
+    this.loggedUser = user;
   }
 
   get isLoggedIn() {
-    return this.loggedInUser ? true : false;
+    return this.loggedUser ? true : false;
   }
 
   login(username: string, password: string): Observable<IUser> {

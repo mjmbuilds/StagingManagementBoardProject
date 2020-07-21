@@ -1,8 +1,8 @@
 <div id="header">
 
-    <span id="titleSpan">
+    <a [routerLink]="['']" id="title">
         Management Board
-    </span>
+    </a>
 
     <span *ngIf="!logedIn" id="loginSpan">
         <form method="POST" onsubmit="return false;">
@@ -11,12 +11,13 @@
             <label for="password">Password</label>
             <input [(ngModel)]='password' type="text" name="password" type="password" placeholder="Password" required>
             <input type="submit" name="loginBtn" value="Log In" (click)="login()">
-            <input type="submit" name="signupBtn" value="Sign Up" (click)="openSignup()">
+            <button name="signupBtn" (click)="signup()">Sign Up</button>
         </form>
     </span>
 
     <span *ngIf="logedIn" id="logedInNameSpan">
         Hello {{ logedInUserName }}
-        <input type="submit" name="logoutBtn" value="Log Out" (click)="logout()">
+        <button [routerLink]="'/board'">Boards</button>
+        <button name="logoutBtn" (click)="logout()">Log Out</button>
     </span>
 </div>
