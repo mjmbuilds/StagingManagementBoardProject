@@ -1,0 +1,26 @@
+2020-07-22 11:47:31 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 5288 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-22 11:47:31 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-22 11:47:31 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-22 11:47:32 TRACE com.staging.dao.FakeDataImpl - FakeDataImpl.FakeDataImpl()
+2020-07-22 11:47:32 INFO  com.staging.dao.FakeDataImpl - Sample user data has been set up
+2020-07-22 11:47:32 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.707 seconds (JVM running for 2.007)
+2020-07-22 11:47:57 TRACE c.s.controller.DebugController - This is a trace message
+2020-07-22 11:47:57 DEBUG c.s.controller.DebugController - This is a debug message
+2020-07-22 11:47:57 INFO  c.s.controller.DebugController - This is an info message
+2020-07-22 11:47:57 WARN  c.s.controller.DebugController - This is a warn message
+2020-07-22 11:47:57 ERROR c.s.controller.DebugController - This is an error message
+2020-07-22 11:47:57 TRACE com.staging.dao.FakeDataImpl - FakeDataImpl.getAllUsers()
+2020-07-22 11:52:25 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 1972 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-22 11:52:25 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-22 11:52:25 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-22 11:52:26 TRACE com.staging.dao.FakeDataImpl - FakeDataImpl.FakeDataImpl()
+2020-07-22 11:52:26 INFO  com.staging.dao.FakeDataImpl - Sample user data has been set up
+2020-07-22 11:52:26 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.564 seconds (JVM running for 1.861)
+2020-07-22 11:52:32 TRACE c.s.controller.DebugController - This is a trace message
+2020-07-22 11:52:32 DEBUG c.s.controller.DebugController - This is a debug message
+2020-07-22 11:52:32 INFO  c.s.controller.DebugController - This is an info message
+2020-07-22 11:52:32 WARN  c.s.controller.DebugController - This is a warn message
+2020-07-22 11:52:32 ERROR c.s.controller.DebugController - This is an error message
+2020-07-22 11:52:32 TRACE com.staging.dao.FakeDataImpl - FakeDataImpl.getAllUsers()
+2020-07-22 11:52:45 TRACE com.staging.dao.FakeDataImpl - FakeDataImpl.addUser()
+2020-07-22 11:52:45 INFO  com.staging.dao.FakeDataImpl - adding user: dsmith

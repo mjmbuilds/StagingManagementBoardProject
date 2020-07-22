@@ -26,16 +26,28 @@ export class AuthSimpleService {
     return this.loggedUser ? true : false;
   }
 
+  /*
   login(username: string, password: string): Observable<IUser> {
     const url: string = this.urlService.getUrl() + 'user/login';
-    const body = { username: `${username}`, password: `${password}`};
+    const body = { username, password };
+    return this.http.post<IUser>(url, body);
+  }
+  */
+
+  //TODO convert to using Observable<HttpResponse<User>>
+  login(username: string, password: string): Observable<IUser> {
+    const url: string = this.urlService.getUrl() + 'user/login';
+    const body = { username, password };
     return this.http.post<IUser>(url, body);
   }
 
-  signup(firstName: string, lastName: string, username: string, password: string): void {
-    const url: string = this.urlService.getUrl() + 'user';
+  signup(firstName: string, lastName: string, username: string, password: string): Observable<IUser> {
+    const url: string = this.urlService.getUrl() + 'user/signup';
     const body = { firstName: `${firstName}`, lastName: `${lastName}`, username: `${username}`, password: `${password}`};
-    this.http.post<IUser>(url, body);
+
+    console.log('signing up');
+
+    return this.http.post<IUser>(url, body);
   }
 
 }
