@@ -30,6 +30,7 @@ public class DebugController {
 	// prints the request data to the log
 	@RequestMapping()
 	public void debug(@RequestBody String data) {
+		log.trace("\n");
 		log.trace("debug()");
 		log.info("Request to '/api/debug' ");
 		log.debug("Data from Request:\n" + data);
@@ -38,6 +39,7 @@ public class DebugController {
 	// returns data for all users
 	@GetMapping("all-users")
 	public List<User> getAllUsers() {
+		log.trace("\n");
 		log.trace("getAllUsers()");
 		log.info("GET Request to '/api/debug/all-users' ");
 		return userService.getAllUsers();

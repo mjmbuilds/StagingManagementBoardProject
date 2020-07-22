@@ -27,13 +27,15 @@ public class UserController {
 
 	@PostMapping("user/signup")
 	public void addUser(@RequestBody User user) {
+		log.trace("\n");
 		log.trace("addUser()");
 		log.info("POST Request to '/api/v1/user/signup' ");
 		userService.addUser(user);
 	}
 	
-	@PostMapping("login")
+	@PostMapping("user/login")
 	public User getUserByUsernameAndPassword(@RequestBody User user) {
+		log.trace("\n");
 		log.trace("getUserByUsernameAndPassword()");
 		log.info("POST Request to '/api/v1/user/login' ");
 		return userService.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());

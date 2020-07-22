@@ -24,8 +24,13 @@ export class SignupComponent implements OnInit {
 
   submitSignup() {
     if (this.signupFirstname && this.signupLastname && this.signupUsername && this.signupPassword) {
-      this.authServ.signup(this.signupFirstname, this.signupLastname, this.signupUsername, this.signupPassword);
-      //this.closeSignup();
+      this.authServ.signup(
+        this.signupFirstname,
+        this.signupLastname,
+        this.signupUsername,
+        this.signupPassword
+        ).subscribe();
+      this.closeSignup();
     }
   }
 
