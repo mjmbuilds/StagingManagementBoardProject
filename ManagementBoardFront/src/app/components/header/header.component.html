@@ -1,23 +1,25 @@
 <div id="header">
+    <div id="header-left">
+        <a [routerLink]="['']" id="title">
+            Management Board
+        </a>
+    </div>
+    <div id="header-right">
+        <span *ngIf="!logedIn" id="logged-out">
+            <form method="POST" onsubmit="return false;">
+                <label for="username">Username</label>
+                <input [(ngModel)]='username' type="text" name="username" placeholder="Username" required>
+                <label for="password">Password</label>
+                <input [(ngModel)]='password' type="text" name="password" type="password" placeholder="Password" required>
+                <input type="submit" name="loginBtn" class="btn-general" value="Log In" (click)="login()">
+                <button name="signupBtn" class="btn-general" (click)="signup()">Sign Up</button>
+            </form>
+        </span>
 
-    <a [routerLink]="['']" id="title">
-        Management Board
-    </a>
-
-    <span *ngIf="!logedIn" id="loginSpan">
-        <form method="POST" onsubmit="return false;">
-            <label for="username">Username</label>
-            <input [(ngModel)]='username' type="text" name="username" placeholder="Username" required>
-            <label for="password">Password</label>
-            <input [(ngModel)]='password' type="text" name="password" type="password" placeholder="Password" required>
-            <input type="submit" name="loginBtn" value="Log In" (click)="login()">
-            <button name="signupBtn" (click)="signup()">Sign Up</button>
-        </form>
-    </span>
-
-    <span *ngIf="logedIn" id="logedInNameSpan">
-        Hello {{ logedInUserName }}
-        <button [routerLink]="'/board'">Boards</button>
-        <button name="logoutBtn" (click)="logout()">Log Out</button>
-    </span>
+        <span *ngIf="logedIn" id="logged-in">
+            Hello {{ logedInUserName }}
+            <button [routerLink]="'/board'" name="boardsBtn" class="btn-general">Boards</button>
+            <button name="logoutBtn" class="btn-general" (click)="logout()">Log Out</button>
+        </span>
+    </div>
 </div>

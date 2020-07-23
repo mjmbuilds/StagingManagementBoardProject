@@ -1,7 +1,19 @@
 #header {
     background-color: lightgrey;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#header-left {
+    display: inline-block;
     text-align: left;
-    padding: 12px;
+}
+
+#header-right {
+    float: right;
+    text-align: right;
 }
 
 a {
@@ -10,25 +22,17 @@ a {
 }
 
 #title {
-    float: none;
-    font-size: larger;
+    width: 50%;
+    text-align: left;
+    font-size: 1.25em;
     font-weight: bold;
 }
 
-#logedInNameSpan {
-    float: right;
-    padding-right: 30px;
-}
-
-#loginSpan {
-    float: right;
-}
-
-#loginSpan label {
+label {
     margin-left: 10px;
     margin-right: 2px;
 }
 
-#loginSpan input[type=submit] {
+input[type=submit] {
     margin-left: 2px;
 }

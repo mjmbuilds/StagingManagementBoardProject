@@ -1,28 +1,41 @@
-#board {
+#board-header {
+    background-color: slategrey;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#board-header-left {
+    display: inline-block;
+    width: 33%;
+    text-align: left;
+}
+
+#board-dropdown {
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#board-header-center {
+    display: inline-block;
+    width: 34%;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-#board H1 {
-    margin: 0px;
+#board-header-right {
+    display: inline-block;
+    width: 33%;
+    text-align: right;
 }
 
-#boardContents {
-    background-color: rgb(148, 166, 180);
-    position: absolute;
-    top: 85px;
-    bottom: 26px;
-    width: 100%;
-}
-
-#noBoard {
+#no-board {
     text-align: center;
     margin-top: 50px;
+    font-size: 1.25em;
 }
 
-#noBoardMessage {
-    font-size: larger;
-    /*position:absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    margin: auto;
-    height: 20px;*/
+#board-contents {
+    text-align: center;
 }

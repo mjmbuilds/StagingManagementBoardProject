@@ -16,6 +16,9 @@ public class ManagementBoardBack {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ManagementBoardBack.class, args);
+		log.trace("\n");
+		log.trace("* * * * * * * * * * * * * * * * * * * * * * * *");
+		log.trace("* * * * * * * * * * STARTUP * * * * * * * * * *");
 	}
 
 	@RequestMapping("/")

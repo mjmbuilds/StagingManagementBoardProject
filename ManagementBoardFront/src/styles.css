@@ -1,5 +1,10 @@
 body {
-    background-color: grey;
+    background-color: rgb(148, 166, 180);
     margin: 0px;
 }
 
+.btn-general {
+    margin-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

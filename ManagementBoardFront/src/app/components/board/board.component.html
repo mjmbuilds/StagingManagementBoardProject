@@ -1,19 +1,26 @@
-<div id="boardSelect">
-    <select id="boards" name="boards" (change)="selectBoard($event.target.value)">
-        <option value="-1" selected="selected">Select a board</option>
-        <option *ngFor="let board of boards; let i = index" value="{{ i }}">{{ board.title }}</option>
-    </select>
-</div>
-
-<div *ngIf="!showBoard" id="noBoard">
-    <span id="noBoardMessage">
-        There is no active board.
+<div id="board-header">
+    <span id="board-header-left">
+        <select id="board-dropdown" name="boards" (change)="selectBoard($event.target.value)">
+            <option value="-1" selected="selected">Select a board</option>
+            <option *ngFor="let board of boards; let i = index" value="{{ i }}">{{ board.title }}</option>
+        </select>
+    </span>
+    <span id="board-header-center">
+        <span id="board-title">{{ boardTitle }}</span>
+    </span>
+    <span id="board-header-right">
+        <button id="add-board-btn" class="btn-general">Add Board</button>
+        <button id="delete-board-btn" class="btn-general">Delete Board</button>
     </span>
 </div>
 
+<div *ngIf="!showBoard" id="no-board">
+    No active board.<br>
+    Add or select a board.
+</div>
+
 <div *ngIf="showBoard" id="board">
-    <h1>{{ boardTitle }}</h1>
-    <div id="boardContents">
+    <div id="board-contents">
         <app-category *ngFor="let val of categories" 
         [category]="val"
         ></app-category>

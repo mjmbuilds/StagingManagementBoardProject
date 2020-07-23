@@ -10,7 +10,7 @@
   </appender>
   
   <appender name="File" class="ch.qos.logback.core.FileAppender">
-    <file>Logs/LogFile.log</file>
+    <file>logs/LogFile.log</file>
     <append>true</append>
     <!-- set immediateFlush to false for much higher logging throughput -->
     <immediateFlush>true</immediateFlush>

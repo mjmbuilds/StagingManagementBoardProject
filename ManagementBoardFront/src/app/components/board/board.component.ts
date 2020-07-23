@@ -20,8 +20,14 @@ export class BoardComponent implements OnInit {
   constructor(private router: Router, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
-    if (this.authServ.isLoggedIn) {
+    if (this.authServ.hasLoggedInUser) {
       this.boards = this.authServ.loggedInUser.boards;
+
+      //TODO remove after development (temporary setting of first board on load)
+      if (this.boards && this.boards.length >= 1) {
+        this.selectBoard('0');
+      }
+
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
     }

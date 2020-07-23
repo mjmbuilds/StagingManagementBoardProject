@@ -22,8 +22,29 @@ export class AuthSimpleService {
     this.loggedUser = user;
   }
 
-  get isLoggedIn() {
+  get hasLoggedInUser() {
     return this.loggedUser ? true : false;
+  }
+
+  get hasSession() {
+    return sessionStorage.getItem('username') ? true : false;
+  }
+
+  setSession(user: User) {
+    //TODO update to a proper session token instead of saving user/pass
+    sessionStorage.setItem('username', user.username);
+    sessionStorage.setItem('password', user.password);
+    this.loggedUser = user;
+  }
+  getSessionUsername() {
+    return sessionStorage.getItem('username');
+  }
+  getSessionPassword() {
+    return sessionStorage.getItem('password');
+  }
+  clearSession() {
+    sessionStorage.clear();
+    this.loggedUser = null;
   }
 
   //TODO convert to using Observable<HttpResponse<User>>

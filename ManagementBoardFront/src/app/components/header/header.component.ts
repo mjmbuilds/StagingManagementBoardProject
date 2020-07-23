@@ -23,26 +23,22 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
-    /*
-    // Was going to check if logged in, but authServ loses data on reload
-    // will need to persist data of some sort when logged in
-    if (this.authServ.isLoggedIn) {
-      this.username = this.authServ.loggedInUser.username;
-      this.password = this.authServ.loggedInUser.password;
+    // Check if there is a valid session
+    if (this.authServ.hasSession) {
+      //TODO adjust to use session
+      this.username = this.authServ.getSessionUsername();
+      this.password = this.authServ.getSessionPassword();
       this.login();
     }
-    */
   }
 
   login(): void {
     this.authServ.login(this.username, this.password).subscribe(
       resp => {
         if (resp) {
+          this.authServ.setSession(resp);
           this.loggedInUser = resp;
-          this.authServ.loggedInUser = resp;
           this.logedInUserName = resp.firstName;
-          this.username = null;
-          this.password = null;
           this.router.navigateByUrl('board');
         } else {
           alert('Incorrect Username or Password');
@@ -52,9 +48,11 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
-    this.authServ.loggedInUser = null;
+    this.authServ.clearSession();
     this.loggedInUser = null;
     this.logedInUserName = null;
+    this.username = null;
+    this.password = null;
     this.router.navigateByUrl('');
   }
 
