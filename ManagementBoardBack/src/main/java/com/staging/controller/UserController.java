@@ -3,6 +3,7 @@ package com.staging.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +15,7 @@ import com.staging.service.UserService;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin
+@CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
 public class UserController {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -40,5 +41,20 @@ public class UserController {
 		log.info("POST Request to '/api/v1/user/login' ");
 		return userService.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());
 	}
+	
+	// TODO TEST using response entity
+	/*
+	@PostMapping("user/login2")
+	public ResponseEntity<User> getUserByUsernameAndPassword2(@RequestBody User user) {
+		log.trace("\n");
+		log.trace("getUserByUsernameAndPassword()");
+		log.info("POST Request to '/api/v1/user/login' ");
+		User u = userService.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());
+		if (u == null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok(u);
+	}
+	*/
 
 }

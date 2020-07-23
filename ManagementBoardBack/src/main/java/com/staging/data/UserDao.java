@@ -1,4 +1,4 @@
-package com.staging.dao;
+package com.staging.data;
 
 import java.util.List;
 

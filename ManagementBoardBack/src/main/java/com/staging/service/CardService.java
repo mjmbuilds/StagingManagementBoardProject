@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.staging.dao.CardDao;
+import com.staging.data.CardDao;
 import com.staging.model.Card;
 
 @Service

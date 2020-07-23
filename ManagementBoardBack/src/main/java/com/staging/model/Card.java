@@ -2,10 +2,18 @@ package com.staging.model;
 
 import java.util.UUID;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Card {
 	
+	@Id
+	@Column(name = "card_id")
 	private UUID id;
+	@Column(name = "card_title")
 	private String title;
+	@Column(name = "card_description")
 	private String description;
 
 	public Card() {

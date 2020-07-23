@@ -16,7 +16,7 @@ import com.staging.service.UserService;
 
 @RestController
 @RequestMapping("/api/debug")
-@CrossOrigin
+@CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
 public class DebugController {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());

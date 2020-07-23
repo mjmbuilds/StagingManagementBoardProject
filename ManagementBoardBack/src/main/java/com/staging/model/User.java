@@ -3,16 +3,29 @@ package com.staging.model;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.*;
+
+//TODO resolve
 //import com.fasterxml.jackson.annotation.JsonCreator;
 //import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
+@Table
 public class User {
 	
+	@Id
+	@Column(name = "user_id")
 	private UUID id;
+	@Column(name = "user_firstname")
 	private String firstName;
+	@Column(name = "user_lastname")
 	private String lastName;
+	@Column(name = "user_username")
 	private String username;
+	@Column(name = "user_password")
 	private String password;
+	@OneToMany
+    @JoinTable(joinColumns = @JoinColumn(name = "user_id"))
 	private List<Board> boards;
 
 	public User() {
@@ -32,6 +45,8 @@ public class User {
 		this.password = password;
 		this.boards = null;
 	}
+	
+	//TODO resolve
 	/* 
 	// JsonCreator and JsonProperty not actually needed??? maybe only if property names differ?
 	@JsonCreator

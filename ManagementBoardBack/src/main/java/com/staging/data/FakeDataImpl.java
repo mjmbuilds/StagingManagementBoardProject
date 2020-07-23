@@ -1,4 +1,4 @@
-package com.staging.dao;
+package com.staging.data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +61,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 	@Override
 	public User getUserByUsernameAndPassword(String username, String password) {
 		log.trace("getUserByUsernameAndPassword()");
-		System.out.println("Searching for username: " + username + ", password: " + password); //log
+		log.info("Searching for username: " + username + ", password: " + password);
 		for (User dbUser : DB) {
 			if ( username.equals(dbUser.getUsername()) && password.equals(dbUser.getPassword()) ) {
 				log.info("User found: \n" + dbUser);

@@ -3,10 +3,19 @@ package com.staging.model;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Board {
 
+	@Id
+	@Column(name = "board_id")
 	private UUID id;
+	@Column(name = "board_title")
 	private String title;
+	@OneToMany
+    @JoinTable(joinColumns = @JoinColumn(name = "category_id"))
 	private List<Category> categories;
 	
 	public Board() {

@@ -3,10 +3,19 @@ package com.staging.model;
 import java.util.List;
 import java.util.UUID;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Category {
 
+	@Id
+	@Column(name = "category_id")
 	private UUID id;
+	@Column(name = "category_title")
 	private String title;
+	@OneToMany
+    @JoinTable(joinColumns = @JoinColumn(name = "card_id"))
 	private List<Card> cards;
 	
 	public Category() {
