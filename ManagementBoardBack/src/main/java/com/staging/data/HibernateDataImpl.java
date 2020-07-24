@@ -84,7 +84,19 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 		int numCategories = 4;
 		int numCards = 5;
 		User sampleUser = new User("Joe", "Smith", "jsmith", "j123");
-		
+		addUser(sampleUser);
+		for (int i = 1; i <= numBoards; i++) {
+			Board board  = new Board("Board " + i, sampleUser.getId());
+			addBoard(board);
+			for (int j = 1; j <= numCategories; j++) {
+				Category category = new Category("Category " + i + "-" + j, board.getId());
+				addCategory(category);
+				for (int k = 1; k <= numCards; k++) {
+					addCard(new Card("Task " + k, "Description of task " + i + j + k, category.getId()));
+				}
+			}
+		}
+		/*
 		List<Board> boards = new ArrayList<Board>();
 		for (int i = 1; i <= numBoards; i++) {
 			Board board  = new Board("Board " + i);
@@ -103,6 +115,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 		}
 		sampleUser.setBoards(boards);
 		addUser(sampleUser);
+		*/
 	}
 	
 	@Override

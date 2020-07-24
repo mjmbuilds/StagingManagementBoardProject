@@ -51,6 +51,7 @@ public class User implements Serializable {
 	public void generateId() {
 		this.id = UUID.randomUUID();
 	}
+	
 	//----------------------------------------------------------------
 
 	public UUID getId() {

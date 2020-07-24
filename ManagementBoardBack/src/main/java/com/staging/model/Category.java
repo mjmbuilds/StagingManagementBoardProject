@@ -14,9 +14,8 @@ public class Category implements Serializable {
 	@Id
 	@Column(name = "category_id")
 	private UUID id;
-	//@ManyToOne 
-    //@JoinColumn(name="board_id") 
-	//private Board board;
+	@Column(name = "board_id")
+	private UUID boardId;
 	@Column(name = "category_title")
 	private String title;
 	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "card_id")
@@ -26,28 +25,41 @@ public class Category implements Serializable {
 	
 	public Category() {
 		this.id = UUID.randomUUID();
+		this.boardId = null;
 		this.title = null;
 		this.cards = null;
 	}
 
 	public Category(String title) {
 		this.id = UUID.randomUUID();
+		this.boardId = null;
 		this.title = title;
 		this.cards = null;
 	}
 	
-	public Category(String title, List<Card> cards) {
+	public Category(String title, UUID boardId) {
 		this.id = UUID.randomUUID();
+		this.boardId = boardId;
 		this.title = title;
-		this.cards = cards;
+		this.cards = null;
 	}
 
+	//----------------------------------------------------------------
+	
 	public UUID getId() {
 		return id;
 	}
 
 	public void setId(UUID id) {
 		this.id = id;
+	}
+
+	public UUID getBoardId() {
+		return boardId;
+	}
+
+	public void setBoardId(UUID boardId) {
+		this.boardId = boardId;
 	}
 
 	public String getTitle() {
@@ -66,10 +78,15 @@ public class Category implements Serializable {
 		this.cards = cards;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((boardId == null) ? 0 : boardId.hashCode());
 		result = prime * result + ((cards == null) ? 0 : cards.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
@@ -85,6 +102,11 @@ public class Category implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Category other = (Category) obj;
+		if (boardId == null) {
+			if (other.boardId != null)
+				return false;
+		} else if (!boardId.equals(other.boardId))
+			return false;
 		if (cards == null) {
 			if (other.cards != null)
 				return false;
@@ -105,7 +127,7 @@ public class Category implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", title=" + title + ", cards=" + cards + "]";
+		return "Category [id=" + id + ", boardId=" + boardId + ", title=" + title + ", cards=" + cards + "]";
 	}
 
 }

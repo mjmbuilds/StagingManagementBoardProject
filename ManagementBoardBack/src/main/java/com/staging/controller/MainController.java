@@ -11,19 +11,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.staging.model.User;
+import com.staging.service.BoardService;
+import com.staging.service.CardService;
+import com.staging.service.CategoryService;
 import com.staging.service.UserService;
 
 @RestController
 @RequestMapping("/api/v1")
 @CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
-public class UserController {
+public class MainController {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	private final UserService userService;
+	private final BoardService boardService;
+	private final CategoryService categoryService;
+	private final CardService cardService;
 
 	@Autowired
-	public UserController(UserService userService) {
-		this.userService = userService;
+	public MainController(UserService us, BoardService bs, CategoryService cts, CardService cds) {
+		this.userService = us;
+		this.boardService = bs;
+		this.categoryService = cts;
+		this.cardService = cds;
 	}
 
 	@PostMapping("user/signup")

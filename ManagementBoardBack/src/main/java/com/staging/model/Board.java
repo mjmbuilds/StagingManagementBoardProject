@@ -14,9 +14,8 @@ public class Board implements Serializable {
 	@Id
 	@Column(name = "board_id")
 	private UUID id;
-	//@ManyToOne 
-    //@JoinColumn(name="user_id") 
-	//private User user;
+	@Column(name = "user_id")
+	private UUID userId;
 	@Column(name = "board_title")
 	private String title;
 	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "category_id")
@@ -26,28 +25,41 @@ public class Board implements Serializable {
 	
 	public Board() {
 		this.id = UUID.randomUUID();
+		this.userId = null;
 		this.title = null;
 		this.categories = null;
 	}
 	
 	public Board(String title) {
 		this.id = UUID.randomUUID();
+		this.userId = null;
 		this.title = title;
 		this.categories = null;
 	}
 	
-	public Board(String title, List<Category> categories) {
+	public Board(String title, UUID userID) {
 		this.id = UUID.randomUUID();
+		this.userId = userID;
 		this.title = title;
-		this.categories = categories;
+		this.categories = null;
 	}
-
+	
+	//----------------------------------------------------------------
+	
 	public UUID getId() {
 		return id;
 	}
 
 	public void setId(UUID id) {
 		this.id = id;
+	}
+
+	public UUID getUserId() {
+		return userId;
+	}
+
+	public void setUserId(UUID userId) {
+		this.userId = userId;
 	}
 
 	public String getTitle() {
@@ -66,6 +78,10 @@ public class Board implements Serializable {
 		this.categories = categories;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -73,6 +89,7 @@ public class Board implements Serializable {
 		result = prime * result + ((categories == null) ? 0 : categories.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
 		return result;
 	}
 
@@ -100,12 +117,17 @@ public class Board implements Serializable {
 				return false;
 		} else if (!title.equals(other.title))
 			return false;
+		if (userId == null) {
+			if (other.userId != null)
+				return false;
+		} else if (!userId.equals(other.userId))
+			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Board [id=" + id + ", title=" + title + ", categories=" + categories + "]";
+		return "Board [id=" + id + ", userId=" + userId + ", title=" + title + ", categories=" + categories + "]";
 	}
-	
+
 }
