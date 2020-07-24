@@ -1,16 +1,21 @@
 package com.staging.model;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 import javax.persistence.*;
 
 @Entity
-@Table
-public class Card {
-	
+@Table(name = "mb_card")
+public class Card implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@Column(name = "card_id")
 	private UUID id;
+	//@ManyToOne 
+    //@JoinColumn(name="category_id") 
+	//private Category category;
 	@Column(name = "card_title")
 	private String title;
 	@Column(name = "card_description")

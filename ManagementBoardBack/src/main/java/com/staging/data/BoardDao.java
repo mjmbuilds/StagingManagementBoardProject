@@ -8,8 +8,8 @@ public interface BoardDao {
 	
 	int addBoard(Board board);
 	
-	void updateBoard(Board board);
+	int updateBoard(Board board);
 	
-	void deleteBoard(UUID id);
+	int deleteBoard(UUID id);
 	
 }

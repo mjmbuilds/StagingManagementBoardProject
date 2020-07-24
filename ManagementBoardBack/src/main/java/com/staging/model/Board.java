@@ -1,21 +1,27 @@
 package com.staging.model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.*;
 
 @Entity
-@Table
-public class Board {
-
+@Table(name = "mb_board")
+public class Board implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@Column(name = "board_id")
 	private UUID id;
+	//@ManyToOne 
+    //@JoinColumn(name="user_id") 
+	//private User user;
 	@Column(name = "board_title")
 	private String title;
+	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "category_id")
 	@OneToMany
-    @JoinTable(joinColumns = @JoinColumn(name = "category_id"))
+	@JoinColumn(name="category_id")
 	private List<Category> categories;
 	
 	public Board() {

@@ -12,13 +12,13 @@ import com.staging.data.CardDao;
 import com.staging.model.Card;
 
 @Service
-public class CardService {
+public class CardService extends GenericService {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	private final CardDao cardDao;
 	
-	@Autowired
-	public CardService(@Qualifier("fakeDao") CardDao cardDao) {
+	@Autowired // daoQualifier is specified in GenericService
+	public CardService(@Qualifier(daoQualifier) CardDao cardDao) {
 		this.cardDao = cardDao;
 	}
 	
@@ -27,13 +27,13 @@ public class CardService {
 		return cardDao.addCard(card);
 	}
 	
-	public void updateCard(Card card) {
+	public int updateCard(Card card) {
 		log.trace("updateCard()");
-		cardDao.updateCard(card);
+		return cardDao.updateCard(card);
 	}
 	
-	public void deleteCard(UUID id) {
+	public int deleteCard(UUID id) {
 		log.trace("deleteCard()");
-		cardDao.deleteCard(id);
+		return cardDao.deleteCard(id);
 	}
 }

@@ -15,14 +15,19 @@ import com.staging.model.User;
 
 // Temporary mock DB using a List
 @Repository("fakeDao")
-public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
+public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, DebugDao {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	private static List<User> DB = new ArrayList<>();
 	
-	//-------------------------------------------- Sample Data setup
-	public FakeDataImpl() {
-		log.trace("FakeDataImpl()");
+	//-------------------------------------------- Debug DAO
+	@Override
+	public void resetDB() {
+		DB = new ArrayList<>();
+	}
+	
+	@Override
+	public void initSampleUser() {
 		int numBoards = 3;
 		int numCategories = 4;
 		int numCards = 5;
@@ -49,6 +54,12 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 		log.info("Sample user data has been set up");
 	}
 	
+	@Override
+	public List<User> getAllUsers() {
+		log.trace("getAllUsers()");
+		return DB;
+	}
+	
 	//-------------------------------------------- User DAO
 	@Override
 	public int addUser(User user) {
@@ -58,6 +69,18 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 		return 0; // always success
 	}
 
+	@Override
+	public int updateUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int deleteUser(UUID id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 	@Override
 	public User getUserByUsernameAndPassword(String username, String password) {
 		log.trace("getUserByUsernameAndPassword()");
@@ -71,12 +94,6 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 		log.info("user NOT found");
 		return null;
 	}
-	
-	@Override
-	public List<User> getAllUsers() {
-		log.trace("getAllUsers()");
-		return DB;
-	}
 
 	//-------------------------------------------- Board DAO
 	@Override
@@ -87,17 +104,17 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 	}
 
 	@Override
-	public void updateBoard(Board board) {
+	public int updateBoard(Board board) {
 		log.trace("updateBoard()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
-	public void deleteBoard(UUID id) {
+	public int deleteBoard(UUID id) {
 		log.trace("deleteBoard()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 	
 	//-------------------------------------------- Category DAO
@@ -110,17 +127,17 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 	}
 
 	@Override
-	public void updateCategory(Category category) {
+	public int updateCategory(Category category) {
 		log.trace("updateCategory()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
-	public void deleteCategory(UUID id) {
+	public int deleteCategory(UUID id) {
 		log.trace("deleteCategory()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 	//-------------------------------------------- Card DAO
 	@Override
@@ -131,17 +148,17 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao {
 	}
 
 	@Override
-	public void updateCard(Card card) {
+	public int updateCard(Card card) {
 		log.trace("updateCard()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
-	public void deleteCard(UUID id) {
+	public int deleteCard(UUID id) {
 		log.trace("deleteCard()");
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 }

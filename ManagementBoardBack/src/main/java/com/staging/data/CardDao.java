@@ -8,8 +8,8 @@ public interface CardDao {
 	
 	int addCard(Card card);
 	
-	void updateCard(Card card);
+	int updateCard(Card card);
 	
-	void deleteCard(UUID id);
+	int deleteCard(UUID id);
 
 }

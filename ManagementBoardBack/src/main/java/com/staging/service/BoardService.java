@@ -12,13 +12,13 @@ import com.staging.data.BoardDao;
 import com.staging.model.Board;
 
 @Service
-public class BoardService {
+public class BoardService extends GenericService {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	private final BoardDao boardDao;
 	
-	@Autowired
-	public BoardService(@Qualifier("fakeDao") BoardDao boardDao) {
+	@Autowired // daoQualifier is specified in GenericService
+	public BoardService(@Qualifier(daoQualifier) BoardDao boardDao) {
 		this.boardDao = boardDao;
 	}
 	
@@ -27,13 +27,13 @@ public class BoardService {
 		return boardDao.addBoard(board);
 	}
 	
-	public void updateBoard(Board board) {
+	public int updateBoard(Board board) {
 		log.trace("updateBoard()");
-		boardDao.updateBoard(board);
+		return boardDao.updateBoard(board);
 	}
 	
-	public void deleteBoard(UUID id) {
+	public int deleteBoard(UUID id) {
 		log.trace("deleteBoard()");
-		boardDao.deleteBoard(id);
+		return boardDao.deleteBoard(id);
 	}
 }

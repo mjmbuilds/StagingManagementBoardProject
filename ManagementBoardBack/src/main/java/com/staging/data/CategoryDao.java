@@ -8,8 +8,8 @@ public interface CategoryDao {
 	
 	int addCategory(Category category);
 	
-	void updateCategory(Category category);
+	int updateCategory(Category category);
 	
-	void deleteCategory(UUID id);
+	int deleteCategory(UUID id);
 	
 }

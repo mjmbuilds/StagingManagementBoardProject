@@ -12,13 +12,13 @@ import com.staging.data.CategoryDao;
 import com.staging.model.Category;
 
 @Service
-public class CategoryService {
+public class CategoryService extends GenericService {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	private final CategoryDao categoryDao;
 	
-	@Autowired
-	public CategoryService(@Qualifier("fakeDao") CategoryDao categoryDao) {
+	@Autowired // daoQualifier is specified in GenericService
+	public CategoryService(@Qualifier(daoQualifier) CategoryDao categoryDao) {
 		this.categoryDao = categoryDao;
 	}
 	
@@ -27,13 +27,13 @@ public class CategoryService {
 		return categoryDao.addCategory(category);
 	}
 	
-	public void updateCategoryd(Category category) {
+	public int updateCategoryd(Category category) {
 		log.trace("updateCategoryd()");
-		categoryDao.updateCategory(category);
+		return categoryDao.updateCategory(category);
 	}
 	
-	public void deleteCategory(UUID id) {
+	public int deleteCategory(UUID id) {
 		log.trace("deleteCategory()");
-		categoryDao.deleteCategory(id);
+		return categoryDao.deleteCategory(id);
 	}
 }

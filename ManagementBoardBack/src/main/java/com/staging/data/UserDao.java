@@ -1,20 +1,17 @@
 package com.staging.data;
 
-import java.util.List;
+import java.util.UUID;
 
 import com.staging.model.User;
 
 public interface UserDao {
 	
-	/** 
-	 * Adds a user.
-	 * @param user The user to be added.
-	 * @return 0 if success. -1 if add failed.
-	 */
 	int addUser(User user);
 	
-	User getUserByUsernameAndPassword(String username, String password);
+	int updateUser(User user);
 	
-	List<User> getAllUsers();
+	int deleteUser(UUID id);
+	
+	User getUserByUsernameAndPassword(String username, String password);
 	
 }

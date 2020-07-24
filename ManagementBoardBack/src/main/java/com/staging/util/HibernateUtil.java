@@ -9,33 +9,38 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class HibernateUtil {
-	private static HibernateUtil hu;
+	private static StandardServiceRegistry registry;
 	private static SessionFactory sessionFactory;
 	
-	private HibernateUtil() {
-		super();
-	}
-	public synchronized static HibernateUtil getHibernateUtil() {
-		if (hu == null) {
-			hu = new HibernateUtil();
-		}
-		return hu;
-	}
-	
-	public synchronized static SessionFactory getSessionFactory() {
+	public synchronized static Session getSession() {
 		if (sessionFactory == null) {
-			StandardServiceRegistry standardRegistry =
-					new StandardServiceRegistryBuilder().configure().build();
-			Metadata meta = new MetadataSources(standardRegistry)
-					.getMetadataBuilder()
-					.applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
-					.build();
-			sessionFactory = meta.getSessionFactoryBuilder().build();
+			try {
+				// Create registry
+				registry = new StandardServiceRegistryBuilder().configure().build();
+
+				// Create Metadata
+				Metadata metadata = new MetadataSources(registry)
+						.getMetadataBuilder()
+						.applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
+						.build();
+
+				// Create SessionFactory
+				sessionFactory = metadata.getSessionFactoryBuilder().build();				
+			} catch (Exception e) {
+                //e.printStackTrace();
+                if (registry != null) {
+                    StandardServiceRegistryBuilder.destroy(registry);
+                }
+            }
 		}
-		return sessionFactory;
+		return sessionFactory.openSession();
 	}
 	
-	public static Session getSession() {
-		return getSessionFactory().openSession();
-	}
+
+    public static void shutdown() {
+        if (registry != null) {
+            StandardServiceRegistryBuilder.destroy(registry);
+        }
+    }
+
 }

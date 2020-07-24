@@ -1,17 +1,15 @@
 package com.staging.model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.*;
 
-//TODO resolve
-//import com.fasterxml.jackson.annotation.JsonCreator;
-//import com.fasterxml.jackson.annotation.JsonProperty;
-
 @Entity
-@Table
-public class User {
+@Table(name = "mb_user")
+public class User implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@Column(name = "user_id")
@@ -24,8 +22,9 @@ public class User {
 	private String username;
 	@Column(name = "user_password")
 	private String password;
+	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "user_id")
 	@OneToMany
-    @JoinTable(joinColumns = @JoinColumn(name = "user_id"))
+	@JoinColumn(name="user_id")
 	private List<Board> boards;
 
 	public User() {
@@ -45,24 +44,6 @@ public class User {
 		this.password = password;
 		this.boards = null;
 	}
-	
-	//TODO resolve
-	/* 
-	// JsonCreator and JsonProperty not actually needed??? maybe only if property names differ?
-	@JsonCreator
-	public User(
-			@JsonProperty("firstName") String firstName, 
-			@JsonProperty("lastName")String lastName, 
-			@JsonProperty("username")String username, 
-			@JsonProperty("password") String password
-			) {
-		this.id = UUID.randomUUID();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.username = username;
-		this.password = password;
-	}
-	*/
 	
 	/**
 	 * Generates a new unique id

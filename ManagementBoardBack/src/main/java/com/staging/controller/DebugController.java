@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.staging.model.User;
-import com.staging.service.UserService;
+import com.staging.service.DebugService;
 
 @RestController
 @RequestMapping("/api/debug")
@@ -20,11 +20,11 @@ import com.staging.service.UserService;
 public class DebugController {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
-	private final UserService userService;
+	private final DebugService debugService;
 
 	@Autowired
-	public DebugController(UserService userService) {
-		this.userService = userService;
+	public DebugController(DebugService debugService) {
+		this.debugService = debugService;
 	}
 	
 	// prints the request data to the log
@@ -36,13 +36,31 @@ public class DebugController {
 		log.debug("Data from Request:\n" + data);
 	}
 	
+	// drop and recreate tables
+	@RequestMapping("reset-db")
+	public void resetDB() {
+		log.trace("\n");
+		log.trace("resetDB()");
+		log.info("Request to '/api/debug/reset-db' ");
+		debugService.resetDB();
+	}
+	
+	// initializes sample user
+	@RequestMapping("init-sample-user")
+	public void initSampleUser() {
+		log.trace("\n");
+		log.trace("initSampleUser()");
+		log.info("Request to '/api/debug/init-sample-user' ");
+		debugService.initSampleUser();
+	}
+	
 	// returns data for all users
 	@GetMapping("all-users")
 	public List<User> getAllUsers() {
 		log.trace("\n");
 		log.trace("getAllUsers()");
 		log.info("GET Request to '/api/debug/all-users' ");
-		return userService.getAllUsers();
+		return debugService.getAllUsers();
 	}
 	
 }
