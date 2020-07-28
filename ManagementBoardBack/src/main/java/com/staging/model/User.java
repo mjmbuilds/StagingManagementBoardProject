@@ -5,7 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "mb_user")
@@ -28,8 +35,6 @@ public class User implements Serializable {
 	@Column(name = "user_password")
 	private String password;
 	
-	//@OneToMany(cascade = CascadeType.ALL)
-	//@JoinColumn(name = "fk_user", referencedColumnName = "user_id")
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Board> boards;
 
@@ -51,11 +56,14 @@ public class User implements Serializable {
 		this.boards = new ArrayList<Board>();
 	}
 	
-	/**
-	 * Generates a new unique id
-	 */
-	public void generateId() {
-		this.id = UUID.randomUUID();
+	public void addBoard(Board board) {
+		boards.add(board);
+		board.setUser(this);
+	}
+	
+	public void removeBoard(Board board) {
+		boards.remove(board);
+		board.setUser(null);
 	}//----------------------------------------------------------------
 
 	public UUID getId() {

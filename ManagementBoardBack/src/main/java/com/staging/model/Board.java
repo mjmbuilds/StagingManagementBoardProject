@@ -1,10 +1,19 @@
 package com.staging.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "mb_board")
@@ -19,8 +28,6 @@ public class Board implements Serializable {
 	@JoinColumn(name = "fk_user")
 	private User user;
 	
-	//private String fk_user;
-	
 	@Column(name = "board_title")
 	private String title;
 	
@@ -31,21 +38,31 @@ public class Board implements Serializable {
 		this.id = UUID.randomUUID();
 		this.user = null;
 		this.title = null;
-		this.categories = null;
+		this.categories = new ArrayList<Category>();
 	}
 	
 	public Board(String title) {
 		this.id = UUID.randomUUID();
 		this.user = null;
 		this.title = title;
-		this.categories = null;
+		this.categories = new ArrayList<Category>();
 	}
 	
 	public Board(String title, User user) {
 		this.id = UUID.randomUUID();
 		this.user = user;
 		this.title = title;
-		this.categories = null;
+		this.categories = new ArrayList<Category>();
+	}
+	
+	public void addCategory(Category category) {
+		categories.add(category);
+		category.setBoard(this);
+	}
+	
+	public void removeCategory(Category category) {
+		categories.remove(category);
+		category.setBoard(null);
 	}//----------------------------------------------------------------
 
 	public UUID getId() {

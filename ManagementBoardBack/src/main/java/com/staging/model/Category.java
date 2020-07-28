@@ -1,10 +1,19 @@
 package com.staging.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "mb_category")
@@ -29,21 +38,31 @@ public class Category implements Serializable {
 		this.id = UUID.randomUUID();
 		this.board = null;
 		this.title = null;
-		this.cards = null;
+		this.cards = new ArrayList<Card>();
 	}
 
 	public Category(String title) {
 		this.id = UUID.randomUUID();
 		this.board = null;
 		this.title = title;
-		this.cards = null;
+		this.cards = new ArrayList<Card>();
 	}
 	
 	public Category(String title, Board board) {
 		this.id = UUID.randomUUID();
 		this.board = board;
 		this.title = title;
-		this.cards = null;
+		this.cards = new ArrayList<Card>();
+	}
+	
+	public void addCard(Card card) {
+		cards.add(card);
+		card.setCategory(this);
+	}
+	
+	public void removeCard(Card card) {
+		cards.remove(card);
+		card.setCategory(null);
 	}//----------------------------------------------------------------
 
 	public UUID getId() {

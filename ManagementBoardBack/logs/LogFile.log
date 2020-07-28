@@ -650,3 +650,1056 @@ User [id=00aab114-b736-4c8e-8a42-5be53e44db03, firstName=Michael, lastName=Mead,
 2020-07-27 19:19:44 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
 2020-07-27 19:19:44 TRACE com.staging.service.DebugService - getAllUsers()
 2020-07-27 19:19:44 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 13:56:29 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 8100 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 13:56:29 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 13:56:29 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 13:56:30 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.762 seconds (JVM running for 2.12)
+2020-07-28 13:56:30 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 13:56:30 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 13:56:30 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 13:56:33 TRACE c.s.controller.DebugController - 
+
+2020-07-28 13:56:33 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 13:56:33 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 13:56:33 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 13:56:33 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 13:56:35 INFO  com.staging.data.HibernateDataImpl - Found 0 users.
+2020-07-28 14:00:35 TRACE c.staging.controller.MainController - 
+
+2020-07-28 14:00:35 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 14:00:35 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 14:00:35 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 14:00:35 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 14:00:35 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 14:00:35 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-07-28 14:04:18 TRACE c.staging.controller.MainController - 
+
+2020-07-28 14:04:18 TRACE c.staging.controller.MainController - addUser()
+2020-07-28 14:04:18 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-07-28 14:04:18 TRACE com.staging.service.UserService - addUser()
+2020-07-28 14:04:18 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-07-28 14:04:18 INFO  com.staging.data.HibernateDataImpl - Successfully added user: dsmith
+2020-07-28 14:05:12 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:05:12 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 14:05:12 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 14:05:12 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 14:05:12 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 14:05:12 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-07-28 14:10:34 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 16964 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 14:10:34 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 14:10:34 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 14:10:35 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.608 seconds (JVM running for 1.925)
+2020-07-28 14:10:35 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 14:10:35 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 14:10:35 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 14:10:39 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:10:39 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 14:10:39 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 14:10:39 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 14:10:39 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 14:10:41 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-07-28 14:14:45 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:14:45 TRACE c.s.controller.DebugController - initSampleUser()
+2020-07-28 14:14:45 INFO  c.s.controller.DebugController - Request to '/api/debug/init-sample-user' 
+2020-07-28 14:14:45 TRACE com.staging.service.DebugService - initSampleUser()
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - initSampleUser()
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 14:14:45 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 14:14:45 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 14:15:12 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:15:12 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 14:15:12 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 14:15:12 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 14:15:12 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 14:15:12 INFO  com.staging.data.HibernateDataImpl - Found 2 users.
+2020-07-28 14:15:59 TRACE c.staging.controller.MainController - 
+
+2020-07-28 14:15:59 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 14:15:59 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 14:15:59 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 14:15:59 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 14:15:59 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 14:15:59 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 14:18:34 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 16216 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 14:18:34 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 14:18:34 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 14:18:35 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.655 seconds (JVM running for 1.988)
+2020-07-28 14:18:35 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 14:18:35 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 14:18:35 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 14:20:46 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:20:46 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 14:20:46 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 14:20:46 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 14:20:46 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 14:20:48 INFO  com.staging.data.HibernateDataImpl - Found 2 users.
+2020-07-28 14:21:04 TRACE c.staging.controller.MainController - 
+
+2020-07-28 14:21:04 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 14:21:04 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 14:21:04 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 14:21:04 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 14:21:04 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 14:21:04 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 14:24:02 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:24:02 TRACE c.s.controller.DebugController - resetDB()
+2020-07-28 14:24:02 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-07-28 14:24:02 TRACE com.staging.service.DebugService - resetDB()
+2020-07-28 14:24:02 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-07-28 14:34:27 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 11192 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 14:34:27 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 14:34:27 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 14:34:28 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.615 seconds (JVM running for 1.943)
+2020-07-28 14:34:28 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 14:34:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 14:34:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 14:34:41 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:34:41 TRACE c.s.controller.DebugController - resetDB()
+2020-07-28 14:34:41 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-07-28 14:34:41 TRACE com.staging.service.DebugService - resetDB()
+2020-07-28 14:34:41 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-07-28 14:37:27 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 10172 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 14:37:27 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 14:37:27 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 14:37:28 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.621 seconds (JVM running for 1.935)
+2020-07-28 14:37:28 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 14:37:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 14:37:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 14:44:36 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 6332 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 14:44:36 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 14:44:36 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 14:44:37 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.619 seconds (JVM running for 1.936)
+2020-07-28 14:44:37 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 14:44:37 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 14:44:37 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 14:44:47 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:44:47 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 14:44:47 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 14:44:47 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 14:44:47 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 14:44:49 INFO  com.staging.data.HibernateDataImpl - Found 2 users.
+2020-07-28 14:45:09 TRACE c.staging.controller.MainController - 
+
+2020-07-28 14:45:09 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 14:45:09 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 14:45:09 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 14:45:09 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 14:45:09 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 14:45:09 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 14:45:22 TRACE c.s.controller.DebugController - 
+
+2020-07-28 14:45:22 TRACE c.s.controller.DebugController - resetDB()
+2020-07-28 14:45:22 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-07-28 14:45:22 TRACE com.staging.service.DebugService - resetDB()
+2020-07-28 14:45:22 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-07-28 15:02:28 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 19204 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:02:28 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:02:28 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:02:30 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.608 seconds (JVM running for 1.925)
+2020-07-28 15:02:30 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:02:30 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:02:30 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:02:35 TRACE c.s.controller.DebugController - 
+
+2020-07-28 15:02:35 TRACE c.s.controller.DebugController - resetDB()
+2020-07-28 15:02:35 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-07-28 15:02:35 TRACE com.staging.service.DebugService - resetDB()
+2020-07-28 15:02:35 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-07-28 15:07:04 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 6460 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:07:04 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:07:04 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:07:05 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.622 seconds (JVM running for 1.94)
+2020-07-28 15:07:05 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:07:05 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:07:05 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:07:41 TRACE c.s.controller.DebugController - 
+
+2020-07-28 15:07:41 TRACE c.s.controller.DebugController - initSampleUser()
+2020-07-28 15:07:41 INFO  c.s.controller.DebugController - Request to '/api/debug/init-sample-user' 
+2020-07-28 15:07:41 TRACE com.staging.service.DebugService - initSampleUser()
+2020-07-28 15:07:41 TRACE com.staging.data.HibernateDataImpl - initSampleUser()
+2020-07-28 15:07:41 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:07:43 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:07:43 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:11 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:08:11 TRACE c.staging.controller.MainController - addUser()
+2020-07-28 15:08:11 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-07-28 15:08:11 TRACE com.staging.service.UserService - addUser()
+2020-07-28 15:08:11 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-07-28 15:08:11 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-07-28 15:08:48 TRACE c.s.controller.DebugController - 
+
+2020-07-28 15:08:48 TRACE c.s.controller.DebugController - initSampleUser()
+2020-07-28 15:08:48 INFO  c.s.controller.DebugController - Request to '/api/debug/init-sample-user' 
+2020-07-28 15:08:48 TRACE com.staging.service.DebugService - initSampleUser()
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - initSampleUser()
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-07-28 15:08:48 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-07-28 15:08:48 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-07-28 15:09:07 TRACE c.s.controller.DebugController - 
+
+2020-07-28 15:09:07 TRACE c.s.controller.DebugController - getAllUsers()
+2020-07-28 15:09:07 INFO  c.s.controller.DebugController - GET Request to '/api/debug/all-users' 
+2020-07-28 15:09:07 TRACE com.staging.service.DebugService - getAllUsers()
+2020-07-28 15:09:07 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-07-28 15:09:07 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-07-28 15:09:13 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:09:13 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 15:09:13 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 15:09:13 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 15:09:13 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 15:09:13 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 15:09:13 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 15:09:29 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:09:29 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 15:09:29 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 15:09:29 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 15:09:29 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 15:09:29 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 15:09:29 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 15:21:47 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 308 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:21:47 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:21:47 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:21:48 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.634 seconds (JVM running for 1.963)
+2020-07-28 15:21:48 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:21:48 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:21:48 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:21:50 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:21:50 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 15:21:50 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 15:21:50 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 15:21:50 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 15:21:50 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 15:21:52 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 15:21:52 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 15:27:16 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 16828 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:27:16 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:27:16 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:27:17 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.61 seconds (JVM running for 1.927)
+2020-07-28 15:27:17 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:27:17 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:27:17 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:27:21 TRACE c.s.controller.DebugController - 
+
+2020-07-28 15:27:21 TRACE c.s.controller.DebugController - resetDB()
+2020-07-28 15:27:21 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-07-28 15:27:21 TRACE com.staging.service.DebugService - resetDB()
+2020-07-28 15:27:21 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-07-28 15:29:06 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 9416 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:29:06 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:29:06 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:29:08 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.624 seconds (JVM running for 1.938)
+2020-07-28 15:29:08 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:29:08 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:29:08 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:29:17 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:29:17 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 15:29:17 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 15:29:17 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 15:29:17 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 15:29:17 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 15:29:19 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 15:29:19 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 15:32:37 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 9072 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 15:32:37 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 15:32:37 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 15:32:39 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.637 seconds (JVM running for 1.958)
+2020-07-28 15:32:39 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 15:32:39 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 15:32:39 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 15:32:44 TRACE c.staging.controller.MainController - 
+
+2020-07-28 15:32:44 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 15:32:44 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 15:32:44 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 15:32:44 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 15:32:44 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 15:32:46 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 15:32:46 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:18:10 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 2356 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:18:10 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:18:10 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:18:11 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.615 seconds (JVM running for 1.932)
+2020-07-28 16:18:11 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:18:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:18:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:18:16 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:18:16 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:18:16 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:18:16 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:18:16 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:18:16 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:18:18 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:18:18 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:18:31 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 16428 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:18:31 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:18:31 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:18:33 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.628 seconds (JVM running for 1.955)
+2020-07-28 16:18:33 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:18:33 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:18:33 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:18:35 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:18:35 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:18:35 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:18:35 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:18:35 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:18:35 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:18:36 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-07-28 16:18:36 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-07-28 16:20:23 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:20:23 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:20:23 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:20:23 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:20:23 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:20:23 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:20:23 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-07-28 16:20:23 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-07-28 16:21:06 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 2668 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:21:06 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:21:06 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:21:08 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.595 seconds (JVM running for 1.911)
+2020-07-28 16:21:08 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:21:08 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:21:08 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:21:08 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:21:08 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:21:08 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:21:08 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:21:08 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:21:08 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:21:10 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:21:10 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:22:10 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 10792 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:22:10 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:22:10 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:22:11 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.629 seconds (JVM running for 1.95)
+2020-07-28 16:22:11 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:22:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:22:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:22:13 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:22:13 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:22:13 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:22:13 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:22:13 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:22:13 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:22:15 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:22:15 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:22:36 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 21848 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:22:36 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:22:36 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:22:37 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.629 seconds (JVM running for 1.943)
+2020-07-28 16:22:37 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:22:37 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:22:37 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:22:40 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:22:40 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:22:40 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:22:40 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:22:40 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:22:40 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:22:42 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:22:42 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:23:10 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 9912 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:23:10 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:23:10 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:23:12 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.609 seconds (JVM running for 1.928)
+2020-07-28 16:23:12 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:23:12 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:23:12 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:23:18 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:23:18 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:23:18 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:23:18 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:23:18 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:23:18 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:23:20 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:23:20 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:25:02 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 21732 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:25:02 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:25:02 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:25:04 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.587 seconds (JVM running for 1.898)
+2020-07-28 16:25:04 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:25:04 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:25:04 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:25:07 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:25:07 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:25:07 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:25:07 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:25:07 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:25:07 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:25:09 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:25:09 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:26:04 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 1236 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:26:04 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:26:04 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:26:05 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.631 seconds (JVM running for 1.958)
+2020-07-28 16:26:05 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:26:05 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:26:05 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:26:07 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:26:07 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:26:07 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:26:07 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:26:07 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:26:07 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:26:09 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:26:09 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:27:51 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 3764 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:27:51 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:27:51 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:27:52 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.594 seconds (JVM running for 1.909)
+2020-07-28 16:27:52 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:27:52 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:27:52 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:27:58 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:27:58 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:27:58 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:27:58 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:27:58 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:27:58 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:28:00 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:32:35 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 6476 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:32:35 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:32:35 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:32:36 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.613 seconds (JVM running for 1.928)
+2020-07-28 16:32:36 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:32:36 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:32:36 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:32:40 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:32:40 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:32:40 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:32:40 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:32:40 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:32:40 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:32:42 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-07-28 16:32:42 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-07-28 16:33:14 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 17216 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:33:14 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:33:14 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:33:15 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.604 seconds (JVM running for 1.924)
+2020-07-28 16:33:15 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:33:15 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:33:15 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:33:16 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:33:16 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:33:16 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:33:16 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:33:16 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:33:16 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:33:18 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:33:18 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:50:14 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 12900 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:50:14 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:50:14 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:50:15 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.629 seconds (JVM running for 1.944)
+2020-07-28 16:50:15 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:50:15 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:50:15 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:50:22 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:50:22 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:50:22 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:50:22 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:50:22 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:50:22 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:50:24 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:55:10 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 8200 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:55:10 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:55:10 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:55:11 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.644 seconds (JVM running for 1.971)
+2020-07-28 16:55:11 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:55:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:55:11 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:55:13 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:55:13 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:55:13 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:55:13 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:55:13 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:55:13 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:55:15 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:55:15 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:56:16 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 19844 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:56:16 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:56:16 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:56:17 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.633 seconds (JVM running for 1.949)
+2020-07-28 16:56:17 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:56:17 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:56:17 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:56:22 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:56:22 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:56:22 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:56:22 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:56:22 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:56:22 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:56:24 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:56:24 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:57:13 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 23388 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:57:13 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:57:13 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:57:14 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.617 seconds (JVM running for 1.932)
+2020-07-28 16:57:14 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:57:14 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:57:14 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:57:18 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:57:18 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:57:18 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:57:18 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:57:18 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:57:18 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:57:20 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:57:20 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:58:37 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 6744 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:58:37 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:58:37 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:58:39 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.608 seconds (JVM running for 1.924)
+2020-07-28 16:58:39 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:58:39 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:58:39 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:58:40 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:58:40 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:58:40 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:58:40 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:58:40 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:58:40 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:58:42 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:58:42 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-07-28 16:59:36 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 22604 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-07-28 16:59:36 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-07-28 16:59:36 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-07-28 16:59:38 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.618 seconds (JVM running for 1.955)
+2020-07-28 16:59:38 TRACE com.staging.ManagementBoardBack - 
+
+2020-07-28 16:59:38 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-07-28 16:59:38 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-07-28 16:59:39 TRACE c.staging.controller.MainController - 
+
+2020-07-28 16:59:39 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-07-28 16:59:39 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-07-28 16:59:39 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-07-28 16:59:39 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-07-28 16:59:39 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-07-28 16:59:41 INFO  com.staging.data.HibernateDataImpl - User found
+2020-07-28 16:59:41 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=31323638-4433-3045-4232-344534343632, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]

@@ -13,16 +13,19 @@
         <property name="hibernate.connection.username">c##management_board_local</property>
         <property name="hibernate.connection.password">pass</property>     
  
+		<!-- property name="javax.persistence.schema-generation.scripts.action">create</property>
+		<property name="javax.persistence.schema-generation.scripts.create-target">./db/DBsetup.sql</property -->
+ 
 		<!-- Echo the SQL to stdout -->
  		<property name="show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
 		<property name="use_sql_comments">true</property>
  
         <!-- Mapping With Model Class Containing Annotations -->
-        <mapping class="com.staging.model.User"></mapping>
-        <mapping class="com.staging.model.Board"></mapping>
-        <mapping class="com.staging.model.Category"></mapping>
-        <mapping class="com.staging.model.Card"></mapping>
+        <mapping class="com.staging.model.User"/>
+        <mapping class="com.staging.model.Board"/>
+        <mapping class="com.staging.model.Category"/>
+        <mapping class="com.staging.model.Card"/>
 
     </session-factory>
 </hibernate-configuration>
