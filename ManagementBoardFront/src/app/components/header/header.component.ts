@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     // Check if there is a valid session
     if (this.authServ.hasSession) {
-      //TODO adjust to use session
+      //TODO adjust to use tokens
       this.username = this.authServ.getSessionUsername();
       this.password = this.authServ.getSessionPassword();
       this.login();

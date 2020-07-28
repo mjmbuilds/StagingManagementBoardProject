@@ -1,6 +1,7 @@
 package com.staging.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,17 +15,22 @@ public class User implements Serializable {
 	@Id
 	@Column(name = "user_id")
 	private UUID id;
+	
 	@Column(name = "user_firstname")
 	private String firstName;
+	
 	@Column(name = "user_lastname")
 	private String lastName;
+	
 	@Column(name = "user_username")
 	private String username;
+	
 	@Column(name = "user_password")
 	private String password;
-	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "user_id")
-	@OneToMany
-	@JoinColumn(name="user_id")
+	
+	//@OneToMany(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "fk_user", referencedColumnName = "user_id")
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Board> boards;
 
 	public User() {
@@ -33,7 +39,7 @@ public class User implements Serializable {
 		this.lastName = null;
 		this.username = null;
 		this.password = null;
-		this.boards = null;
+		this.boards = new ArrayList<Board>();
 	}
 	
 	public User(String firstName, String lastName, String username, String password) {
@@ -42,7 +48,7 @@ public class User implements Serializable {
 		this.lastName = lastName;
 		this.username = username;
 		this.password = password;
-		this.boards = null;
+		this.boards = new ArrayList<Board>();
 	}
 	
 	/**
@@ -50,9 +56,7 @@ public class User implements Serializable {
 	 */
 	public void generateId() {
 		this.id = UUID.randomUUID();
-	}
-	
-	//----------------------------------------------------------------
+	}//----------------------------------------------------------------
 
 	public UUID getId() {
 		return id;
@@ -162,5 +166,5 @@ public class User implements Serializable {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
 				+ ", password=" + password + ", boards=" + boards + "]";
 	}
-	
+
 }
