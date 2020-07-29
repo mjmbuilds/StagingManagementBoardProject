@@ -14,6 +14,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "mb_user")
 public class User implements Serializable {
@@ -21,6 +23,7 @@ public class User implements Serializable {
 	
 	@Id
 	@Column(name = "user_id")
+	@Type(type="uuid-char")
 	private UUID id;
 	
 	@Column(name = "user_firstname")

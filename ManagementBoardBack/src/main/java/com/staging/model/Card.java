@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "mb_card")
 public class Card implements Serializable {
@@ -18,6 +20,7 @@ public class Card implements Serializable {
 
 	@Id
 	@Column(name = "card_id")
+	@Type(type="uuid-char")
 	private UUID id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)

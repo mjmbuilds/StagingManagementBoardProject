@@ -4,7 +4,7 @@ DROP TABLE mb_category CASCADE CONSTRAINTS;
 DROP TABLE mb_card CASCADE CONSTRAINTS;
 
 CREATE TABLE mb_user (
-    user_id VARCHAR2(36),
+    user_id VARCHAR2(40),
     user_firstname VARCHAR2(50) NOT NULL,
     user_lastname VARCHAR2(50) NOT NULL,
     user_username VARCHAR2(50) NOT NULL,
@@ -13,21 +13,21 @@ CREATE TABLE mb_user (
 );
 
 CREATE TABLE mb_board (
-    board_id VARCHAR2(36),
+    board_id VARCHAR2(40),
     fk_user VARCHAR2(36),
     board_title VARCHAR2(50) NOT NULL,
     CONSTRAINT pk_board PRIMARY KEY (board_id)
 );
 
 CREATE TABLE mb_category (
-    category_id VARCHAR2(36),
+    category_id VARCHAR2(40),
     fk_board VARCHAR2(36),
     category_title VARCHAR2(50) NOT NULL,
     CONSTRAINT pk_category PRIMARY KEY (category_id)
 );
 
 CREATE TABLE mb_card (
-    card_id VARCHAR2(36),
+    card_id VARCHAR2(40),
     fk_category VARCHAR2(36),
     card_title VARCHAR2(50) NOT NULL,
     card_description VARCHAR2(1000) NOT NULL,

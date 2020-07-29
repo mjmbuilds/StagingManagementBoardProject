@@ -15,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "mb_category")
 public class Category implements Serializable {
@@ -22,6 +24,7 @@ public class Category implements Serializable {
 
 	@Id
 	@Column(name = "category_id")
+	@Type(type="uuid-char")
 	private UUID id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
