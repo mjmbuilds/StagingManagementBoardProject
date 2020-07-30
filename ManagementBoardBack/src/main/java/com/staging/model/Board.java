@@ -17,8 +17,12 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "mb_board")
+@JsonIgnoreProperties({"user"})
+//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "user"})
 public class Board implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -27,6 +31,9 @@ public class Board implements Serializable {
 	@Type(type="uuid-char")
 	private UUID id;
 	
+	//@Column(name = "fk_user")
+	//private String owningUserId;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_user")
 	private User user;
@@ -34,7 +41,7 @@ public class Board implements Serializable {
 	@Column(name = "board_title")
 	private String title;
 	
-	@OneToMany(mappedBy = "board", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Category> categories;
 	
 	public Board() {
@@ -145,7 +152,7 @@ public class Board implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Board [id=" + id + ", user=" + user + ", title=" + title + ", categories=" + categories + "]";
+		return "Board [id=" + id + ", user-id=" + user.getId() + ", title=" + title + ", categories=" + categories + "]";
 	}
 
 }

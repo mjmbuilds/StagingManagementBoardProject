@@ -17,8 +17,11 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "mb_category")
+@JsonIgnoreProperties({"board"})
 public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -27,6 +30,9 @@ public class Category implements Serializable {
 	@Type(type="uuid-char")
 	private UUID id;
 	
+	//@Column(name = "fk_board")
+	//private String owningBoardId;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_board")
 	private Board board;
@@ -34,7 +40,7 @@ public class Category implements Serializable {
 	@Column(name = "category_title")
 	private String title;
 	
-	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Card> cards;
 	
 	public Category() {
@@ -145,7 +151,7 @@ public class Category implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", board=" + board + ", title=" + title + ", cards=" + cards + "]";
+		return "Category [id=" + id + ", board-id=" + board.getId() + ", title=" + title + ", cards=" + cards + "]";
 	}
 
 }
