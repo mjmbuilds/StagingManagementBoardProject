@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     HeaderComponent,
     HomeComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

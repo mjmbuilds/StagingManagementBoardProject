@@ -1,0 +1,25 @@
+<div id="account">
+    <form onsubmit="return false;">
+        <h2>Account Info</h2>
+        <div class="accountRow">
+            <label for="accountFirstname">First Name</label>
+            <input [(ngModel)]='accountFirstname' type="text" name="accountFirstname" placeholder="First Name" required>
+        </div>
+        <div class="accountRow">
+            <label for="accountLastname">Last Name</label>
+            <input [(ngModel)]='accountLastname' type="text" name="accountLastname" placeholder="Last Name" required>
+        </div>
+        <div class="accountRow">
+            <label for="accountUsername">Username</label>
+            <input [(ngModel)]='accountUsername' type="text" name="accountUsername" placeholder="Username" required>
+        </div>
+        <div>
+            <input type="button" class="btn-general" name="submitBtn" value="Update" (click)="submitUpdate()">
+            <input type="button" class="btn-general" name="resetBtn" value="Reset" (click)="reset()">
+        </div>
+        <div class="accountHR"></div>
+        <div class="accountRow">
+            <input type="button" class="btn-general" name="changePassBtn" value="Change Password">
+        </div>
+    </form>
+</div>

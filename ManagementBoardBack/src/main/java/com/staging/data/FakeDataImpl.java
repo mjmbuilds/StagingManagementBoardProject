@@ -76,7 +76,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
-	public int deleteUser(UUID id) {
+	public int deleteUser(String id) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -111,7 +111,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
-	public int deleteBoard(UUID id) {
+	public int deleteBoard(String id) {
 		log.trace("deleteBoard()");
 		// TODO Auto-generated method stub
 		return 0;
@@ -134,7 +134,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
-	public int deleteCategory(UUID id) {
+	public int deleteCategory(String id) {
 		log.trace("deleteCategory()");
 		// TODO Auto-generated method stub
 		return 0;
@@ -155,7 +155,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
-	public int deleteCard(UUID id) {
+	public int deleteCard(String id) {
 		log.trace("deleteCard()");
 		// TODO Auto-generated method stub
 		return 0;

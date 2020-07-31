@@ -58,11 +58,11 @@ public class MainController {
 	}
 	
 	@DeleteMapping("user/remove")
-	public void deleteUser(@RequestBody User user) {
+	public void deleteUser(@RequestBody String id) {
 		log.trace("\n");
 		log.trace("deleteUser()");
 		log.info("DELETE Request to '/api/user/remove' ");
-		userService.deleteUser(user.getId());
+		userService.deleteUser(id);
 	}
 	
 	@PostMapping("user/login")
@@ -106,11 +106,11 @@ public class MainController {
 	}
 	
 	@DeleteMapping("board/remove")
-	public void deleteBoard(@RequestBody Board board) {
+	public void deleteBoard(@RequestBody String id) {
 		log.trace("\n");
 		log.trace("deleteBoard()");
 		log.info("DELETE Request to '/api/board/remove' ");
-		boardService.deleteBoard(board.getId());
+		boardService.deleteBoard(id);
 	}
 	
 	//-------------------------------------------- Category
@@ -131,11 +131,11 @@ public class MainController {
 	}
 	
 	@DeleteMapping("category/remove")
-	public void deleteCategory(@RequestBody Category category) {
+	public void deleteCategory(@RequestBody String id) {
 		log.trace("\n");
 		log.trace("deleteCategory()");
 		log.info("DELETE Request to '/api/category/remove' ");
-		categoryService.deleteCategory(category.getId());
+		categoryService.deleteCategory(id);
 	}
 	
 	//-------------------------------------------- Card
@@ -156,11 +156,11 @@ public class MainController {
 	}
 	
 	@DeleteMapping("card/remove")
-	public void deleteCard(@RequestBody Card card) {
+	public void deleteCard(@RequestBody String id) {
 		log.trace("\n");
 		log.trace("deleteCard()");
 		log.info("DELETE Request to '/api/card/remove' ");
-		cardService.deleteCard(card.getId());
+		cardService.deleteCard(id);
 	}
 	
 }

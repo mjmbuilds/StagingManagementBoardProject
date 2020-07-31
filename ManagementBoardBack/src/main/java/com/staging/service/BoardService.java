@@ -32,7 +32,7 @@ public class BoardService extends GenericService {
 		return boardDao.updateBoard(board);
 	}
 	
-	public int deleteBoard(UUID id) {
+	public int deleteBoard(String id) {
 		log.trace("deleteBoard()");
 		return boardDao.deleteBoard(id);
 	}

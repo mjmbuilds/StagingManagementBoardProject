@@ -10,7 +10,7 @@
     </span>
     <span id="board-header-right">
         <button id="add-board-btn" class="btn-general">Add Board</button>
-        <button id="delete-board-btn" class="btn-general">Delete Board</button>
+        <button id="delete-board-btn" [disabled]="!activeBoard" class="btn-general">Delete Board</button>
     </span>
 </div>
 

@@ -32,7 +32,7 @@ public class CardService extends GenericService {
 		return cardDao.updateCard(card);
 	}
 	
-	public int deleteCard(UUID id) {
+	public int deleteCard(String id) {
 		log.trace("deleteCard()");
 		return cardDao.deleteCard(id);
 	}

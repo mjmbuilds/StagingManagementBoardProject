@@ -10,7 +10,7 @@ public interface UserDao {
 	
 	int updateUser(User user);
 	
-	int deleteUser(UUID id);
+	int deleteUser(String id);
 	
 	User getUserByUsernameAndPassword(String username, String password);
 	

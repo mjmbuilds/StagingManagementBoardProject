@@ -12,10 +12,23 @@ export class SignupComponent implements OnInit {
   signupLastname: string;
   signupUsername: string;
   signupPassword: string;
+  signupConfirmPassword: string;
 
   constructor(private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
+  }
+
+  canSubmit(): boolean {
+    if (this.signupFirstname
+    && this.signupLastname
+    && this.signupUsername
+    && this.signupPassword
+    && this.signupConfirmPassword
+    && this.signupPassword === this.signupConfirmPassword) {
+      return true;
+    }
+    return false;
   }
 
   closeSignup() {
@@ -23,7 +36,7 @@ export class SignupComponent implements OnInit {
   }
 
   submitSignup() {
-    if (this.signupFirstname && this.signupLastname && this.signupUsername && this.signupPassword) {
+    if (this.canSubmit()) {
       this.authServ.signup(
         this.signupFirstname,
         this.signupLastname,

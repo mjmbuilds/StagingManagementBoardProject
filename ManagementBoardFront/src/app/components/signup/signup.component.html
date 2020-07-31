@@ -1,25 +1,32 @@
 <div id="signup">
-    <form method="POST" onsubmit="return false;">
+    <form onsubmit="return false;">
         <h2>Sign Up</h2>
         <div class="signupRow">
-            <label for="signupFirstname">First Name</label>
             <input [(ngModel)]='signupFirstname' type="text" name="signupFirstname" placeholder="First Name" required>
+            <div *ngIf='!signupFirstname' class="required-msg">*</div>
         </div>
         <div class="signupRow">
-            <label for="signupLastname">Last Name</label>
             <input [(ngModel)]='signupLastname' type="text" name="signupLastname" placeholder="Last Name" required>
+            <div *ngIf='!signupLastname' class="required-msg">*</div>
         </div>
         <div class="signupRow">
-            <label for="signupUsername">Username</label>
             <input [(ngModel)]='signupUsername' type="text" name="signupUsername" placeholder="Username" required>
+            <div *ngIf='!signupUsername' class="required-msg">*</div>
         </div>
         <div class="signupRow">
-            <label for="signupPassword">Password</label>
-            <input [(ngModel)]='signupPassword' type="text" name="signupPassword" placeholder="Password" required>
+            <input [(ngModel)]='signupPassword' type="password" name="signupPassword" placeholder="Password" required>
+            <div *ngIf='!signupPassword' class="required-msg">*</div>
+        </div>
+        <div class="signupRow">
+            <input [(ngModel)]='signupConfirmPassword' type="password"
+                name="signupConfirmPassword" placeholder="Confirm Password" required>
+            <div *ngIf='!signupConfirmPassword' class="required-msg">*</div>
+            <div *ngIf='signupConfirmPassword && signupConfirmPassword != signupPassword' 
+                class="required-msg">Password must match</div>
         </div>
         <div>
-            <input type="submit" name="submitSignupBtn" value="Submit" (click)="submitSignup()">
-            <input type="submit" name="closeSignupBtn" value="Cancel" (click)="closeSignup()">
+            <input type="submit" [disabled]="!canSubmit()" class="btn-general" name="submitSignupBtn" value="Submit" (click)="submitSignup()">
+            <input type="button" class="btn-general" name="closeSignupBtn" value="Cancel" (click)="closeSignup()">
         </div>
     </form>
 </div>

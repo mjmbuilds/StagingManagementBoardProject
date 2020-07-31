@@ -24,9 +24,9 @@ export class BoardComponent implements OnInit {
       this.boards = this.authServ.loggedInUser.boards;
 
       //TODO remove after development (temporary setting of first board on load)
-      if (this.boards && this.boards.length >= 1) {
-        this.selectBoard('0');
-      }
+      //if (this.boards && this.boards.length >= 1) {
+      //  this.selectBoard('0');
+      //}
 
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page

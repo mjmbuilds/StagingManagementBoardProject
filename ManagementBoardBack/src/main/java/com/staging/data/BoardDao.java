@@ -10,6 +10,6 @@ public interface BoardDao {
 	
 	int updateBoard(Board board);
 	
-	int deleteBoard(UUID id);
+	int deleteBoard(String id);
 	
 }

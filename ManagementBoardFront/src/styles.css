@@ -8,3 +8,12 @@ body {
     padding-top: 3px;
     padding-bottom: 3px;
 }
+
+.required-msg {
+    display: inline-block;
+    position: absolute;
+    color: darkred;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-left: 3px;
+}

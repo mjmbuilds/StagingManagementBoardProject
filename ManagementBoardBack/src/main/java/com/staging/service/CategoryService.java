@@ -32,7 +32,7 @@ public class CategoryService extends GenericService {
 		return categoryDao.updateCategory(category);
 	}
 	
-	public int deleteCategory(UUID id) {
+	public int deleteCategory(String id) {
 		log.trace("deleteCategory()");
 		return categoryDao.deleteCategory(id);
 	}

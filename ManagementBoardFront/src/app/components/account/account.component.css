@@ -1,0 +1,29 @@
+#account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type=submit] {
+    margin: 10px;
+}
+
+.accountRow {
+    margin-bottom: 6px;
+}
+
+.accountHR {
+    height: 2px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: gray;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    padding-right: 3px;
+}

@@ -13,8 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Type;
-
 @Entity
 @Table(name = "mb_user")
 public class User implements Serializable {
@@ -22,8 +20,7 @@ public class User implements Serializable {
 	
 	@Id
 	@Column(name = "user_id")
-	@Type(type="uuid-char")
-	private UUID id;
+	private String id;
 	
 	@Column(name = "user_firstname")
 	private String firstName;
@@ -41,7 +38,7 @@ public class User implements Serializable {
 	private List<Board> boards;
 
 	public User() {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.firstName = null;
 		this.lastName = null;
 		this.username = null;
@@ -50,7 +47,7 @@ public class User implements Serializable {
 	}
 	
 	public User(String firstName, String lastName, String username, String password) {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = username;
@@ -68,11 +65,11 @@ public class User implements Serializable {
 		board.setUser(null);
 	}//----------------------------------------------------------------
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

@@ -10,6 +10,6 @@ public interface CardDao {
 	
 	int updateCard(Card card);
 	
-	int deleteCard(UUID id);
+	int deleteCard(String id);
 
 }

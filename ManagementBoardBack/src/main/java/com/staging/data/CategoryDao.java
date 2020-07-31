@@ -10,6 +10,6 @@ public interface CategoryDao {
 	
 	int updateCategory(Category category);
 	
-	int deleteCategory(UUID id);
+	int deleteCategory(String id);
 	
 }

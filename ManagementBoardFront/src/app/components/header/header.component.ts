@@ -32,6 +32,13 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  canSubmit() {
+    if (this.username && this.password) {
+      return true;
+    }
+    return false;
+  }
+
   login(): void {
     this.authServ.login(this.username, this.password).subscribe(
       resp => {

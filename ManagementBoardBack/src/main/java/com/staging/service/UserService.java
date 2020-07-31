@@ -32,7 +32,7 @@ public class UserService extends GenericService {
 		return userDao.updateUser(user);
 	}
 	
-	public int deleteUser(UUID id) {
+	public int deleteUser(String id) {
 		log.trace("deleteUser()");
 		return userDao.deleteUser(id);
 	}

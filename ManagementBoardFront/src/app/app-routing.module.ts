@@ -4,9 +4,11 @@ import { HomeComponent } from './components/home/home.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { BoardComponent } from './components/board/board.component';
+import { AccountComponent } from './components/account/account.component';
 
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
+  {path: 'account', component: AccountComponent},
   {path: 'board', component: BoardComponent},
   {path: '', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}

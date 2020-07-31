@@ -14,8 +14,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Type;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -27,11 +26,11 @@ public class Category implements Serializable {
 
 	@Id
 	@Column(name = "category_id")
-	@Type(type="uuid-char")
-	private UUID id;
+	private String id;
 	
 	//@Column(name = "fk_board")
-	//private String owningBoardId;
+	@Transient
+	private String owningBoardId;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "fk_board")
@@ -44,21 +43,21 @@ public class Category implements Serializable {
 	private List<Card> cards;
 	
 	public Category() {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.board = null;
 		this.title = null;
 		this.cards = new ArrayList<Card>();
 	}
 
 	public Category(String title) {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.board = null;
 		this.title = title;
 		this.cards = new ArrayList<Card>();
 	}
 	
 	public Category(String title, Board board) {
-		this.id = UUID.randomUUID();
+		this.id = UUID.randomUUID().toString();
 		this.board = board;
 		this.title = title;
 		this.cards = new ArrayList<Card>();
@@ -74,12 +73,23 @@ public class Category implements Serializable {
 		card.setCategory(null);
 	}//----------------------------------------------------------------
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getOwningBoardId() {
+		if (owningBoardId == null) {
+			return board.getId();
+		}
+		return owningBoardId;
+	}
+
+	public void setOwningBoardId(String owningBoardId) {
+		this.owningBoardId = owningBoardId;
 	}
 
 	public Board getBoard() {
@@ -88,6 +98,7 @@ public class Category implements Serializable {
 
 	public void setBoard(Board board) {
 		this.board = board;
+		this.owningBoardId = board.getId();
 	}
 
 	public String getTitle() {
@@ -151,7 +162,8 @@ public class Category implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", board-id=" + board.getId() + ", title=" + title + ", cards=" + cards + "]";
+		return "Category [id=" + id + ", owningBoardId=" + owningBoardId + ", title=" + title + ", cards=" + cards
+				+ "]";
 	}
 
 }

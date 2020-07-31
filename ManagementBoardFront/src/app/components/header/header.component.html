@@ -6,19 +6,20 @@
     </div>
     <div id="header-right">
         <span *ngIf="!logedIn" id="logged-out">
-            <form method="POST" onsubmit="return false;">
+            <form onsubmit="return false;">
                 <label for="username">Username</label>
                 <input [(ngModel)]='username' type="text" name="username" placeholder="Username" required>
                 <label for="password">Password</label>
                 <input [(ngModel)]='password' type="text" name="password" type="password" placeholder="Password" required>
-                <input type="submit" name="loginBtn" class="btn-general" value="Log In" (click)="login()">
-                <button name="signupBtn" class="btn-general" (click)="signup()">Sign Up</button>
+                <input type="submit" [disabled]="!canSubmit()" name="loginBtn" class="btn-general" value="Log In" (click)="login()">
+                <input type="button" value="Sign Up" name="signupBtn" class="btn-general" (click)="signup()">
             </form>
         </span>
 
         <span *ngIf="logedIn" id="logged-in">
             Hello {{ logedInUserName }}
             <button [routerLink]="'/board'" name="boardsBtn" class="btn-general">Boards</button>
+            <button [routerLink]="'/account'" name="accountBtn" class="btn-general">Account</button>
             <button name="logoutBtn" class="btn-general" (click)="logout()">Log Out</button>
         </span>
     </div>

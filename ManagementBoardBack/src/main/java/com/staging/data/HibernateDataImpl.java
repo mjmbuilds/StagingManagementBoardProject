@@ -1,8 +1,6 @@
 package com.staging.data;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -82,7 +80,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
-	public int deleteUser(UUID id) {
+	public int deleteUser(String id) {
 		log.trace("deleteUser()");
 		log.info("Deleting user with ID: " + id);
 		Transaction transaction = null;
@@ -128,12 +126,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			log.warn("User not found");
 			//e.printStackTrace();
 		}
-		
-		//TODO try getting nested data to work
-		System.out.println("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-		List<Board> boards = user.getBoards();
-		System.out.println( boards.size() );		
-		
 		log.debug("User data:\n" + user);
 		return user;
 	}
@@ -190,7 +182,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
-	public int deleteBoard(UUID id) {
+	public int deleteBoard(String id) {
 		log.trace("deleteBoard()");
 		log.info("Deleting board with ID: " + id);
 		Transaction transaction = null;
@@ -268,7 +260,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
-	public int deleteCategory(UUID id) {
+	public int deleteCategory(String id) {
 		log.trace("deleteCategory()");
 		log.info("Deleting category with ID: " + id);
 		Transaction transaction = null;
@@ -345,7 +337,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
-	public int deleteCard(UUID id) {
+	public int deleteCard(String id) {
 		log.trace("deleteCard()");
 		log.info("Deleting card with ID: " + id);
 		Transaction transaction = null;
@@ -373,66 +365,10 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	//-------------------------------------------- Debug DAO
 	@Override
 	public void resetDB() {
-		//log.warn("!!!!!!!!!! DROP TABLES - RESET DATABASE !!!!!!!!!!");
 		log.warn("!!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!");
-		Transaction transaction = null;
-		try {
-			Session session = HibernateUtil.openSession();
-			transaction = session.beginTransaction();
-			
-			Query query = session.createQuery("DELETE FROM User");
-	        query.executeUpdate();
-			
-			transaction.commit();
-			//session.close();
-			/*
-			String sql = "DROP TABLE mb_user CASCADE CONSTRAINTS; "
-					+ "DROP TABLE mb_board CASCADE CONSTRAINTS; "
-					+ "DROP TABLE mb_category CASCADE CONSTRAINTS; "
-					+ "DROP TABLE mb_card CASCADE CONSTRAINTS; "
-					+ "CREATE TABLE mb_user ("
-					+ "user_id VARCHAR2(36), "
-					+ "user_firstname VARCHAR2(50) NOT NULL, "
-					+ "user_lastname VARCHAR2(50) NOT NULL, "
-					+ "user_username VARCHAR2(50) NOT NULL, "
-					+ "user_password VARCHAR2(50) NOT NULL, "
-					+ "CONSTRAINT pk_user PRIMARY KEY (user_id)); "
-					+ "CREATE TABLE mb_board ("
-					+ "board_id VARCHAR2(36), "
-					+ "user_id VARCHAR2(36), "
-					+ "board_title VARCHAR2(50) NOT NULL, "
-					+ "CONSTRAINT pk_board PRIMARY KEY (board_id)); "
-					+ "CREATE TABLE mb_category ("
-					+ "category_id VARCHAR2(36), "
-					+ "board_id VARCHAR2(36), "
-					+ "category_title VARCHAR2(50) NOT NULL, "
-					+ "CONSTRAINT pk_category PRIMARY KEY (category_id)); "
-					+ "CREATE TABLE mb_card ("
-					+ "card_id VARCHAR2(36), "
-					+ "category_id VARCHAR2(36), "
-					+ "card_title VARCHAR2(50) NOT NULL, "
-					+ "card_description VARCHAR2(1000) NOT NULL, "
-					+ "CONSTRAINT pk_card PRIMARY KEY (card_id));"
-					+ "ALTER TABLE mb_board"
-					+ "ADD CONSTRAINT fk_board_user FOREIGN KEY ( user_id )"
-					+ "REFERENCES mb_user ( user_id );"
-					+ "ALTER TABLE mb_category"
-					+ "ADD CONSTRAINT fk_category_board FOREIGN KEY ( board_id )"
-					+ "REFERENCES mb_board ( board_id );"
-					+ "ALTER TABLE mb_card"
-					+ "ADD CONSTRAINT fk_card_category FOREIGN KEY ( category_id )"
-					+ "REFERENCES mb_category ( category_id );";
-			Session session = HibernateUtil.openSession();
-			session.beginTransaction();
-			session.createSQLQuery(sql).executeUpdate();
-			session.getTransaction().commit();
-			session.close();
-			*/
-		} catch (Exception e) {
-			if (transaction != null) {
-				transaction.rollback();
-			}
-			e.printStackTrace();
+		List<User> users = getAllUsers();
+		for (User user : users) {
+			deleteUser(user.getId());
 		}
 	}
 	
@@ -443,6 +379,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 		int numCategories = 4;
 		int numCards = 5;
 		User sampleUser = new User("Joe", "Smith", "jsmith", "j123");
+		sampleUser.setId("8fa417b5-b30c-4e16-b6b4-9edfafc91a57");
 		addUser(sampleUser);
 		for (int i = 1; i <= numBoards; i++) {
 			Board board  = new Board("Board " + i, sampleUser);
