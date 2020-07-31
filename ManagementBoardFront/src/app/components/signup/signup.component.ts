@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthSimpleService } from 'src/app/auth-simple.service';
+import { AuthSimpleService } from 'src/app/services/auth-simple.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +15,7 @@ export class SignupComponent implements OnInit {
   signupPassword: string;
   signupConfirmPassword: string;
 
-  constructor(private authServ: AuthSimpleService) { }
+  constructor(private userServ: UserService, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
   }
@@ -37,7 +38,7 @@ export class SignupComponent implements OnInit {
 
   submitSignup() {
     if (this.canSubmit()) {
-      this.authServ.signup(
+      this.userServ.signup(
         this.signupFirstname,
         this.signupLastname,
         this.signupUsername,

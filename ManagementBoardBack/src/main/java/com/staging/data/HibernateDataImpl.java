@@ -54,6 +54,12 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	public int updateUser(User user) {
 		log.trace("updateUser()");
 		log.info("Updating user: " + user.getUsername());
+		if (user.getFirstName().isEmpty()
+			|| user.getLastName().isEmpty()
+			|| user.getUsername().isEmpty() ) {
+			log.info("Incomplete information submitted, canceling update");
+			return -1;
+		}
 		Transaction transaction = null;
 		try {
 			Session session = HibernateUtil.openSession();
@@ -63,7 +69,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			pUser.setFirstName(user.getFirstName());
 			pUser.setLastName(user.getLastName());
 			pUser.setUsername(user.getUsername());
-			pUser.setPassword(user.getPassword());
 			
 			transaction.commit();
 			//session.close();

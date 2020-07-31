@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Board } from 'src/app/models/Board';
 import { Category } from 'src/app/models/Category';
 import { Router } from '@angular/router';
-import { AuthSimpleService } from 'src/app/auth-simple.service';
+import { AuthSimpleService } from 'src/app/services/auth-simple.service';
 
 @Component({
   selector: 'app-board',

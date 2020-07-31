@@ -21,7 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "mb_board")
 @JsonIgnoreProperties({"user"})
-//@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "user"})
 public class Board implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -29,7 +28,6 @@ public class Board implements Serializable {
 	@Column(name = "board_id")
 	private String id;
 	
-	//@Column(name = "fk_user")
 	@Transient
 	private String owningUserId;
 	

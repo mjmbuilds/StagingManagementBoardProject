@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from 'src/app/models/iUser';
 import { Router } from '@angular/router';
-import { AuthSimpleService } from 'src/app/auth-simple.service';
+import { AuthSimpleService } from 'src/app/services/auth-simple.service';
 import { User } from 'src/app/models/User';
 
 @Component({

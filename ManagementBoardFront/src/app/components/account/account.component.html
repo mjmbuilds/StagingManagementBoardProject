@@ -14,12 +14,16 @@
             <input [(ngModel)]='accountUsername' type="text" name="accountUsername" placeholder="Username" required>
         </div>
         <div>
-            <input type="button" class="btn-general" name="submitBtn" value="Update" (click)="submitUpdate()">
+            <input type="button" [disabled]="!canSubmit()" class="btn-general" name="submitBtn" value="Update" (click)="submitUpdate()">
             <input type="button" class="btn-general" name="resetBtn" value="Reset" (click)="reset()">
         </div>
         <div class="accountHR"></div>
         <div class="accountRow">
-            <input type="button" class="btn-general" name="changePassBtn" value="Change Password">
+            <input type="button" class="btn-general" name="changePassBtn" value="Change Password" (click)="changePassword()">
+        </div>
+        <div class="accountHR"></div>
+        <div class="accountRow">
+            <input type="button" class="btn-general" name="deleteAcctBtn" value="Delete Account" (click)="deleteAccount()">
         </div>
     </form>
 </div>
