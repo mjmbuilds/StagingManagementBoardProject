@@ -1,7 +1,5 @@
 package com.staging.service;
 
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +23,11 @@ public class BoardService extends GenericService {
 	public int addBoard(Board board) {
 		log.trace("addBoard()");
 		return boardDao.addBoard(board);
+	}
+	
+	public Board getBoard(String id) {
+		log.trace("getBoard()");
+		return boardDao.getBoard(id);
 	}
 	
 	public int updateBoard(Board board) {

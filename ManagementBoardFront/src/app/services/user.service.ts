@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AuthSimpleService } from './auth-simple.service';
 import { UrlService } from './url.service';
 import { HttpClient } from '@angular/common/http';
-import { IUser } from '../models/iUser';
 import { Observable } from 'rxjs';
 
 @Injectable({

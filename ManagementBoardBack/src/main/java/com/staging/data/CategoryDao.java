@@ -1,12 +1,12 @@
 package com.staging.data;
 
-import java.util.UUID;
-
 import com.staging.model.Category;
 
 public interface CategoryDao {
 	
 	int addCategory(Category category);
+	
+	Category getCategory(String id);
 	
 	int updateCategory(Category category);
 	

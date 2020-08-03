@@ -37,7 +37,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.save(user);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully added user: " + user.getUsername());
 			return 0;
 		} catch (Exception e) {
@@ -71,7 +70,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			pUser.setUsername(user.getUsername());
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully updated user: " + user.getUsername());
 			return 0;
 		} catch (Exception e) {
@@ -97,7 +95,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.delete(pUser);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully deleted user with ID: " + id);
 			return 0;
 		} catch (Exception e) {
@@ -125,13 +122,18 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Predicate predicateForUsernamePassword = cb.and(predicateForUsername, predicateForPassword);
 			cQuery.select(root).where(predicateForUsernamePassword);
 			user = session.createQuery(cQuery).getSingleResult();
-			//session.close();
 			log.info("User found");
 		} catch (Exception e) {
 			log.warn("User not found");
 			//e.printStackTrace();
 		}
 		log.debug("User data:\n" + user);
+		
+		// return only the names of the boards, not the categories or cards
+		for (Board board : user.getBoards()) {
+			board.setCategories(null);
+		}
+		
 		return user;
 	}
 
@@ -147,7 +149,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.save(board);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully added board: " + board.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -161,6 +162,26 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
+	public Board getBoard(String id) {
+		log.trace("getBoard()");
+		log.info("Getting board with id: " +id);
+		try {
+			Session session = HibernateUtil.openSession();
+			Board board = (Board) session.get(Board.class, id);
+			if (board == null) {
+				log.info("No board found with id: " +id);
+				return null;
+			}
+			log.info("Found board: " + board.getTitle());
+			return board;
+		} catch (Exception e) {
+			log.warn("Failed to get board");
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	@Override
 	public int updateBoard(Board board) {
 		log.trace("updateBoard()");
 		log.info("Updating board: " + board.getTitle());
@@ -173,7 +194,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			pBoard.setTitle(board.getTitle());
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully updated board: " + board.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -199,7 +219,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.delete(pBoard);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully deleted board with ID: " + id);
 			return 0;
 		} catch (Exception e) {
@@ -225,7 +244,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.save(category);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully added category: " + category.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -239,6 +257,26 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	@Override
+	public Category getCategory(String id) {
+		log.trace("getCategory()");
+		log.info("Getting category with id: " +id);
+		try {
+			Session session = HibernateUtil.openSession();
+			Category category = (Category) session.get(Category.class, id);
+			if (category == null) {
+				log.info("No category found with id: " + id);
+				return null;
+			}
+			log.info("Found category: " + category.getTitle());
+			return category;
+		} catch (Exception e) {
+			log.warn("Failed to get category");
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	@Override
 	public int updateCategory(Category category) {
 		log.trace("updateCategory()");
 		log.info("Updating category: " + category.getTitle());
@@ -251,7 +289,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			pCategory.setTitle(category.getTitle());
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully updated category: " + category.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -277,7 +314,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.delete(pCategory);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully deleted category with ID: " + id);
 			return 0;
 		} catch (Exception e) {
@@ -301,7 +337,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.save(card);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully added card: " + card.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -314,6 +349,26 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 		}
 	}
 
+	@Override
+	public Card getCard(String id) {
+		log.trace("getCard()");
+		log.info("Getting card with id: " +id);
+		try {
+			Session session = HibernateUtil.openSession();
+			Card card = (Card) session.get(Card.class, id);
+			if (card == null) {
+				log.info("No card found with id: " + id);
+				return null;
+			}
+			log.info("Found card: " + card.getTitle());
+			return card;
+		} catch (Exception e) {
+			log.warn("Failed to get card");
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
 	@Override
 	public int updateCard(Card card) {
 		log.trace("updateCard()");
@@ -328,7 +383,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			pCard.setDescription(card.getDescription());
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully updated card: " + card.getTitle());
 			return 0;
 		} catch (Exception e) {
@@ -354,7 +408,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			session.delete(pCard);
 			
 			transaction.commit();
-			//session.close();
 			log.info("Successfully deleted card with ID: " + id);
 			return 0;
 		} catch (Exception e) {
@@ -418,7 +471,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Session session = HibernateUtil.openSession();
 			String hql = "FROM User";
 			userList = session.createQuery(hql, User.class).getResultList();
-			// DO NOT CLOSE SESSION HERE
 			log.info("Found " + userList.size() + " users.");
 		} catch (Exception e) {
             e.printStackTrace();

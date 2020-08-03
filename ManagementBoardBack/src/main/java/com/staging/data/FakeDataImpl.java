@@ -106,6 +106,12 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
+	public Board getBoard(String id) {
+		//TODO
+		return null;
+	}
+	
+	@Override
 	public int updateBoard(Board board) {
 		log.trace("updateBoard()");
 		// TODO Auto-generated method stub
@@ -129,6 +135,12 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
+	public Category getCategory(String id) {
+		//TODO
+		return null;
+	}
+	
+	@Override
 	public int updateCategory(Category category) {
 		log.trace("updateCategory()");
 		// TODO Auto-generated method stub
@@ -149,6 +161,12 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 		return 0;
 	}
 
+	@Override
+	public Card getCard(String id) {
+		//TODO
+		return null;
+	}
+	
 	@Override
 	public int updateCard(Card card) {
 		log.trace("updateCard()");

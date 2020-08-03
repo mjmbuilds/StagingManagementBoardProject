@@ -1,7 +1,5 @@
 package com.staging.service;
 
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +23,11 @@ public class CardService extends GenericService {
 	public int addCard(Card card) {
 		log.trace("addCard()");
 		return cardDao.addCard(card);
+	}
+	
+	public Card getCard(String id) {
+		log.trace("getCard()");
+		return cardDao.getCard(id);
 	}
 	
 	public int updateCard(Card card) {

@@ -1,7 +1,5 @@
 package com.staging.service;
 
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +23,11 @@ public class CategoryService extends GenericService {
 	public int addCategory(Category category) {
 		log.trace("addCategory()");
 		return categoryDao.addCategory(category);
+	}
+	
+	public Category getCategory(String id) {
+		log.trace("getCategory()");
+		return categoryDao.getCategory(id);
 	}
 	
 	public int updateCategoryd(Category category) {

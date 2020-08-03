@@ -1,12 +1,12 @@
 package com.staging.data;
 
-import java.util.UUID;
-
 import com.staging.model.Board;
 
 public interface BoardDao {
 	
 	int addBoard(Board board);
+	
+	Board getBoard(String id);
 	
 	int updateBoard(Board board);
 	

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -83,6 +84,14 @@ public class MainController {
 		return boardService.addBoard(board);
 	}
 	
+	@GetMapping("board/{id}")
+	public Board getBoard(@PathVariable("id") String id) {
+		log.trace("\n");
+		log.trace("getBoard()");
+		log.info("GET Request to '/api/board' ");
+		return boardService.getBoard(id);
+	}
+	
 	@PutMapping("board/update")
 	public int updateBoard(@RequestBody Board board) {
 		log.trace("\n");
@@ -108,6 +117,14 @@ public class MainController {
 		return categoryService.addCategory(category);
 	}
 	
+	@GetMapping("category/{id}")
+	public Category getCategory(@PathVariable("id") String id) {
+		log.trace("\n");
+		log.trace("getCategory()");
+		log.info("GET Request to '/api/category' ");
+		return categoryService.getCategory(id);
+	}
+	
 	@PutMapping("category/update")
 	public int updateCategory(@RequestBody Category category) {
 		log.trace("\n");
@@ -131,6 +148,14 @@ public class MainController {
 		log.trace("addCard()");
 		log.info("POST Request to '/api/card/add' ");
 		return cardService.addCard(card);
+	}
+	
+	@GetMapping("card/{id}")
+	public Card getCard(@PathVariable("id") String id) {
+		log.trace("\n");
+		log.trace("getCard()");
+		log.info("GET Request to '/api/card' ");
+		return cardService.getCard(id);
 	}
 	
 	@PutMapping("card/update")

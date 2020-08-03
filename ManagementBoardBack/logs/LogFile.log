@@ -5174,3 +5174,865 @@ User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, us
 2020-08-03 12:37:46 INFO  com.staging.data.HibernateDataImpl - User found
 2020-08-03 12:37:46 DEBUG com.staging.data.HibernateDataImpl - User data:
 User [id=bf4544b7-2717-49b2-bbd0-05fce1f0fea9, firstName=Bob, lastName=Smith, username=bsmith, password=b123, boards=[]]
+2020-08-03 13:15:00 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 22280 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 13:15:00 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 13:15:00 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 13:15:02 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.617 seconds (JVM running for 1.934)
+2020-08-03 13:15:02 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 13:15:02 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 13:15:02 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 13:15:12 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:15:12 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:15:12 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:15:12 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:15:12 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:15:12 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:15:14 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-08-03 13:15:14 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:15:14 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: bf4544b7-2717-49b2-bbd0-05fce1f0fea9
+2020-08-03 13:15:14 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: bf4544b7-2717-49b2-bbd0-05fce1f0fea9
+2020-08-03 13:15:21 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:15:21 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:15:21 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:15:21 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:15:21 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:15:22 INFO  com.staging.data.HibernateDataImpl - Successfully added user: sjones
+2020-08-03 13:15:35 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:15:35 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:15:35 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:15:35 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:15:35 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:15:35 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:15:35 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-08-03 13:15:35 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:15:35 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: fd9a5ffd-7437-4586-92dd-e3bcf9ac5fd9
+2020-08-03 13:15:35 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: fd9a5ffd-7437-4586-92dd-e3bcf9ac5fd9
+2020-08-03 13:15:38 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:15:38 TRACE c.s.controller.DebugController - initSampleUser()
+2020-08-03 13:15:38 INFO  c.s.controller.DebugController - Request to '/api/debug/init-sample-user' 
+2020-08-03 13:15:38 TRACE com.staging.service.DebugService - initSampleUser()
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - initSampleUser()
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-2
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-3
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-4
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:38 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:38 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 13:15:39 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 13:15:39 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 13:15:41 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:15:41 TRACE c.staging.controller.MainController - deleteUser()
+2020-08-03 13:15:41 INFO  c.staging.controller.MainController - DELETE Request to '/api/user/remove' 
+2020-08-03 13:15:41 TRACE com.staging.service.UserService - deleteUser()
+2020-08-03 13:15:41 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:15:41 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 8fa417b5-b30c-4e16-b6b4-9edfafc91a57
+2020-08-03 13:15:41 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 8fa417b5-b30c-4e16-b6b4-9edfafc91a57
+2020-08-03 13:16:05 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:16:05 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 13:16:05 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 13:16:05 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 13:16:05 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 13:16:05 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 13:16:05 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 13:16:05 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 13:16:19 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:16:19 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:16:19 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:16:19 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:16:19 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:16:19 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-08-03 13:17:05 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:17:05 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:17:05 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:17:05 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:17:05 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:17:05 INFO  com.staging.data.HibernateDataImpl - Successfully added user: bsmith
+2020-08-03 13:17:26 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:17:26 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:17:26 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:17:26 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:17:26 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:17:26 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:17:26 INFO  com.staging.data.HibernateDataImpl - Found 2 users.
+2020-08-03 13:17:26 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:17:26 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 8aec2e67-6697-4284-abbc-37ceccc38c46
+2020-08-03 13:17:26 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 8aec2e67-6697-4284-abbc-37ceccc38c46
+2020-08-03 13:17:26 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:17:26 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 40757335-54dd-414b-8267-2641d62b7afc
+2020-08-03 13:17:26 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 40757335-54dd-414b-8267-2641d62b7afc
+2020-08-03 13:17:38 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:17:38 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:17:38 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:17:38 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:17:38 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:17:38 INFO  com.staging.data.HibernateDataImpl - Successfully added user: mmead
+2020-08-03 13:18:03 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:18:03 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:18:03 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:18:03 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:18:03 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:18:03 INFO  com.staging.data.HibernateDataImpl - Successfully added user: mmead
+2020-08-03 13:18:36 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:18:36 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:18:36 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:18:36 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:18:36 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:18:36 INFO  com.staging.data.HibernateDataImpl - Successfully added user: ksmith
+2020-08-03 13:18:43 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:18:43 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:18:43 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:18:43 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:18:43 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:18:43 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Found 3 users.
+2020-08-03 13:18:43 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: b0bc2cd4-7964-49ac-b07a-f0ded0c85543
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: b0bc2cd4-7964-49ac-b07a-f0ded0c85543
+2020-08-03 13:18:43 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: e8fbc060-8139-4cd0-947c-476790757bdb
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: e8fbc060-8139-4cd0-947c-476790757bdb
+2020-08-03 13:18:43 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 5011edb4-4de3-4f4b-941e-f8653601c0b3
+2020-08-03 13:18:43 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 5011edb4-4de3-4f4b-941e-f8653601c0b3
+2020-08-03 13:18:54 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:18:54 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:18:54 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:18:54 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:18:54 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:18:54 INFO  com.staging.data.HibernateDataImpl - Successfully added user: kemith
+2020-08-03 13:19:17 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:19:17 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:19:17 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:19:17 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:19:17 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:19:17 INFO  com.staging.data.HibernateDataImpl - Successfully added user: bsmith
+2020-08-03 13:20:04 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:20:04 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:20:04 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:20:04 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:20:04 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:20:04 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:20:04 INFO  com.staging.data.HibernateDataImpl - Found 2 users.
+2020-08-03 13:20:04 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:20:04 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 86b95802-4c0e-4b74-8d18-901198302d5b
+2020-08-03 13:20:04 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 86b95802-4c0e-4b74-8d18-901198302d5b
+2020-08-03 13:20:04 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:20:04 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: f1e71d1a-b141-417f-a74f-dc03e8f1b469
+2020-08-03 13:20:04 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: f1e71d1a-b141-417f-a74f-dc03e8f1b469
+2020-08-03 13:20:14 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:20:14 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:20:14 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:20:14 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:20:14 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:20:14 INFO  com.staging.data.HibernateDataImpl - Successfully added user: ksmith
+2020-08-03 13:20:33 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:20:33 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:20:33 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:20:33 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:20:33 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:20:33 INFO  com.staging.data.HibernateDataImpl - Successfully added user: bsmith
+2020-08-03 13:21:09 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:21:09 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:21:09 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:21:09 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:21:09 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:21:09 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-08-03 13:22:58 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:22:58 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:22:58 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:22:58 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:22:58 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:22:58 INFO  com.staging.data.HibernateDataImpl - Successfully added user: bkelly
+2020-08-03 13:25:53 TRACE c.s.controller.DebugController - 
+
+2020-08-03 13:25:53 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 13:25:53 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 13:25:53 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 13:25:53 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 13:25:53 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Found 4 users.
+2020-08-03 13:25:53 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: c777daed-262d-49ed-9995-48710613bec2
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: c777daed-262d-49ed-9995-48710613bec2
+2020-08-03 13:25:53 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 0b1a5110-309c-4b96-a406-aadf7a9b5868
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 0b1a5110-309c-4b96-a406-aadf7a9b5868
+2020-08-03 13:25:53 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 45b7445c-d8ef-4433-bcc3-6ca337da02f2
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 45b7445c-d8ef-4433-bcc3-6ca337da02f2
+2020-08-03 13:25:53 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 7d9515b2-0caa-4675-aec6-cf1dd16108ef
+2020-08-03 13:25:53 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 7d9515b2-0caa-4675-aec6-cf1dd16108ef
+2020-08-03 13:26:09 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:26:09 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:26:09 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:26:09 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:26:09 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:26:09 INFO  com.staging.data.HibernateDataImpl - Successfully added user: bsmith
+2020-08-03 13:27:04 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:27:04 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:27:04 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:27:04 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:27:04 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:27:04 INFO  com.staging.data.HibernateDataImpl - Successfully added user: asmith
+2020-08-03 13:27:39 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:27:39 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:27:39 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:27:39 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:27:39 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:27:39 INFO  com.staging.data.HibernateDataImpl - Successfully added user: 1
+2020-08-03 13:27:46 TRACE c.staging.controller.MainController - 
+
+2020-08-03 13:27:46 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 13:27:46 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 13:27:46 TRACE com.staging.service.UserService - addUser()
+2020-08-03 13:27:46 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 13:27:46 INFO  com.staging.data.HibernateDataImpl - Successfully added user: 2
+2020-08-03 15:06:53 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:06:53 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 15:06:53 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 15:06:53 TRACE com.staging.service.UserService - addUser()
+2020-08-03 15:06:53 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 15:06:53 INFO  com.staging.data.HibernateDataImpl - Successfully added user: ksmith
+2020-08-03 15:07:02 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:07:02 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:07:02 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:07:02 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:07:02 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:07:02 INFO  com.staging.data.HibernateDataImpl - Searching for user: ksmith
+2020-08-03 15:07:02 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:07:02 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=b3b33dff-033d-4580-abdb-7bdf82d5aaae, firstName=j, lastName=smith, username=ksmith, password=k123, boards=[]]
+2020-08-03 15:07:06 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:07:06 TRACE c.staging.controller.MainController - deleteUser()
+2020-08-03 15:07:06 INFO  c.staging.controller.MainController - DELETE Request to '/api/user/remove' 
+2020-08-03 15:07:06 TRACE com.staging.service.UserService - deleteUser()
+2020-08-03 15:07:06 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:07:06 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: b3b33dff-033d-4580-abdb-7bdf82d5aaae
+2020-08-03 15:07:06 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: b3b33dff-033d-4580-abdb-7bdf82d5aaae
+2020-08-03 15:07:48 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:07:48 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:07:48 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:07:48 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:07:48 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:07:48 INFO  com.staging.data.HibernateDataImpl - Searching for user: ksmith
+2020-08-03 15:07:48 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:07:48 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:08:04 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:08:04 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:08:04 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:08:04 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:08:04 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:08:04 INFO  com.staging.data.HibernateDataImpl - Searching for user: ksmith
+2020-08-03 15:08:04 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:08:04 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:08:09 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:08:09 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:08:09 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:08:09 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:08:09 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:08:09 INFO  com.staging.data.HibernateDataImpl - Searching for user: ksmith
+2020-08-03 15:08:09 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:08:09 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:22:33 TRACE c.s.controller.DebugController - 
+
+2020-08-03 15:22:33 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 15:22:33 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 15:22:33 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 15:22:33 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 15:22:33 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Found 4 users.
+2020-08-03 15:22:33 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 663166a1-d837-47f7-b6c6-78a87fd81bfe
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 663166a1-d837-47f7-b6c6-78a87fd81bfe
+2020-08-03 15:22:33 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: cba87c45-7ed5-4439-95f6-26492b6f706d
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: cba87c45-7ed5-4439-95f6-26492b6f706d
+2020-08-03 15:22:33 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 9f623136-130f-42a5-b6a3-29f48aebc170
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 9f623136-130f-42a5-b6a3-29f48aebc170
+2020-08-03 15:22:33 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 7d09fe01-4397-4a8c-b97a-cb096a4a06a4
+2020-08-03 15:22:33 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 7d09fe01-4397-4a8c-b97a-cb096a4a06a4
+2020-08-03 15:22:49 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:22:49 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 15:22:49 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 15:22:49 TRACE com.staging.service.UserService - addUser()
+2020-08-03 15:22:49 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 15:22:49 INFO  com.staging.data.HibernateDataImpl - Successfully added user: m
+2020-08-03 15:22:56 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:22:56 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:22:56 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:22:56 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:22:56 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:22:56 INFO  com.staging.data.HibernateDataImpl - Searching for user: m
+2020-08-03 15:22:56 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:22:56 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8c0889ae-cc75-4b59-abc6-26b9a1761495, firstName=m, lastName=m, username=m, password=m, boards=[]]
+2020-08-03 15:23:03 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:23:03 TRACE c.staging.controller.MainController - deleteUser()
+2020-08-03 15:23:03 INFO  c.staging.controller.MainController - DELETE Request to '/api/user/remove' 
+2020-08-03 15:23:03 TRACE com.staging.service.UserService - deleteUser()
+2020-08-03 15:23:03 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:23:03 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: 8c0889ae-cc75-4b59-abc6-26b9a1761495
+2020-08-03 15:23:03 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: 8c0889ae-cc75-4b59-abc6-26b9a1761495
+2020-08-03 15:24:48 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:24:48 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 15:24:48 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 15:24:48 TRACE com.staging.service.UserService - addUser()
+2020-08-03 15:24:48 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 15:24:48 INFO  com.staging.data.HibernateDataImpl - Successfully added user: a
+2020-08-03 15:24:53 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:24:53 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:24:53 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:24:53 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:24:53 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:24:53 INFO  com.staging.data.HibernateDataImpl - Searching for user: a
+2020-08-03 15:24:53 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:24:53 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=d94686c0-e8c2-4796-abe1-6b92730171c2, firstName=a, lastName=a, username=a, password=a, boards=[]]
+2020-08-03 15:24:58 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:24:58 TRACE c.staging.controller.MainController - deleteUser()
+2020-08-03 15:24:58 INFO  c.staging.controller.MainController - DELETE Request to '/api/user/remove' 
+2020-08-03 15:24:58 TRACE com.staging.service.UserService - deleteUser()
+2020-08-03 15:24:58 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:24:58 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: d94686c0-e8c2-4796-abe1-6b92730171c2
+2020-08-03 15:24:58 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: d94686c0-e8c2-4796-abe1-6b92730171c2
+2020-08-03 15:29:45 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:29:45 TRACE c.staging.controller.MainController - addUser()
+2020-08-03 15:29:45 INFO  c.staging.controller.MainController - POST Request to '/api/user/signup' 
+2020-08-03 15:29:45 TRACE com.staging.service.UserService - addUser()
+2020-08-03 15:29:45 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 15:29:45 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-08-03 15:29:50 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:29:50 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:29:50 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:29:50 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:29:50 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:29:50 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:29:50 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:29:50 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=a1e4e54b-e0ba-46bf-adf4-64da02221fb7, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[]]
+2020-08-03 15:36:06 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 6668 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:36:06 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:36:06 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:36:07 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.609 seconds (JVM running for 1.922)
+2020-08-03 15:36:07 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:36:07 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:36:07 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:36:23 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:36:23 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:36:23 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:36:23 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:36:23 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:36:23 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:36:25 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:36:25 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:36:30 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:36:30 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:36:30 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:36:30 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:36:30 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:36:30 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:36:30 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:36:30 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:36:57 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 22228 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:36:57 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:36:57 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:36:58 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.612 seconds (JVM running for 1.931)
+2020-08-03 15:36:58 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:36:58 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:36:58 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:37:01 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:37:01 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:37:01 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:37:01 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:37:01 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:37:01 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:37:03 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:37:03 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:37:43 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 19036 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:37:43 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:37:43 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:37:45 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.631 seconds (JVM running for 1.946)
+2020-08-03 15:37:45 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:37:45 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:37:45 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:37:46 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:37:46 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:37:46 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:37:46 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:37:46 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:37:46 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:37:49 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:37:49 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:38:07 TRACE c.s.controller.DebugController - 
+
+2020-08-03 15:38:07 TRACE c.s.controller.DebugController - resetDB()
+2020-08-03 15:38:07 INFO  c.s.controller.DebugController - Request to '/api/debug/reset-db' 
+2020-08-03 15:38:07 TRACE com.staging.service.DebugService - resetDB()
+2020-08-03 15:38:07 WARN  com.staging.data.HibernateDataImpl - !!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!
+2020-08-03 15:38:07 TRACE com.staging.data.HibernateDataImpl - getAllUsers()
+2020-08-03 15:38:07 INFO  com.staging.data.HibernateDataImpl - Found 1 users.
+2020-08-03 15:38:07 TRACE com.staging.data.HibernateDataImpl - deleteUser()
+2020-08-03 15:38:07 INFO  com.staging.data.HibernateDataImpl - Deleting user with ID: a1e4e54b-e0ba-46bf-adf4-64da02221fb7
+2020-08-03 15:38:07 INFO  com.staging.data.HibernateDataImpl - Successfully deleted user with ID: a1e4e54b-e0ba-46bf-adf4-64da02221fb7
+2020-08-03 15:38:14 TRACE c.s.controller.DebugController - 
+
+2020-08-03 15:38:14 TRACE c.s.controller.DebugController - initSampleUser()
+2020-08-03 15:38:14 INFO  c.s.controller.DebugController - Request to '/api/debug/init-sample-user' 
+2020-08-03 15:38:14 TRACE com.staging.service.DebugService - initSampleUser()
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - initSampleUser()
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addUser()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added user: jsmith
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 1-4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-3
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:14 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:14 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 2-4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addBoard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added board: Board 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCategory()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added category: Category 3-4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 1
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 2
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 3
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 4
+2020-08-03 15:38:15 TRACE com.staging.data.HibernateDataImpl - addCard()
+2020-08-03 15:38:15 INFO  com.staging.data.HibernateDataImpl - Successfully added card: Task 5
+2020-08-03 15:38:18 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:38:18 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:38:18 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:38:18 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:38:18 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:38:18 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:38:18 WARN  com.staging.data.HibernateDataImpl - User not found
+2020-08-03 15:38:18 DEBUG com.staging.data.HibernateDataImpl - User data:
+null
+2020-08-03 15:38:22 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:38:22 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:38:22 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:38:22 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:38:22 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:38:22 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:38:22 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:38:22 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 15:38:41 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 18468 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:38:41 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:38:41 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:38:42 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.631 seconds (JVM running for 1.958)
+2020-08-03 15:38:42 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:38:42 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:38:42 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:38:49 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:38:49 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:38:49 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:38:49 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:38:49 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:38:49 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:38:51 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:38:51 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 15:40:01 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 17020 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:40:01 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:40:01 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:40:02 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.615 seconds (JVM running for 1.933)
+2020-08-03 15:40:02 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:40:02 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:40:02 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:40:07 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:40:07 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:40:07 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:40:07 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:40:07 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:40:07 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:40:09 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:40:09 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 15:40:26 INFO  com.staging.ManagementBoardBack - Starting ManagementBoardBack on DESKTOP-MICHAEL with PID 10536 (C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack\target\classes started by Michael in C:\MJM\Revature\Staging\StagingManagementBoardProject\ManagementBoardBack)
+2020-08-03 15:40:26 DEBUG com.staging.ManagementBoardBack - Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2020-08-03 15:40:26 INFO  com.staging.ManagementBoardBack - No active profile set, falling back to default profiles: default
+2020-08-03 15:40:28 INFO  com.staging.ManagementBoardBack - Started ManagementBoardBack in 1.626 seconds (JVM running for 1.949)
+2020-08-03 15:40:28 TRACE com.staging.ManagementBoardBack - 
+
+2020-08-03 15:40:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * * * * * * * * * * * * * * *
+2020-08-03 15:40:28 TRACE com.staging.ManagementBoardBack - * * * * * * * * * * STARTUP * * * * * * * * * *
+2020-08-03 15:40:42 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:40:42 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:40:42 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:40:42 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:40:42 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:40:42 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:40:44 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:40:44 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 15:41:14 TRACE c.staging.controller.MainController - 
+
+2020-08-03 15:41:14 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 15:41:14 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 15:41:14 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 15:41:14 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 15:41:14 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 15:41:14 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 15:41:14 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 16:03:43 TRACE c.staging.controller.MainController - 
+
+2020-08-03 16:03:43 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 16:03:43 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 16:03:43 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 16:03:43 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 16:03:43 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 16:03:43 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 16:03:43 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
+2020-08-03 16:11:05 TRACE c.staging.controller.MainController - 
+
+2020-08-03 16:11:05 TRACE c.staging.controller.MainController - getUserByUsernameAndPassword()
+2020-08-03 16:11:05 INFO  c.staging.controller.MainController - POST Request to '/api/user/login' 
+2020-08-03 16:11:05 TRACE com.staging.service.UserService - getUserByUsernameAndPassword()
+2020-08-03 16:11:05 TRACE com.staging.data.HibernateDataImpl - getUserByUsernameAndPassword()
+2020-08-03 16:11:05 INFO  com.staging.data.HibernateDataImpl - Searching for user: jsmith
+2020-08-03 16:11:05 INFO  com.staging.data.HibernateDataImpl - User found
+2020-08-03 16:11:05 DEBUG com.staging.data.HibernateDataImpl - User data:
+User [id=8fa417b5-b30c-4e16-b6b4-9edfafc91a57, firstName=Joe, lastName=Smith, username=jsmith, password=j123, boards=[Board [id=f9c91b9c-e95f-4f67-98a0-614f052d59d5, owningUserId=null, title=Board 1, categories=[Category [id=75e937e7-1c72-44d0-9b28-aa64bfdb5bf7, owningBoardId=null, title=Category 1-1, cards=[Card [id=127ac71a-5d03-4940-9aaa-5d1efcc16a44, owningCategoryId=null, title=Task 1, description=Description of task 111], Card [id=2b98b718-b55d-4952-ab16-f1e9407f7ffd, owningCategoryId=null, title=Task 2, description=Description of task 112], Card [id=ec8b5fd7-7f8f-4b41-8b09-a4cbdfff8163, owningCategoryId=null, title=Task 3, description=Description of task 113], Card [id=74ddb88a-4100-4819-8ce4-1df7f233b092, owningCategoryId=null, title=Task 4, description=Description of task 114], Card [id=4aa33831-de1d-45b5-a888-37e86204bb8a, owningCategoryId=null, title=Task 5, description=Description of task 115]]], Category [id=3bbce4d4-ded7-4f25-b6b1-955a775e6d72, owningBoardId=null, title=Category 1-2, cards=[Card [id=cc3fec6d-e0a5-43e9-a1cf-4ddff8ac646a, owningCategoryId=null, title=Task 1, description=Description of task 121], Card [id=db0ca81d-5dcb-4e59-8061-726e582e0dfe, owningCategoryId=null, title=Task 2, description=Description of task 122], Card [id=6fec2821-977e-4102-a552-cd37234f88d6, owningCategoryId=null, title=Task 3, description=Description of task 123], Card [id=3ffa4b5a-d135-482c-9b69-d1a3a26c3dd8, owningCategoryId=null, title=Task 4, description=Description of task 124], Card [id=afa078e6-d7f2-4ed3-8336-6c0e0e91c07a, owningCategoryId=null, title=Task 5, description=Description of task 125]]], Category [id=b7eb4d81-9f90-408c-b8a5-65cf37a23f4b, owningBoardId=null, title=Category 1-3, cards=[Card [id=34ce6fe8-6925-4aa8-8039-3f668465eb24, owningCategoryId=null, title=Task 1, description=Description of task 131], Card [id=61b02d5f-9259-4e62-9852-75086d5e38bb, owningCategoryId=null, title=Task 2, description=Description of task 132], Card [id=3e15a8de-1741-4c58-a960-795935a358cd, owningCategoryId=null, title=Task 3, description=Description of task 133], Card [id=d617872f-01c7-4e29-97c2-f4adae82be70, owningCategoryId=null, title=Task 4, description=Description of task 134], Card [id=1fcf037f-2c81-4a18-b26e-e21c14f90d51, owningCategoryId=null, title=Task 5, description=Description of task 135]]], Category [id=1be479e9-234b-46af-97fe-c08370315799, owningBoardId=null, title=Category 1-4, cards=[Card [id=f3797486-441e-487f-b14d-7e5aa10391c1, owningCategoryId=null, title=Task 1, description=Description of task 141], Card [id=9c1af790-fa64-429d-aa76-65fa5e32d1b5, owningCategoryId=null, title=Task 2, description=Description of task 142], Card [id=d7fa1d84-56bb-4b87-af9d-6445932fe48e, owningCategoryId=null, title=Task 3, description=Description of task 143], Card [id=d35cb9a6-10b0-4600-9fc8-6f99725f58f8, owningCategoryId=null, title=Task 4, description=Description of task 144], Card [id=0eed7edc-be74-43c2-a1eb-7d4b8d0faf9f, owningCategoryId=null, title=Task 5, description=Description of task 145]]]]], Board [id=0ebe60fa-87c1-46f3-90b3-45807f418d6b, owningUserId=null, title=Board 2, categories=[Category [id=31b8496c-8c49-4b58-ac25-7dcfec74aedf, owningBoardId=null, title=Category 2-1, cards=[Card [id=6fbbd0a8-ec76-415e-b850-2b39fd72225b, owningCategoryId=null, title=Task 1, description=Description of task 211], Card [id=d2e70e72-4533-483d-8615-dbcdea403456, owningCategoryId=null, title=Task 2, description=Description of task 212], Card [id=4a00b760-5c7a-4889-b138-585876eaa905, owningCategoryId=null, title=Task 3, description=Description of task 213], Card [id=e81d3bd1-8ef5-4977-ae6f-097639103a64, owningCategoryId=null, title=Task 4, description=Description of task 214], Card [id=7265467b-7f5c-4699-bdf1-2e5ae0fab1a8, owningCategoryId=null, title=Task 5, description=Description of task 215]]], Category [id=0103b4d7-1f0d-4fc0-8539-ccae1a74f25c, owningBoardId=null, title=Category 2-2, cards=[Card [id=6b62b32d-bbae-4eae-a602-b3ae97bc7a1b, owningCategoryId=null, title=Task 1, description=Description of task 221], Card [id=747384f8-8279-460c-bd37-bf1dd592363c, owningCategoryId=null, title=Task 2, description=Description of task 222], Card [id=38f70cff-40c5-4522-8352-030cd9df27e2, owningCategoryId=null, title=Task 3, description=Description of task 223], Card [id=ae021863-633f-4b08-bd13-4ffeed46dbde, owningCategoryId=null, title=Task 4, description=Description of task 224], Card [id=5598b780-4d1a-41e2-9a36-7544eea95ae7, owningCategoryId=null, title=Task 5, description=Description of task 225]]], Category [id=fe843208-589b-4459-8d58-29468bb93ecf, owningBoardId=null, title=Category 2-3, cards=[Card [id=e00988d5-180c-46fc-937b-f278d8256190, owningCategoryId=null, title=Task 1, description=Description of task 231], Card [id=c7ba4fc2-e91a-4df1-848f-ec0982aa6f5f, owningCategoryId=null, title=Task 2, description=Description of task 232], Card [id=2d35308b-870b-49bf-a07b-43f28d4a1919, owningCategoryId=null, title=Task 3, description=Description of task 233], Card [id=d0066343-5abf-4404-b74b-3942dfc02743, owningCategoryId=null, title=Task 4, description=Description of task 234], Card [id=ff0ecbe9-5080-4f6d-a5af-b20e78699b80, owningCategoryId=null, title=Task 5, description=Description of task 235]]], Category [id=10ca607b-f2dc-45ce-8c0c-abca5ec9ec13, owningBoardId=null, title=Category 2-4, cards=[Card [id=c1509a92-7851-4490-a074-1a47ce6b275a, owningCategoryId=null, title=Task 1, description=Description of task 241], Card [id=334abea6-7d78-4474-a405-b06c7d2e8156, owningCategoryId=null, title=Task 2, description=Description of task 242], Card [id=142b079b-7e53-4012-a601-1dec67d1972e, owningCategoryId=null, title=Task 3, description=Description of task 243], Card [id=04dc1ca4-706a-4626-979e-c0f26edcb6cb, owningCategoryId=null, title=Task 4, description=Description of task 244], Card [id=ec7b290f-6e5a-4bd2-907d-047b69b1f3a6, owningCategoryId=null, title=Task 5, description=Description of task 245]]]]], Board [id=a487fd29-c58a-49a6-8bf1-314525209fca, owningUserId=null, title=Board 3, categories=[Category [id=3dd0cc81-6a95-404f-be8f-7149a92f5450, owningBoardId=null, title=Category 3-1, cards=[Card [id=504f0a03-697f-46b0-95ce-4c4e409202d4, owningCategoryId=null, title=Task 1, description=Description of task 311], Card [id=9ba8b47d-bc46-4f90-be1c-2d57eb45f023, owningCategoryId=null, title=Task 2, description=Description of task 312], Card [id=29a21708-960b-4a12-8425-16df30412e1a, owningCategoryId=null, title=Task 3, description=Description of task 313], Card [id=42d128ac-fd8c-4e26-b29b-864118dcba2d, owningCategoryId=null, title=Task 4, description=Description of task 314], Card [id=12637320-701b-4e1f-a2c1-2ea7c4b24c10, owningCategoryId=null, title=Task 5, description=Description of task 315]]], Category [id=3d17bdcd-79a4-4114-8779-fb9408a48f5a, owningBoardId=null, title=Category 3-2, cards=[Card [id=5bcd6183-59bc-44ef-8207-eef64fbce883, owningCategoryId=null, title=Task 1, description=Description of task 321], Card [id=aa6b2486-fb8c-45b6-86ad-c62235ad28d3, owningCategoryId=null, title=Task 2, description=Description of task 322], Card [id=651a8399-9139-4b7e-9929-11ce9c44afb2, owningCategoryId=null, title=Task 3, description=Description of task 323], Card [id=11d0f3e6-59be-4006-8cb5-7145374f99aa, owningCategoryId=null, title=Task 4, description=Description of task 324], Card [id=1af76385-a5d0-40ec-a17f-b61f6d61484e, owningCategoryId=null, title=Task 5, description=Description of task 325]]], Category [id=4ff69a10-1687-427e-a510-740c8d5ce2c5, owningBoardId=null, title=Category 3-3, cards=[Card [id=b0711957-5198-4c78-9cbb-f5467e97d124, owningCategoryId=null, title=Task 1, description=Description of task 331], Card [id=9b85ed68-575e-47ea-9afc-14d1782c18b5, owningCategoryId=null, title=Task 2, description=Description of task 332], Card [id=f5b78625-d318-4183-99fe-50494228744a, owningCategoryId=null, title=Task 3, description=Description of task 333], Card [id=0f190d6a-db80-4967-9870-af843be39a52, owningCategoryId=null, title=Task 4, description=Description of task 334], Card [id=64c8f150-4934-4865-9c0d-f1519ee048c4, owningCategoryId=null, title=Task 5, description=Description of task 335]]], Category [id=3172c156-c7b6-4b16-95be-f97c70d9a1d9, owningBoardId=null, title=Category 3-4, cards=[Card [id=3a55d0ad-b455-45fc-bda7-aa9392852456, owningCategoryId=null, title=Task 1, description=Description of task 341], Card [id=63db8fca-a425-45e5-b7b5-907536df8afb, owningCategoryId=null, title=Task 2, description=Description of task 342], Card [id=6f26fd24-493d-4ec8-b710-b75629bdac96, owningCategoryId=null, title=Task 3, description=Description of task 343], Card [id=e1c87358-d880-4e15-99ec-e959e1b66d32, owningCategoryId=null, title=Task 4, description=Description of task 344], Card [id=33833f55-db33-4cb0-b191-fc0d7385fa44, owningCategoryId=null, title=Task 5, description=Description of task 345]]]]]]]
