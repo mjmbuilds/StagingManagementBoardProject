@@ -36,22 +36,22 @@ public class DebugController {
 		log.debug("Data from Request:\n" + data);
 	}
 	
-	// drop and recreate tables
+	// delete all users to reset DB
 	@RequestMapping("reset-db")
-	public void resetDB() {
+	public int resetDB() {
 		log.trace("\n");
 		log.trace("resetDB()");
 		log.info("Request to '/api/debug/reset-db' ");
-		debugService.resetDB();
+		return debugService.resetDB();
 	}
 	
 	// initializes sample user
 	@RequestMapping("init-sample-user")
-	public void initSampleUser() {
+	public int initSampleUser() {
 		log.trace("\n");
 		log.trace("initSampleUser()");
 		log.info("Request to '/api/debug/init-sample-user' ");
-		debugService.initSampleUser();
+		return debugService.initSampleUser();
 	}
 	
 	// returns data for all users

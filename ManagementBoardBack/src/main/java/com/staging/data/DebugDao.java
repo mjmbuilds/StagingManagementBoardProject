@@ -6,9 +6,9 @@ import com.staging.model.User;
 
 public interface DebugDao {
 	
-	void resetDB();
+	int resetDB();
 	
-	void initSampleUser();
+	int initSampleUser();
 	
 	List<User> getAllUsers();
 	

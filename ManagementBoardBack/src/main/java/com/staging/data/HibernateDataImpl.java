@@ -73,7 +73,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully updated user: " + user.getUsername());
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -99,7 +99,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully deleted user with ID: " + id);
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -175,7 +175,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully updated board: " + board.getTitle());
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -201,7 +201,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully deleted board with ID: " + id);
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -253,7 +253,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully updated category: " + category.getTitle());
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -279,7 +279,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully deleted category with ID: " + id);
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -330,7 +330,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully updated card: " + card.getTitle());
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -356,7 +356,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction.commit();
 			//session.close();
 			log.info("Successfully deleted card with ID: " + id);
-			return 1;
+			return 0;
 		} catch (Exception e) {
 			if (transaction != null) {
 				transaction.rollback();
@@ -369,54 +369,45 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	
 	//-------------------------------------------- Debug DAO
 	@Override
-	public void resetDB() {
+	public int resetDB() {
 		log.warn("!!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!");
-		List<User> users = getAllUsers();
-		for (User user : users) {
-			deleteUser(user.getId());
+		try {
+			List<User> users = getAllUsers();
+			for (User user : users) {
+				deleteUser(user.getId());
+			}
+			return 0;
+		} catch(Exception e) {
+			return -1;
 		}
+		
 	}
 	
 	@Override
-	public void initSampleUser() {
+	public int initSampleUser() {
 		log.trace("initSampleUser()");
-		int numBoards = 3;
-		int numCategories = 4;
-		int numCards = 5;
-		User sampleUser = new User("Joe", "Smith", "jsmith", "j123");
-		sampleUser.setId("8fa417b5-b30c-4e16-b6b4-9edfafc91a57");
-		addUser(sampleUser);
-		for (int i = 1; i <= numBoards; i++) {
-			Board board  = new Board("Board " + i, sampleUser);
-			addBoard(board);
-			for (int j = 1; j <= numCategories; j++) {
-				Category category = new Category("Category " + i + "-" + j, board);
-				addCategory(category);
-				for (int k = 1; k <= numCards; k++) {
-					addCard(new Card("Task " + k, "Description of task " + i + j + k, category));
+		try {
+			int numBoards = 3;
+			int numCategories = 4;
+			int numCards = 5;
+			User sampleUser = new User("Joe", "Smith", "jsmith", "j123");
+			sampleUser.setId("8fa417b5-b30c-4e16-b6b4-9edfafc91a57");
+			addUser(sampleUser);
+			for (int i = 1; i <= numBoards; i++) {
+				Board board  = new Board("Board " + i, sampleUser);
+				addBoard(board);
+				for (int j = 1; j <= numCategories; j++) {
+					Category category = new Category("Category " + i + "-" + j, board);
+					addCategory(category);
+					for (int k = 1; k <= numCards; k++) {
+						addCard(new Card("Task " + k, "Description of task " + i + j + k, category));
+					}
 				}
 			}
+			return 0;
+		} catch (Exception e) {
+			return -1;
 		}
-		/*
-		List<Board> boards = new ArrayList<Board>();
-		for (int i = 1; i <= numBoards; i++) {
-			Board board  = new Board("Board " + i);
-			List<Category> categories = new ArrayList<Category>();
-			for (int j = 1; j <= numCategories; j++) {
-				Category category = new Category("Category " + i + "-" + j);
-				List<Card> cards = new ArrayList<Card>();
-				for (int k = 1; k <= numCards; k++) {
-					cards.add(new Card("Task " + k, "Description of task " + i + j + k));
-				}
-				category.setCards(cards);
-				categories.add(category);
-			}
-			board.setCategories(categories);
-			boards.add(board);
-		}
-		sampleUser.setBoards(boards);
-		addUser(sampleUser);
-		*/
 	}
 	
 	@Override

@@ -29,6 +29,11 @@ export class HeaderComponent implements OnInit {
       this.username = this.authServ.getSessionUsername();
       this.password = this.authServ.getSessionPassword();
       this.login();
+    } else {
+      this.loggedInUser = null;
+      this.logedInUserName = null;
+      this.username = null;
+      this.password = null;
     }
   }
 

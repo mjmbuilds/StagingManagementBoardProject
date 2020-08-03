@@ -23,18 +23,18 @@ public class DebugService extends GenericService {
 
 	}
 
-	// DEBUG method for dropping and recreating tables
+	// DEBUG method for deleting all users to reset DB
 	// not intended for public API
-	public void resetDB() {
+	public int resetDB() {
 		log.trace("resetDB()");
-		debugDao.resetDB();
+		return debugDao.resetDB();
 	}
 	
 	// DEBUG method for initializing sample user
 	// not intended for public API
-	public void initSampleUser() {
+	public int initSampleUser() {
 		log.trace("initSampleUser()");
-		debugDao.initSampleUser();
+		return debugDao.initSampleUser();
 	}
 	
 	// DEBUG method for getting all users

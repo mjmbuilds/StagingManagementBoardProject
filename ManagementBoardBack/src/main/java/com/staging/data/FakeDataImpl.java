@@ -22,12 +22,13 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	
 	//-------------------------------------------- Debug DAO
 	@Override
-	public void resetDB() {
+	public int resetDB() {
 		DB = new ArrayList<>();
+		return 0;
 	}
 	
 	@Override
-	public void initSampleUser() {
+	public int initSampleUser() {
 		int numBoards = 3;
 		int numCategories = 4;
 		int numCards = 5;
@@ -52,6 +53,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 		sampleUser.setBoards(boards);
 		DB.add(sampleUser);
 		log.info("Sample user data has been set up");
+		return 0;
 	}
 	
 	@Override

@@ -52,7 +52,7 @@ export class AccountComponent implements OnInit {
       this.accountLastname,
       this.accountUsername ).subscribe(
         resp => {
-          if (resp.toString() === '1') {
+          if (resp.toString() === '0') {
             this.authServ.loggedInUser.firstName = this.accountFirstname;
             this.authServ.loggedInUser.lastName = this.accountLastname;
             this.authServ.loggedInUser.username = this.accountUsername;
@@ -82,10 +82,10 @@ export class AccountComponent implements OnInit {
     if (confirm('Do you really want to delete your account?')) {
       this.userSer.closeAcct(this.accountId).subscribe(
         resp => {
-          if (resp.toString() === '1') {
+          if (resp.toString() === '0') {
             alert('Account deleted successfully');
             this.authServ.clearSession();
-            this.router.navigateByUrl('');
+            window.location.href = '/';
           } else if (resp.toString() === '-1') {
             alert('Error attempting to delete account');
           } else {

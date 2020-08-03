@@ -17,3 +17,12 @@ body {
     margin-top: 3px;
     margin-left: 3px;
 }
+
+.ok-msg {
+    display: inline-block;
+    position: absolute;
+    color: greenyellow;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-left: 3px;
+}

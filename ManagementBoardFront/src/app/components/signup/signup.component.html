@@ -4,18 +4,22 @@
         <div class="signupRow">
             <input [(ngModel)]='signupFirstname' type="text" name="signupFirstname" placeholder="First Name" required>
             <div *ngIf='!signupFirstname' class="required-msg">*</div>
+            <div *ngIf='signupFirstname' class="ok-msg">*</div>
         </div>
         <div class="signupRow">
             <input [(ngModel)]='signupLastname' type="text" name="signupLastname" placeholder="Last Name" required>
             <div *ngIf='!signupLastname' class="required-msg">*</div>
+            <div *ngIf='signupLastname' class="ok-msg">*</div>
         </div>
         <div class="signupRow">
             <input [(ngModel)]='signupUsername' type="text" name="signupUsername" placeholder="Username" required>
             <div *ngIf='!signupUsername' class="required-msg">*</div>
+            <div *ngIf='signupUsername' class="ok-msg">*</div>
         </div>
         <div class="signupRow">
             <input [(ngModel)]='signupPassword' type="password" name="signupPassword" placeholder="Password" required>
             <div *ngIf='!signupPassword' class="required-msg">*</div>
+            <div *ngIf='signupPassword' class="ok-msg">*</div>
         </div>
         <div class="signupRow">
             <input [(ngModel)]='signupConfirmPassword' type="password"
@@ -23,6 +27,8 @@
             <div *ngIf='!signupConfirmPassword' class="required-msg">*</div>
             <div *ngIf='signupConfirmPassword && signupConfirmPassword != signupPassword' 
                 class="required-msg">Password must match</div>
+                <div *ngIf='signupConfirmPassword && signupConfirmPassword === signupPassword' 
+                class="ok-msg">*</div> 
         </div>
         <div>
             <input type="submit" [disabled]="!canSubmit()" class="btn-general" name="submitSignupBtn" value="Submit" (click)="submitSignup()">
