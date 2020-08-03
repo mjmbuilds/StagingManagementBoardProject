@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable} from 'rxjs';
 import { HttpClient} from '@angular/common/http';
 import { UrlService } from './url.service';
-import { IUser } from '../models/iUser';
 import { User } from '../models/User';
 
 @Injectable({
@@ -48,10 +47,10 @@ export class AuthSimpleService {
   }
 
   //TODO convert to using Observable<HttpResponse<User>>
-  login(username: string, password: string): Observable<IUser> {
+  login(username: string, password: string): Observable<User> {
     const url: string = this.urlServ.getUrl() + 'user/login';
     const body = { username, password };
-    return this.http.post<IUser>(url, body);
+    return this.http.post<User>(url, body);
   }
 
 }

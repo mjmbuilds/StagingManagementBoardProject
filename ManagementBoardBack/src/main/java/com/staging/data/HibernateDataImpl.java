@@ -146,6 +146,9 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Session session = HibernateUtil.openSession();
 			transaction = session.beginTransaction();
 			
+			User owningUser = new User();
+			owningUser.setId(board.getOwningUserId());
+			board.setUser(owningUser);
 			session.save(board);
 			
 			transaction.commit();
@@ -241,6 +244,9 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Session session = HibernateUtil.openSession();
 			transaction = session.beginTransaction();
 			
+			Board owningBoard = new Board();
+			owningBoard.setId(category.getOwningBoardId());
+			category.setBoard(owningBoard);
 			session.save(category);
 			
 			transaction.commit();
@@ -334,6 +340,9 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Session session = HibernateUtil.openSession();
 			transaction = session.beginTransaction();
 			
+			Category owningCategory = new Category();
+			owningCategory.setId(card.getOwningCategoryId());
+			card.setCategory(owningCategory);
 			session.save(card);
 			
 			transaction.commit();
