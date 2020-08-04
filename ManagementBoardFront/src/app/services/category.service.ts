@@ -18,9 +18,8 @@ export class CategoryService {
   }
 
   getCategory( id: string ): Observable<Category> {
-    const url: string = this.urlServ.getUrl() + 'category';
-    const body = { id };
-    return this.http.post<Category>(url, body);
+    const url: string = this.urlServ.getUrl() + 'category/' + id;
+    return this.http.get<Category>(url);
   }
 
   updateCategory( id: string, title: string ): Observable<string> {

@@ -38,7 +38,7 @@ public class Board implements Serializable {
 	@Column(name = "board_title")
 	private String title;
 	
-	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "board", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Category> categories;
 	
 	public Board() {

@@ -3,6 +3,7 @@ import { Board } from 'src/app/models/Board';
 import { Category } from 'src/app/models/Category';
 import { Router } from '@angular/router';
 import { AuthSimpleService } from 'src/app/services/auth-simple.service';
+import { BoardService } from 'src/app/services/board.service';
 
 @Component({
   selector: 'app-board',
@@ -17,7 +18,7 @@ export class BoardComponent implements OnInit {
   boardTitle: string;
   categories: Category[];
 
-  constructor(private router: Router, private authServ: AuthSimpleService) { }
+  constructor(private router: Router, private boardServ: BoardService, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
     if (this.authServ.hasLoggedInUser) {
@@ -31,8 +32,13 @@ export class BoardComponent implements OnInit {
     if (selected === '-1') {
       this.closeBoard();
     } else {
-      //TODO get board from boardservice
-      this.openBoard(this.boards[selected]);
+      this.boardServ.getBoard(this.boards[selected].id).subscribe(
+        resp => {
+          if (resp) {
+            this.openBoard(resp);
+          }
+        }
+      );
     }
   }
 

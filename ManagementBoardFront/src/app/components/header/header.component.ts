@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser } from 'src/app/models/iUser';
 import { Router } from '@angular/router';
 import { AuthSimpleService } from 'src/app/services/auth-simple.service';
 import { User } from 'src/app/models/User';
@@ -11,7 +10,7 @@ import { User } from 'src/app/models/User';
 })
 export class HeaderComponent implements OnInit {
 
-  loggedInUser: IUser;
+  loggedInUser: User;
   username: string;
   password: string;
   logedInUserName = null;

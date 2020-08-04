@@ -18,9 +18,8 @@ export class BoardService {
   }
 
   getBoard( id: string ): Observable<Board> {
-    const url: string = this.urlServ.getUrl() + 'board';
-    const body = { id };
-    return this.http.post<Board>(url, body);
+    const url: string = this.urlServ.getUrl() + 'board/' + id;
+    return this.http.get<Board>(url);
   }
 
   updateBoard( id: string, title: string ): Observable<string> {

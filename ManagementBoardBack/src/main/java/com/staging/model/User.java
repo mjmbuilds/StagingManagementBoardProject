@@ -34,7 +34,7 @@ public class User implements Serializable {
 	@Column(name = "user_password")
 	private String password;
 	
-	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Board> boards;
 
 	public User() {

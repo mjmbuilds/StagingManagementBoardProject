@@ -18,9 +18,8 @@ export class CardService {
   }
 
   getCard( id: string ): Observable<Card> {
-    const url: string = this.urlServ.getUrl() + 'card';
-    const body = { id };
-    return this.http.post<Card>(url, body);
+    const url: string = this.urlServ.getUrl() + 'card/' + id;
+    return this.http.get<Card>(url);
   }
 
   updateCard( id: string, title: string, description: string ): Observable<string> {
