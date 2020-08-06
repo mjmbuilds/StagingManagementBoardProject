@@ -52,11 +52,19 @@ public class MainController {
 	}
 	
 	@PutMapping("user/update")
-	public CodeMessage updateUser(@RequestBody User user) {
+	public CodeMessage updateUserInfo(@RequestBody User user) {
 		log.trace("\n");
-		log.trace("updateUser()");
+		log.trace("updateUserInfo()");
 		log.info("PUT Request to '/api/user/update' ");
-		return userService.updateUser(user);
+		return userService.updateUserInfo(user);
+	}
+	
+	@PutMapping("user/updatepass")
+	public CodeMessage updateUserPass(@RequestBody User user) {
+		log.trace("\n");
+		log.trace("updateUserPass()");
+		log.info("PUT Request to '/api/user/updatepass' ");
+		return userService.updateUserPass(user);
 	}
 	
 	@DeleteMapping("user/remove/{id}")

@@ -46,6 +46,11 @@ export class AuthSimpleService {
     this.loggedUser = null;
   }
 
+  setPassword(password: string) {
+    this.loggedUser.password = password;
+    sessionStorage.setItem('password', password);
+  }
+
   //TODO convert to using Observable<HttpResponse<User>>
   login(username: string, password: string): Observable<User> {
     const url: string = this.urlServ.getUrl() + 'user/login';

@@ -19,7 +19,7 @@ export class BoardComponent implements OnInit {
   boardTitle: string;
   categories: Category[];
 
-  showAddBoard = true; //TODO set to false when done designing overlay
+  showAddBoard = false;
   addBoardTitle: string;
 
   constructor(private router: Router, private boardServ: BoardService, private authServ: AuthSimpleService) { }

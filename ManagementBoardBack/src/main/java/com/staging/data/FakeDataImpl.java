@@ -2,7 +2,6 @@ package com.staging.data;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,11 +72,17 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	@Override
-	public CodeMessage updateUser(User user) {
+	public CodeMessage updateUserInfo(User user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
+	public CodeMessage updateUserPass(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	@Override
 	public CodeMessage deleteUser(String id) {
 		// TODO Auto-generated method stub

@@ -7,7 +7,9 @@ public interface UserDao {
 	
 	CodeMessage addUser(User user);
 	
-	CodeMessage updateUser(User user);
+	CodeMessage updateUserInfo(User user);
+	
+	CodeMessage updateUserPass(User user);
 	
 	CodeMessage deleteUser(String id);
 	

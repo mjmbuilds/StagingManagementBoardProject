@@ -1,7 +1,5 @@
 package com.staging.service;
 
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,9 +26,14 @@ public class UserService extends GenericService {
 		return userDao.addUser(user);
 	}
 	
-	public CodeMessage updateUser(User user) {
-		log.trace("updateUser()");
-		return userDao.updateUser(user);
+	public CodeMessage updateUserInfo(User user) {
+		log.trace("updateUserInfo()");
+		return userDao.updateUserInfo(user);
+	}
+	
+	public CodeMessage updateUserPass(User user) {
+		log.trace("updateUserPass()");
+		return userDao.updateUserPass(user);
 	}
 	
 	public CodeMessage deleteUser(String id) {

@@ -50,8 +50,8 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 	
 	@Override
-	public CodeMessage updateUser(User user) {
-		log.trace("updateUser()");
+	public CodeMessage updateUserInfo(User user) {
+		log.trace("updateUserInfo()");
 		log.info("Updating user: " + user.getUsername());
 		if (user.getFirstName().isEmpty()
 			|| user.getLastName().isEmpty()
@@ -77,6 +77,35 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 				transaction.rollback();
 			}
 			log.warn("Failed to update user: " + user.getUsername());
+			e.printStackTrace();
+			return new CodeMessage(-1);
+		}
+	}
+	
+	@Override
+	public CodeMessage updateUserPass(User user) {
+		log.trace("updateUserPass()");
+		log.info("Updating user with id: " + user.getId());
+		if (user.getPassword().isEmpty()) {
+			log.info("Incomplete information submitted, canceling update");
+			return new CodeMessage(-1);
+		}
+		Transaction transaction = null;
+		try {
+			Session session = HibernateUtil.openSession();
+			transaction = session.beginTransaction();
+			
+			User pUser = (User) session.load(User.class, user.getId());
+			pUser.setPassword(user.getPassword());
+			
+			transaction.commit();
+			log.info("Successfully updated password for user id: " + user.getId());
+			return new CodeMessage(0);
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			log.warn("Failed to update password for user id: " + user.getId());
 			e.printStackTrace();
 			return new CodeMessage(-1);
 		}

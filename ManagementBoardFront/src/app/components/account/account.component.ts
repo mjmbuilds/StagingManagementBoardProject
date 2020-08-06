@@ -19,6 +19,8 @@ export class AccountComponent implements OnInit {
   accountFirstname: string;
   accountLastname: string;
   accountUsername: string;
+  newPassword: string;
+  confNewPassword: string;
 
   constructor(private userSer: UserService, private authServ: AuthSimpleService, private router: Router,) { }
 
@@ -31,15 +33,30 @@ export class AccountComponent implements OnInit {
       this.accountFirstname = this.accountFirstnameOriginal;
       this.accountLastname = this.accountLastnameOriginal;
       this.accountUsername = this.accountUsernameOriginal;
+      this.newPassword = null;
+      this.confNewPassword = null;
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
     }
   }
 
-  canSubmit(): boolean {
+  canSubmitUpdate(): boolean {
     if (this.accountFirstname
       && this.accountLastname
-      && this.accountUsername) {
+      && this.accountUsername
+      && (
+        this.accountFirstname !== this.accountFirstnameOriginal
+        || this.accountLastname !== this.accountLastnameOriginal
+        || this.accountUsername !== this.accountUsernameOriginal)) {
+      return true;
+    }
+    return false;
+  }
+
+  canSubmitPass(): boolean {
+    if (this.newPassword
+      && this.confNewPassword
+      && this.confNewPassword === this.newPassword) {
       return true;
     }
     return false;
@@ -74,7 +91,21 @@ export class AccountComponent implements OnInit {
   }
 
   changePassword() {
-    //TODO
+    this.userSer.updatePassword(
+      this.accountId,
+      this.newPassword).subscribe(
+        resp => {
+          if (resp.code === 0) {
+            alert('Password updated successfully');
+            this.authServ.setPassword(this.newPassword);
+            this.ngOnInit();
+          } else if (resp.code === -1) {
+            alert('Unable to update password');
+          } else {
+            alert('Error: Unknown response');
+          }
+        }
+    );
   }
 
   deleteAccount() {

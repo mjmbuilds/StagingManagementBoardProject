@@ -1,29 +1,46 @@
 <div id="account">
-    <form onsubmit="return false;">
+    <form onsubmit="return false;" id="update-info-form">
         <h2>Account Info</h2>
         <div class="accountRow">
             <label for="accountFirstname">First Name</label>
-            <input [(ngModel)]='accountFirstname' type="text" name="accountFirstname" placeholder="First Name" required>
+            <input [(ngModel)]='accountFirstname' type="text" name="accountFirstname" required>
         </div>
         <div class="accountRow">
             <label for="accountLastname">Last Name</label>
-            <input [(ngModel)]='accountLastname' type="text" name="accountLastname" placeholder="Last Name" required>
+            <input [(ngModel)]='accountLastname' type="text" name="accountLastname" required>
         </div>
         <div class="accountRow">
             <label for="accountUsername">Username</label>
-            <input [(ngModel)]='accountUsername' type="text" name="accountUsername" placeholder="Username" required>
+            <input [(ngModel)]='accountUsername' type="text" name="accountUsername" required>
         </div>
         <div>
-            <input type="button" [disabled]="!canSubmit()" class="btn-general" name="submitBtn" value="Update" (click)="submitUpdate()">
+            <input type="submit" [disabled]="!canSubmitUpdate()" class="btn-general" name="submitBtn" value="Update" (click)="submitUpdate()">
             <input type="button" class="btn-general" name="resetBtn" value="Reset" (click)="reset()">
         </div>
-        <div class="accountHR"></div>
+    </form>
+    
+    <div class="accountHR"></div>
+
+    <form onsubmit="return false;" id="new-pass-form">
         <div class="accountRow">
-            <input type="button" class="btn-general" name="changePassBtn" value="Change Password" (click)="changePassword()">
+            <label for="newPass">New Password</label>
+            <input [(ngModel)]='newPassword' type="password" name="newPass" required>
         </div>
-        <div class="accountHR"></div>
         <div class="accountRow">
-            <input type="button" class="btn-general" name="deleteAcctBtn" value="Delete Account" (click)="deleteAccount()">
+            <label for="confNewPass">Confirm<br>New Password</label>
+            <input [(ngModel)]='confNewPassword' type="password" name="confNewPass" required>
+            <div *ngIf='confNewPassword && confNewPassword != newPassword' 
+                class="required-msg"><br>Password must match</div>
+        </div>
+        <div class="accountRow">
+            <input type="submit" [disabled]="!canSubmitPass()" class="btn-general" name="changePassBtn" value="Change Password" (click)="changePassword()">
         </div>
     </form>
+
+    <div class="accountHR"></div>
+
+    <div class="accountRow">
+        <input type="button" class="btn-general" name="deleteAcctBtn" value="Delete Account" (click)="deleteAccount()">
+    </div>
+
 </div>
