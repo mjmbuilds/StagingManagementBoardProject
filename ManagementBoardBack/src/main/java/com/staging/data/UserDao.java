@@ -1,16 +1,15 @@
 package com.staging.data;
 
-import java.util.UUID;
-
+import com.staging.model.CodeMessage;
 import com.staging.model.User;
 
 public interface UserDao {
 	
-	int addUser(User user);
+	CodeMessage addUser(User user);
 	
-	int updateUser(User user);
+	CodeMessage updateUser(User user);
 	
-	int deleteUser(String id);
+	CodeMessage deleteUser(String id);
 	
 	User getUserByUsernameAndPassword(String username, String password);
 	

@@ -1,15 +1,16 @@
 package com.staging.data;
 
 import com.staging.model.Board;
+import com.staging.model.CodeMessage;
 
 public interface BoardDao {
 	
-	int addBoard(Board board);
+	CodeMessage addBoard(Board board);
 	
 	Board getBoard(String id);
 	
-	int updateBoard(Board board);
+	CodeMessage updateBoard(Board board);
 	
-	int deleteBoard(String id);
+	CodeMessage deleteBoard(String id);
 	
 }

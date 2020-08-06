@@ -21,6 +21,9 @@
 		<property name="hibernate.format_sql">true</property>
 		<property name="use_sql_comments">true</property>
  
+ 		<!-- Connection pool -->
+ 		<property name="connection.pool_size">100</property>
+ 
         <!-- Mapping With Model Class Containing Annotations -->
         <mapping class="com.staging.model.User"/>
         <mapping class="com.staging.model.Board"/>

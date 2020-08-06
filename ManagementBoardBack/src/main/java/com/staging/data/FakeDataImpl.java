@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.staging.model.Board;
 import com.staging.model.Card;
 import com.staging.model.Category;
+import com.staging.model.CodeMessage;
 import com.staging.model.User;
 
 // Temporary mock DB using a List
@@ -64,23 +65,23 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	
 	//-------------------------------------------- User DAO
 	@Override
-	public int addUser(User user) {
+	public CodeMessage addUser(User user) {
 		log.trace("addUser()");
 		DB.add(user);
 		log.info("adding user: " + user.getUsername());
-		return 0; // always success
+		return null; // always success
 	}
 
 	@Override
-	public int updateUser(User user) {
+	public CodeMessage updateUser(User user) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int deleteUser(String id) {
+	public CodeMessage deleteUser(String id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 	
 	@Override
@@ -99,10 +100,10 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 
 	//-------------------------------------------- Board DAO
 	@Override
-	public int addBoard(Board board) {
+	public CodeMessage addBoard(Board board) {
 		log.trace("addBoard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
@@ -112,26 +113,26 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 	
 	@Override
-	public int updateBoard(Board board) {
+	public CodeMessage updateBoard(Board board) {
 		log.trace("updateBoard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int deleteBoard(String id) {
+	public CodeMessage deleteBoard(String id) {
 		log.trace("deleteBoard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 	
 	//-------------------------------------------- Category DAO
 	
 	@Override
-	public int addCategory(Category category) {
+	public CodeMessage addCategory(Category category) {
 		log.trace("addCategory()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
@@ -141,24 +142,24 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 	
 	@Override
-	public int updateCategory(Category category) {
+	public CodeMessage updateCategory(Category category) {
 		log.trace("updateCategory()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int deleteCategory(String id) {
+	public CodeMessage deleteCategory(String id) {
 		log.trace("deleteCategory()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 	//-------------------------------------------- Card DAO
 	@Override
-	public int addCard(Card card) {
+	public CodeMessage addCard(Card card) {
 		log.trace("addCard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
@@ -168,17 +169,17 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 	
 	@Override
-	public int updateCard(Card card) {
+	public CodeMessage updateCard(Card card) {
 		log.trace("updateCard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
-	public int deleteCard(String id) {
+	public CodeMessage deleteCard(String id) {
 		log.trace("deleteCard()");
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 }

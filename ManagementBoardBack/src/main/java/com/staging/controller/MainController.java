@@ -3,7 +3,6 @@ package com.staging.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.staging.model.Board;
 import com.staging.model.Card;
 import com.staging.model.Category;
+import com.staging.model.CodeMessage;
 import com.staging.model.User;
 import com.staging.service.BoardService;
 import com.staging.service.CardService;
@@ -44,7 +44,7 @@ public class MainController {
 
 	//-------------------------------------------- User 
 	@PostMapping("user/signup")
-	public int addUser(@RequestBody User user) {
+	public CodeMessage addUser(@RequestBody User user) {
 		log.trace("\n");
 		log.trace("addUser()");
 		log.info("POST Request to '/api/user/signup' ");
@@ -52,7 +52,7 @@ public class MainController {
 	}
 	
 	@PutMapping("user/update")
-	public int updateUser(@RequestBody User user) {
+	public CodeMessage updateUser(@RequestBody User user) {
 		log.trace("\n");
 		log.trace("updateUser()");
 		log.info("PUT Request to '/api/user/update' ");
@@ -60,7 +60,7 @@ public class MainController {
 	}
 	
 	@DeleteMapping("user/remove/{id}")
-	public int deleteUser(@PathVariable("id") String id) {
+	public CodeMessage deleteUser(@PathVariable("id") String id) {
 		log.trace("\n");
 		log.trace("deleteUser()");
 		log.info("DELETE Request to '/api/user/remove' ");
@@ -77,7 +77,7 @@ public class MainController {
 
 	//-------------------------------------------- Board
 	@PostMapping("board/add")
-	public int addBoard(@RequestBody Board board) {
+	public CodeMessage addBoard(@RequestBody Board board) {
 		log.trace("\n");
 		log.trace("addBoard()");
 		log.info("POST Request to '/api/board/add' ");
@@ -93,7 +93,7 @@ public class MainController {
 	}
 	
 	@PutMapping("board/update")
-	public int updateBoard(@RequestBody Board board) {
+	public CodeMessage updateBoard(@RequestBody Board board) {
 		log.trace("\n");
 		log.trace("updateBoard()");
 		log.info("PUT Request to '/api/board/update' ");
@@ -101,7 +101,7 @@ public class MainController {
 	}
 	
 	@DeleteMapping("board/remove/{id}")
-	public int deleteBoard(@PathVariable("id") String id) {
+	public CodeMessage deleteBoard(@PathVariable("id") String id) {
 		log.trace("\n");
 		log.trace("deleteBoard()");
 		log.info("DELETE Request to '/api/board/remove' ");
@@ -110,7 +110,7 @@ public class MainController {
 	
 	//-------------------------------------------- Category
 	@PostMapping("category/add")
-	public int addCategory(@RequestBody Category category) {
+	public CodeMessage addCategory(@RequestBody Category category) {
 		log.trace("\n");
 		log.trace("addCategory()");
 		log.info("POST Request to '/api/category/add' ");
@@ -126,7 +126,7 @@ public class MainController {
 	}
 	
 	@PutMapping("category/update")
-	public int updateCategory(@RequestBody Category category) {
+	public CodeMessage updateCategory(@RequestBody Category category) {
 		log.trace("\n");
 		log.trace("updateCategory()");
 		log.info("PUT Request to '/api/category/update' ");
@@ -134,7 +134,7 @@ public class MainController {
 	}
 	
 	@DeleteMapping("category/remove/{id}")
-	public int deleteCategory(@PathVariable("id") String id) {
+	public CodeMessage deleteCategory(@PathVariable("id") String id) {
 		log.trace("\n");
 		log.trace("deleteCategory()");
 		log.info("DELETE Request to '/api/category/remove' ");
@@ -143,7 +143,7 @@ public class MainController {
 	
 	//-------------------------------------------- Card
 	@PostMapping("card/add")
-	public int addCard(@RequestBody Card card) {
+	public CodeMessage addCard(@RequestBody Card card) {
 		log.trace("\n");
 		log.trace("addCard()");
 		log.info("POST Request to '/api/card/add' ");
@@ -159,7 +159,7 @@ public class MainController {
 	}
 	
 	@PutMapping("card/update")
-	public int updateCard(@RequestBody Card card) {
+	public CodeMessage updateCard(@RequestBody Card card) {
 		log.trace("\n");
 		log.trace("updateCard()");
 		log.info("PUT Request to '/api/card/update' ");
@@ -167,7 +167,7 @@ public class MainController {
 	}
 	
 	@DeleteMapping("card/remove/{id}")
-	public int deleteCard(@PathVariable("id") String id) {
+	public CodeMessage deleteCard(@PathVariable("id") String id) {
 		log.trace("\n");
 		log.trace("deleteCard()");
 		log.info("DELETE Request to '/api/card/remove' ");

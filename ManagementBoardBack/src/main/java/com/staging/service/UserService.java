@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.staging.data.UserDao;
+import com.staging.model.CodeMessage;
 import com.staging.model.User;
 
 @Service
@@ -22,17 +23,17 @@ public class UserService extends GenericService {
 		this.userDao = userDao;
 	}
 	
-	public int addUser(User user) {
+	public CodeMessage addUser(User user) {
 		log.trace("addUser()");
 		return userDao.addUser(user);
 	}
 	
-	public int updateUser(User user) {
+	public CodeMessage updateUser(User user) {
 		log.trace("updateUser()");
 		return userDao.updateUser(user);
 	}
 	
-	public int deleteUser(String id) {
+	public CodeMessage deleteUser(String id) {
 		log.trace("deleteUser()");
 		return userDao.deleteUser(id);
 	}

@@ -45,10 +45,10 @@ export class SignupComponent implements OnInit {
         this.signupPassword
         ).subscribe(
           resp => {
-            if (resp.toString() === '0') {
+            if (resp.code === 0) {
               alert('Successfully created account. Please log in.');
               this.closeSignup();
-            } else if (resp.toString() === '-1') {
+            } else if (resp.code === -1) {
               alert('Failed to create account');
             }else {
               alert('Error: Unknown response');

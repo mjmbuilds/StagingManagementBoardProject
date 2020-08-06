@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.staging.data.BoardDao;
 import com.staging.model.Board;
+import com.staging.model.CodeMessage;
 
 @Service
 public class BoardService extends GenericService {
@@ -20,7 +21,7 @@ public class BoardService extends GenericService {
 		this.boardDao = boardDao;
 	}
 	
-	public int addBoard(Board board) {
+	public CodeMessage addBoard(Board board) {
 		log.trace("addBoard()");
 		return boardDao.addBoard(board);
 	}
@@ -30,12 +31,12 @@ public class BoardService extends GenericService {
 		return boardDao.getBoard(id);
 	}
 	
-	public int updateBoard(Board board) {
+	public CodeMessage updateBoard(Board board) {
 		log.trace("updateBoard()");
 		return boardDao.updateBoard(board);
 	}
 	
-	public int deleteBoard(String id) {
+	public CodeMessage deleteBoard(String id) {
 		log.trace("deleteBoard()");
 		return boardDao.deleteBoard(id);
 	}

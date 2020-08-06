@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
   login(): void {
     this.authServ.login(this.username, this.password).subscribe(
       resp => {
-        if (resp) {
+        if (resp.id) {
           this.authServ.setSession(resp);
           this.loggedInUser = resp;
           this.logedInUserName = resp.firstName;

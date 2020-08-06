@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.staging.data.CategoryDao;
 import com.staging.model.Category;
+import com.staging.model.CodeMessage;
 
 @Service
 public class CategoryService extends GenericService {
@@ -20,7 +21,7 @@ public class CategoryService extends GenericService {
 		this.categoryDao = categoryDao;
 	}
 	
-	public int addCategory(Category category) {
+	public CodeMessage addCategory(Category category) {
 		log.trace("addCategory()");
 		return categoryDao.addCategory(category);
 	}
@@ -30,12 +31,12 @@ public class CategoryService extends GenericService {
 		return categoryDao.getCategory(id);
 	}
 	
-	public int updateCategoryd(Category category) {
+	public CodeMessage updateCategoryd(Category category) {
 		log.trace("updateCategoryd()");
 		return categoryDao.updateCategory(category);
 	}
 	
-	public int deleteCategory(String id) {
+	public CodeMessage deleteCategory(String id) {
 		log.trace("deleteCategory()");
 		return categoryDao.deleteCategory(id);
 	}

@@ -1,15 +1,16 @@
 package com.staging.data;
 
 import com.staging.model.Category;
+import com.staging.model.CodeMessage;
 
 public interface CategoryDao {
 	
-	int addCategory(Category category);
+	CodeMessage addCategory(Category category);
 	
 	Category getCategory(String id);
 	
-	int updateCategory(Category category);
+	CodeMessage updateCategory(Category category);
 	
-	int deleteCategory(String id);
+	CodeMessage deleteCategory(String id);
 	
 }

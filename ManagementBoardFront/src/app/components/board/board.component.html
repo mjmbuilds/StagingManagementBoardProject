@@ -9,8 +9,8 @@
         <span id="board-title">{{ boardTitle }}</span>
     </span>
     <span id="board-header-right">
-        <button id="add-board-btn" class="btn-general">Add Board</button>
-        <button id="delete-board-btn" [disabled]="!activeBoard" class="btn-general">Delete Board</button>
+        <button id="add-board-btn" class="btn-general" (click)="openAddBoard()">Add Board</button>
+        <button id="delete-board-btn" [disabled]="!activeBoard" class="btn-general" (click)="deleteBoard()">Delete Board</button>
     </span>
 </div>
 
@@ -24,6 +24,22 @@
         <app-category *ngFor="let val of categories" 
         [category]="val"
         ></app-category>
+    </div>
+</div>
+
+<div *ngIf="showAddBoard" class="popup-overlay">
+    <div class="popup-container">
+        <form class="popup-form" onsubmit="return false;">
+            <h2>Add Board</h2>
+            <div class="popup-row">
+                <label for="">Title</label>
+                <input type="text" [(ngModel)]="addBoardTitle" name="addBoardTitle">
+            </div>
+            <div>
+                <input type="submit" [disabled]="!addBoardTitle" class="btn-general" name="submitBoardBtn" value="Submit" (click)="submitAddBoard()">
+                <input type="button" class="btn-general" name="closeAddBoardBtn" value="Cancel" (click)="closeAddBoard()">
+            </div>
+        </form>
     </div>
 </div>
 

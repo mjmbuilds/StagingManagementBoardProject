@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.staging.data.CardDao;
 import com.staging.model.Card;
+import com.staging.model.CodeMessage;
 
 @Service
 public class CardService extends GenericService {
@@ -20,7 +21,7 @@ public class CardService extends GenericService {
 		this.cardDao = cardDao;
 	}
 	
-	public int addCard(Card card) {
+	public CodeMessage addCard(Card card) {
 		log.trace("addCard()");
 		return cardDao.addCard(card);
 	}
@@ -30,12 +31,12 @@ public class CardService extends GenericService {
 		return cardDao.getCard(id);
 	}
 	
-	public int updateCard(Card card) {
+	public CodeMessage updateCard(Card card) {
 		log.trace("updateCard()");
 		return cardDao.updateCard(card);
 	}
 	
-	public int deleteCard(String id) {
+	public CodeMessage deleteCard(String id) {
 		log.trace("deleteCard()");
 		return cardDao.deleteCard(id);
 	}
