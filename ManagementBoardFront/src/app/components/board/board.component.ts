@@ -16,17 +16,23 @@ export class BoardComponent implements OnInit {
   boards: Board[];
   activeBoard: Board;
   selectedIndex: number;
-  boardTitle: string;
   categories: Category[];
-
+  boardTitle: string;
+  boardTitleInput: string;
+  editingTitle = false;
   showAddBoard = false;
   addBoardTitle: string;
+
+
 
   constructor(private router: Router, private boardServ: BoardService, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
     if (this.authServ.hasLoggedInUser) {
       this.boards = this.authServ.loggedInUser.boards;
+
+      this.selectBoard('0');//TODO remove after testing
+
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
     }
@@ -52,6 +58,7 @@ export class BoardComponent implements OnInit {
   openBoard(board: Board) {
     this.activeBoard = board;
     this.boardTitle = board.title;
+    this.boardTitleInput = board.title;
     this.showBoard = true;
     if (board.categories) {
       this.categories = board.categories;
@@ -104,6 +111,28 @@ export class BoardComponent implements OnInit {
             this.selectBoard('-1');
           } else if (resp.code === -1) {
             alert('Error deleting board');
+          } else {
+            alert('Error: Unknown response');
+          }
+        }
+      );
+    }
+  }
+
+  editBoardTitle() {
+    this.editingTitle = true;
+  }
+
+  saveBoardTitle() {
+    this.editingTitle = false;
+    if (this.boardTitleInput !== this.boardTitle ) {
+      this.boardServ.updateBoard(this.activeBoard.id, this.boardTitleInput).subscribe(
+        resp => {
+          if (resp.code === 0) {
+            this.boardTitle = this.boardTitleInput;
+            this.boards[this.selectedIndex].title = this.boardTitle;
+          } else if (resp.code === -1) {
+            alert('Error updating board title');
           } else {
             alert('Error: Unknown response');
           }

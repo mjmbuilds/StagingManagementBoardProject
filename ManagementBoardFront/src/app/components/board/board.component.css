@@ -2,18 +2,13 @@
     background-color: slategrey;
     padding-left: 10px;
     padding-right: 10px;
+    height: 40px;
 }
 
 #board-header-left {
     display: inline-block;
     width: 33%;
     text-align: left;
-}
-
-#board-dropdown {
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 #board-header-center {
@@ -30,6 +25,11 @@
     text-align: right;
 }
 
+#board-dropdown {
+    padding: 5px;
+    margin-top: 5px;
+}
+
 #no-board {
     text-align: center;
     margin-top: 50px;
@@ -40,3 +40,17 @@
     text-align: center;
 }
 
+#board-title-btn {
+    background: none;
+    border: none;
+    font-size: 1em;
+}
+
+#board-title-input {
+    font-size: 1em;
+}
+
+#board-header-form {
+    position: relative;
+    top: 4px;
+}
