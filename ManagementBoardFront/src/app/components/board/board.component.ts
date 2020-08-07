@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthSimpleService } from 'src/app/services/auth-simple.service';
 import { BoardService } from 'src/app/services/board.service';
 import { CategoryService } from 'src/app/services/category.service';
+import { IndexList } from 'src/app/models/indexList';
 
 @Component({
   selector: 'app-board',
@@ -34,7 +35,7 @@ export class BoardComponent implements OnInit {
     if (this.authServ.hasLoggedInUser) {
       this.boards = this.authServ.loggedInUser.boards;
 
-      this.selectBoard('0');//TODO remove after testing
+      //this.selectBoard('0');//TODO remove after testing
 
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
@@ -139,7 +140,7 @@ export class BoardComponent implements OnInit {
 
   saveBoardTitle() {
     this.editingTitle = false;
-    if (this.boardTitleInput !== this.boardTitle ) {
+    if (this.boardTitleInput && this.boardTitleInput !== this.boardTitle ) {
       this.boardServ.updateBoard(this.activeBoard.id, this.boardTitleInput).subscribe(
         resp => {
           if (resp.code === 0) {
@@ -186,6 +187,46 @@ export class BoardComponent implements OnInit {
         }
       }
     );
+  }
+
+  removeCategory(index: number) {
+    this.categories.splice(index, 1);
+    this.updateCategoryIndexes();
+  }
+
+  // Step through the current collection of Categories
+  // and update their 'index' field, then add their
+  // id to an IndexList, and send to DB to save
+  updateCategoryIndexes() {
+    const indexList = new IndexList(); // IndexList to be sent to DB
+    indexList.idList = [];
+    for (let i = 0; i < this.categories.length; i++) { // step through categories
+      this.categories[i].index = i; // update 'index' field for the category
+      indexList.idList.push(this.categories[i].id); // add category's id to the IndexList
+    } // send update to server
+    this.categoryServ.updateCategoryIndexList(indexList).subscribe(
+      resp => {
+        if (resp.code === 0) {
+          // update was successful
+        } else if (resp.code === -1) {
+          alert('Error updating category index list');
+        } else {
+          alert('Error: Unknown response');
+        }
+      }
+    );
+  }
+
+  // Updates the title of the category with a mathcing id.
+  // Allows the category componenet to update a title in the
+  // board componenet's categories array.
+  setTitle(id: string, title: string) {
+    for (const category of this.categories) { // step through the categories array
+      if (category.id === id) { // if the id matches...
+        category.title = title; // ...then updated the title
+        break;
+      }
+    }
   }
 
 }

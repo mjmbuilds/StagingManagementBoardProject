@@ -1,11 +1,23 @@
-<div class="category-container">
-    <h2>{{ title }}</h2>
+<div class="category-container" draggable="true">
+
+    <div class="category-header">
+        <form onsubmit="return false;" id="category-title-form" name="categoryTitleForm">
+            <input type="button" id="ctgy-title-btn" name="ctgyTitleBtn" *ngIf="!editingTitle" [value]="title" (click)="editCategoryTitle()">
+            <input id="ctgy-title-input" name="ctgyTitleInput" *ngIf="editingTitle" [(ngModel)]='titleInput'>
+            <input type="submit" class="hidden-submit" (click)="saveCategoryTitle()">
+        </form>
+        <button id="delete-category-btn" (click)="deleteCategory()">X</button>
+    </div>
+
     <div class="category-card-container">
         <app-card *ngFor="let val of cards" 
         [card]="val"
         ></app-card>
     </div>
+
     <div class="category-footer">
         <button class="btn-general" id="add-card-btn">Add Card</button>
     </div>
+    <!--div>{{ category.index }}</div-->
+
 </div>

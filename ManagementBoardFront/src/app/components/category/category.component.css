@@ -6,12 +6,55 @@
     vertical-align: top;
 }
 
-.category-container h2 {
-    margin: 0px;
+.category-header {
+    height: 30px;
     border: 1px solid grey;
+    background-color: rgb(179, 222, 255);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#delete-category-btn {
+    height: 38px;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    float: right;
+    margin-top: -4px;
+    margin-right: -2px;
+    padding-top: 3px;
+    font-size: 1em;
 }
 
 #add-card-btn {
     width: 100%;
+    margin-top: -1px;
+    margin-left: 0px;
+}
+
+#delete-category-btn {
+    display: inline-block;
+}
+
+#category-title-form {
+    display: inline-block;
     margin: 0px;
+}
+
+#ctgy-title-btn {
+    background: none;
+    margin-left: 10px;
+    border: none;
+    font-size: 1.25em;
+    padding-top: 3px;
+}
+
+#ctgy-title-box {
+    width: 30;
+    text-overflow: ellipsis;
+}
+
+#ctgy-title-input {
+    margin-left: 3px;
+    width: 160px;
+    font-size: 1.25em;
 }

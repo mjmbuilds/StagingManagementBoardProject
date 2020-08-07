@@ -1,3 +1,3 @@
 export class IndexList {
-    idList: string[];
+    idList: string[] = [];
 }

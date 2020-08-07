@@ -23,7 +23,7 @@ public class CardService extends GenericService {
 	}
 	
 	public CodeMessage updateCardIndexList(IndexList indexList) {
-		log.trace("updateCardList()");
+		log.trace("updateCardIndexList()");
 		return cardDao.updateCardIndexList(indexList);
 	}
 	

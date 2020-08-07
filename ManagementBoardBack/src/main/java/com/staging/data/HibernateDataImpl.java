@@ -276,19 +276,28 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	
 	@Override
 	public CodeMessage updateCategoryIndexList(IndexList indexList) {
-		log.trace("updateIndexList()");
+		log.trace("updateCategoryIndexList()");
 		Transaction transaction = null;
+		if (indexList == null || indexList.getIdList() == null
+				|| indexList.getIdList().size() < 1) {
+			log.info("IndexList data was not valid");
+			System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+			System.out.println(indexList);
+			return new CodeMessage(-1);
+		}
 		try {
 			Session session = HibernateUtil.openSession();
-			transaction = session.beginTransaction();
 			
 			List<String> idList = indexList.getIdList();
 			for (int index = 0; index < idList.size(); index++) {
+				transaction = session.beginTransaction();
 				Category pCategory = (Category) session.load(Category.class, idList.get(index));
 				pCategory.setIndex(index);
+				log.debug("Updating Category: " + pCategory.getTitle() 
+					+ " : with id : " + pCategory.getIndex());
+				transaction.commit();
 			}
 			
-			transaction.commit();
 			log.info("Successfully updated category indexes");
 			return new CodeMessage(0);
 		} catch (Exception e) {
@@ -406,7 +415,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	
 	@Override
 	public CodeMessage updateCardIndexList(IndexList indexList) {
-		log.trace("updateCardList()");
+		log.trace("updateCardIndexList()");
 		Transaction transaction = null;
 		try {
 			Session session = HibernateUtil.openSession();

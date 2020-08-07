@@ -23,7 +23,7 @@ public class CategoryService extends GenericService {
 	}
 	
 	public CodeMessage updateCategoryIndexList(IndexList indexList) {
-		log.trace("updateIndexList()");
+		log.trace("updateCategoryIndexList()");
 		return categoryDao.updateCategoryIndexList(indexList);
 	}
 	

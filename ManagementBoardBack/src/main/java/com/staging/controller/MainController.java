@@ -119,11 +119,22 @@ public class MainController {
 	
 	//-------------------------------------------- Category
 	
-	@PostMapping("category/update-index-list")
+	/*
+	@PutMapping("category/update-index-list")
+	public CodeMessage updateCategoryIndexList(@RequestBody String data) {
+		log.trace("\n");
+		log.trace("updateCategoryIndexList()");
+		log.info("PUT Request to '/api/category/update-index-list' ");
+		log.trace("debug()");
+		log.debug("Data from Request:\n" + data);
+		return new CodeMessage();
+	}*/
+	
+	@PutMapping("category/update-index-list")
 	public CodeMessage updateCategoryIndexList(@RequestBody IndexList indexList) {
 		log.trace("\n");
 		log.trace("updateCategoryIndexList()");
-		log.info("POST Request to '/api/category/update-index-list' ");
+		log.info("PUT Request to '/api/category/update-index-list' ");
 		return categoryService.updateCategoryIndexList(indexList);
 	}
 	
@@ -161,11 +172,11 @@ public class MainController {
 	
 	//-------------------------------------------- Card
 	
-	@PostMapping("card/update-index-list")
+	@PutMapping("card/update-index-list")
 	public CodeMessage updateCardIndexList(@RequestBody IndexList indexList) {
 		log.trace("\n");
 		log.trace("updateCardIndexList()");
-		log.info("POST Request to '/api/category/update-index-list' ");
+		log.info("PUT Request to '/api/category/update-index-list' ");
 		return cardService.updateCardIndexList(indexList);
 	}
 	

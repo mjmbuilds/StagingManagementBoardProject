@@ -19,4 +19,9 @@ public class IndexList {
 		this.idList = idList;
 	}
 
+	@Override
+	public String toString() {
+		return "IndexList [idList=" + idList + "]";
+	}
+
 }

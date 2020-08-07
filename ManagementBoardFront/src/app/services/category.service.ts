@@ -4,6 +4,7 @@ import { UrlService } from './url.service';
 import { Observable } from 'rxjs';
 import { Category } from '../models/Category';
 import { CodeMessage } from '../models/CodeMessage';
+import { IndexList } from '../models/indexList';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,13 @@ import { CodeMessage } from '../models/CodeMessage';
 export class CategoryService {
 
   constructor(private http: HttpClient, private urlServ: UrlService) { }
+
+  updateCategoryIndexList( indexList: IndexList): Observable<CodeMessage> {
+    const idList = indexList.idList;
+    const url = this.urlServ.getUrl() + 'category/update-index-list';
+    const body = { idList };
+    return this.http.put<CodeMessage>(url, body);
+  }
 
   addCategory( title: string, owningBoardId: string, index: number ): Observable<CodeMessage> {
     const url = this.urlServ.getUrl() + 'category/add';
