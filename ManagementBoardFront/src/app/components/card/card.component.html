@@ -1,4 +1,7 @@
-<div class="cardDiv">
+<div class="cardDiv" id="card-item" 
+    draggable="true" 
+    (dragstart)="dragCardStart($event)" 
+    (dragover)="onDragOver($event)">
     <div class="cardTitle">
         {{ title }}
     </div>

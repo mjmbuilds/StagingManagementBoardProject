@@ -9,7 +9,7 @@
         <span id="board-header-center">
             <form onsubmit="return false;" id="board-header-form" name="boardHeaderForm">
                 <button id="board-title-btn" name="boardTitleBtn" *ngIf="activeBoard && !editingTitle" (click)="editBoardTitle()">{{ boardTitle }}</button>
-                <input id="board-title-input" name="boardTitleInput" *ngIf="editingTitle" [(ngModel)]='boardTitleInput'>
+                <input id="board-title-input" name="boardTitleInput" *ngIf="editingTitle" [(ngModel)]='boardTitleInput' (blur)="saveBoardTitle()">
                 <input type="submit" class="hidden-submit" (click)="saveBoardTitle()">
             </form>
         </span>

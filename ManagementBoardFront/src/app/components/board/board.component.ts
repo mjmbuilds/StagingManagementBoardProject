@@ -26,6 +26,10 @@ export class BoardComponent implements OnInit {
   addBoardTitle: string;
   showAddCategory = false;
   addCategoryTitle: string;
+  draggedCategoryIndex = -1;
+  draggedCardIndex = -1;
+  dragoverCategoryIndex = -1;
+  dragoverCardIndex = -1;
 
 
   constructor(private router: Router, private boardServ: BoardService,
@@ -35,11 +39,56 @@ export class BoardComponent implements OnInit {
     if (this.authServ.hasLoggedInUser) {
       this.boards = this.authServ.loggedInUser.boards;
 
-      //this.selectBoard('0');//TODO remove after testing
+      this.selectBoard('0');//TODO remove after testing
 
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
     }
+  }
+
+  setDraggedCategoryIndex(index: number) {
+    this.draggedCategoryIndex = index;
+    //console.log('drag category: ' + index);//debug
+  }
+
+  setDraggedCardIndex(index: number) {
+    this.draggedCardIndex = index;
+    //console.log('drag card: ' + index);//debug
+  }
+
+  setDragoverCategoryIndex(index: number) {
+    this.dragoverCategoryIndex = index;
+    //console.log('drag over category: ' + index);//debug
+  }
+
+  setDragoverCardIndex(index: number) {
+    this.dragoverCardIndex = index;
+    //console.log('drag over card: ' + index);//debug
+  }
+
+  onDrop() { //TODO
+    if (this.draggedCardIndex >= 0) {
+      if (this.dragoverCategoryIndex === this.draggedCategoryIndex
+          && this.dragoverCardIndex === this.draggedCardIndex) {
+        console.log('cancelled drop card');//debug
+      } else {
+        console.log('dropped card');//debug
+      }
+    } else {
+      if (this.dragoverCategoryIndex === this.draggedCategoryIndex) {
+        console.log('cancelled dropp category');//debug
+      } else {
+        console.log('dropped category');//debug
+        const tempCategory = this.categories[this.draggedCategoryIndex];
+        this.categories.splice(this.draggedCategoryIndex, 1);
+        this.categories.splice(this.dragoverCategoryIndex, 0, tempCategory);
+        this.updateCategoryIndexes();
+      }
+    }
+    this.draggedCategoryIndex = -1;
+    this.draggedCardIndex = -1;
+    this.dragoverCategoryIndex = -1;
+    this.dragoverCardIndex = -1;
   }
 
   selectBoard(selected: string) {
@@ -215,18 +264,6 @@ export class BoardComponent implements OnInit {
         }
       }
     );
-  }
-
-  // Updates the title of the category with a mathcing id.
-  // Allows the category componenet to update a title in the
-  // board componenet's categories array.
-  setTitle(id: string, title: string) {
-    for (const category of this.categories) { // step through the categories array
-      if (category.id === id) { // if the id matches...
-        category.title = title; // ...then updated the title
-        break;
-      }
-    }
   }
 
 }

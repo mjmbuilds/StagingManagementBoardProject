@@ -27,6 +27,27 @@ export class CategoryComponent implements OnInit {
     }
   }
 
+  dragCategoryStart(ev: Event) {
+    this.boardComp.setDraggedCategoryIndex(this.category.index);
+  }
+
+  setDraggedCardIndex(index: number) {
+    this.boardComp.setDraggedCardIndex(index);
+  }
+
+  setDragoverCardIndex(index: number) {
+    this.boardComp.setDragoverCardIndex(index);
+  }
+
+  onDragOver(ev: Event) {
+    ev.preventDefault(); // to allow dropping on this element
+    this.boardComp.setDragoverCategoryIndex(this.category.index);
+  }
+
+  onDrop() {
+    this.boardComp.onDrop();
+  }
+
   editCategoryTitle() {
     this.editingTitle = true;
   }
@@ -38,7 +59,7 @@ export class CategoryComponent implements OnInit {
         resp => {
           if (resp.code === 0) {
             this.title = this.titleInput;
-            //TODO send update to category title in board page
+            this.category.title = this.titleInput;
           } else if (resp.code === -1) {
             alert('Error updating category title');
           } else {
