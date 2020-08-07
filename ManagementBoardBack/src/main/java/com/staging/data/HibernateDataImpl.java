@@ -417,17 +417,24 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	public CodeMessage updateCardIndexList(IndexList indexList) {
 		log.trace("updateCardIndexList()");
 		Transaction transaction = null;
+		if (indexList == null || indexList.getIdList() == null
+				|| indexList.getIdList().size() < 1) {
+			log.info("IndexList data was not valid");
+			return new CodeMessage(-1);
+		}
 		try {
 			Session session = HibernateUtil.openSession();
-			transaction = session.beginTransaction();
 			
 			List<String> idList = indexList.getIdList();
 			for (int index = 0; index < idList.size(); index++) {
+				transaction = session.beginTransaction();
 				Card pCard = (Card) session.load(Card.class, idList.get(index));
 				pCard.setIndex(index);
+				log.debug("Updating Card: " + pCard.getTitle() 
+					+ " : with id : " + pCard.getIndex());
+				transaction.commit();
 			}
 			
-			transaction.commit();
 			log.info("Successfully updated card indexes");
 			return new CodeMessage(0);
 		} catch (Exception e) {
@@ -497,8 +504,17 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			transaction = session.beginTransaction();
 			
 			Card pCard = (Card) session.load(Card.class, card.getId());
-			pCard.setTitle(card.getTitle());
-			pCard.setDescription(card.getDescription());
+			if (card.getTitle() != null) {
+				pCard.setTitle(card.getTitle());
+			}
+			if (card.getDescription() != null) {
+				pCard.setDescription(card.getDescription());
+			}
+			if (card.getOwningCategoryId() != null) {
+				Category owningCategory = new Category();
+				owningCategory.setId(card.getOwningCategoryId());
+				pCard.setCategory(owningCategory);
+			}
 			
 			transaction.commit();
 			log.info("Successfully updated card: " + card.getTitle());

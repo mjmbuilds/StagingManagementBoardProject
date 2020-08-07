@@ -24,6 +24,7 @@ export class CategoryComponent implements OnInit {
       this.title = this.category.title;
       this.titleInput = this.title;
       this.cards = this.category.cards;
+      this.cards.sort(this.compareCard);
     }
   }
 
@@ -71,19 +72,17 @@ export class CategoryComponent implements OnInit {
   }
 
   deleteCategory() {
-    if (confirm('Do you really want to delete this category?')) {
-      this.categoryServ.deleteCategory(this.category.id).subscribe(
-        resp => {
-          if (resp.code === 0) {
-            this.boardComp.removeCategory(this.category.index);
-          } else if (resp.code === -1) {
-            alert('Error deleting category');
-          } else {
-            alert('Error: Unknown response');
-          }
-        }
-      );
+    this.boardComp.deleteCategory(this.category.id, this.category.index);
+  }
+
+  compareCard( a: Card, b: Card ) {
+    if ( a.index < b.index ) {
+      return -1;
     }
+    if ( a.index > b.index ) {
+      return 1;
+    }
+    return 0;
   }
 
 }
