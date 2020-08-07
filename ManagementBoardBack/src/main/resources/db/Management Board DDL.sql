@@ -31,7 +31,7 @@ CREATE TABLE mb_card (
     card_id VARCHAR2(40),
     fk_category VARCHAR2(36),
     card_title VARCHAR2(50) NOT NULL,
-    card_description VARCHAR2(1000) NOT NULL,
+    card_description VARCHAR2(1000),
     card_index NUMBER,
     CONSTRAINT pk_card PRIMARY KEY (card_id)
 );

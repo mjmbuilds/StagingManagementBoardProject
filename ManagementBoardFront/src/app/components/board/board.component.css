@@ -70,3 +70,15 @@
     vertical-align: top;
     padding: 10px;
 }
+
+#add-card-textarea {
+    min-width: 200px;
+    min-height: 100px;
+}
+
+#add-card-category-name {
+    font-weight: bold;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    
+}

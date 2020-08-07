@@ -7,6 +7,7 @@ import { BoardService } from 'src/app/services/board.service';
 import { CategoryService } from 'src/app/services/category.service';
 import { IndexList } from 'src/app/models/indexList';
 import { CardService } from 'src/app/services/card.service';
+import { Card } from 'src/app/models/Card';
 
 @Component({
   selector: 'app-board',
@@ -27,6 +28,11 @@ export class BoardComponent implements OnInit {
   addBoardTitle: string;
   showAddCategory = false;
   addCategoryTitle: string;
+  showAddCard = false;
+  addCardCategoryIndex: number;
+  addCardCategoryName: string;
+  addCardTitle: string;
+  addCardDescription: string;
   draggedCategoryIndex = -1;
   draggedCardIndex = -1;
   dragoverCategoryIndex = -1;
@@ -42,7 +48,7 @@ export class BoardComponent implements OnInit {
     if (this.authServ.hasLoggedInUser) {
       this.boards = this.authServ.loggedInUser.boards;
 
-      this.selectBoard('0');//TODO remove after testing
+      //this.selectBoard('0');//TODO remove after testing
 
     } else {
       this.router.navigateByUrl(''); // if not logged in, navigate to home page
@@ -51,32 +57,26 @@ export class BoardComponent implements OnInit {
 
   setDraggedCategoryIndex(index: number) {
     this.draggedCategoryIndex = index;
-    //console.log('drag category: ' + index);//debug
   }
 
   setDraggedCardIndex(index: number) {
     this.draggedCardIndex = index;
-    //console.log('drag card: ' + index);//debug
   }
 
   setDragoverCategoryIndex(index: number) {
     this.dragoverCategoryIndex = index;
-    //console.log('drag over category: ' + index);//debug
   }
 
   setDragoverCardIndex(index: number) {
     this.dragoverCardIndex = index;
-    //console.log('drag over card: ' + index);//debug
   }
 
-  onDrop() { //TODO
+  onDrop() {
     if (this.draggedCardIndex >= 0) { // check if card was dragged
       if (this.dragoverCategoryIndex === this.draggedCategoryIndex
           && this.dragoverCardIndex === this.draggedCardIndex) {
         // if card is dropped on itself, cancel drop
-        console.log('cancelled drop card');//debug
       } else {
-        //console.log('dropped card');//debug
         const toCards = this.categories[this.dragoverCategoryIndex].cards; // card array dropped in
         const fromCards = this.categories[this.draggedCategoryIndex].cards; // card array dragged from
         const tempCard = fromCards[this.draggedCardIndex]; // ref to card being moved
@@ -105,9 +105,7 @@ export class BoardComponent implements OnInit {
     } else { // category was dragged
       if (this.dragoverCategoryIndex === this.draggedCategoryIndex) {
         // if category is dropped on itself, cancel drop
-        console.log('cancelled dropp category');//debug
       } else {
-        //console.log('dropped category');//debug
         const tempCategory = this.categories[this.draggedCategoryIndex]; // ref to category being moded
         this.categories.splice(this.draggedCategoryIndex, 1); // remove category from old position
         this.categories.splice(this.dragoverCategoryIndex, 0, tempCategory); // insert category into new position
@@ -341,6 +339,48 @@ export class BoardComponent implements OnInit {
           // update was successful
         } else if (resp.code === -1) {
           alert('Error updating card index list');
+        } else {
+          alert('Error: Unknown response');
+        }
+      }
+    );
+  }
+
+  openAddCard(categoryIndex: number) {
+    this.showAddCard = true;
+    this.addCardTitle = null;
+    this.addCardDescription = null;
+    this.addCardCategoryIndex = categoryIndex;
+    this.addCardCategoryName = this.categories[categoryIndex].title;
+  }
+
+  closeAddCard() {
+    this.showAddCard = false;
+    this.addCardTitle = null;
+    this.addCardDescription = null;
+    this.addCardCategoryIndex = null;
+    this.addCardCategoryName = null;
+  }
+
+  submitAddCard(){
+    if (this.categories[this.addCardCategoryIndex].cards == null) {
+      this.categories[this.addCardCategoryIndex].cards = [];
+    }
+    const cards = this.categories[this.addCardCategoryIndex].cards;
+    const newCard = new Card();
+    newCard.title = this.addCardTitle;
+    newCard.description = this.addCardDescription;
+    newCard.owningCategoryId = this.categories[this.addCardCategoryIndex].id;
+    newCard.index = cards.length;
+    this.cardServ.addCard(
+      newCard.title, newCard.description, newCard.owningCategoryId, newCard.index).subscribe(
+      resp => {
+        if (resp.code === 0) {
+          newCard.id = resp.message;
+          cards.push(newCard);
+          this.closeAddCard();
+        } else if (resp.code === -1) {
+          alert('Error adding card');
         } else {
           alert('Error: Unknown response');
         }

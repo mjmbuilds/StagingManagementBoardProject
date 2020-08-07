@@ -38,7 +38,7 @@
             <form class="popup-form" onsubmit="return false;">
                 <h2>Add Board</h2>
                 <div class="popup-row">
-                    <label for="">Title</label>
+                    <label for="addBoardTitle">Title</label>
                     <input type="text" [(ngModel)]="addBoardTitle" name="addBoardTitle">
                 </div>
                 <div>
@@ -54,7 +54,7 @@
             <form class="popup-form" onsubmit="return false;">
                 <h2>Add Category</h2>
                 <div class="popup-row">
-                    <label for="">Title</label>
+                    <label for="addCategpryTitle">Title</label>
                     <input type="text" [(ngModel)]="addCategoryTitle" name="addCategpryTitle">
                 </div>
                 <div>
@@ -64,4 +64,26 @@
             </form>
         </div>
     </div>
+
+    <div *ngIf="showAddCard" class="popup-overlay">
+        <div class="popup-container">
+            <form class="popup-form" onsubmit="return false;">
+                <h2>Add Card</h2>
+                <div id="add-card-category-name">{{ addCardCategoryName }}</div>
+                <div class="popup-row">
+                    <label for="addCardTitle">Title</label><br>
+                    <input type="text" [(ngModel)]="addCardTitle" name="addCardTitle">
+                </div>
+                <div class="popup-row">
+                    <label for="addCardDescription">Description</label><br>
+                    <textarea id="add-card-textarea" name="addCardDescription" [(ngModel)]="addCardDescription"></textarea>
+                </div>
+                <div>
+                    <input type="submit" [disabled]="!addCardTitle" class="btn-general" name="submitCardBtn" value="Submit" (click)="submitAddCard()">
+                    <input type="button" class="btn-general" name="closeAddCategoryBtn" value="Cancel" (click)="closeAddCard()">
+                </div>
+            </form>
+        </div>
+    </div>
+
 </div>

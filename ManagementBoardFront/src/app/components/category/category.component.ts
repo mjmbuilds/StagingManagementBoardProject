@@ -85,4 +85,8 @@ export class CategoryComponent implements OnInit {
     return 0;
   }
 
+  openAddCard() {
+    this.boardComp.openAddCard(this.category.index);
+  }
+
 }
