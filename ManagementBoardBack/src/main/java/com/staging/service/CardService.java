@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.staging.data.CardDao;
 import com.staging.model.Card;
 import com.staging.model.CodeMessage;
+import com.staging.model.IndexList;
 
 @Service
 public class CardService extends GenericService {
@@ -19,6 +20,11 @@ public class CardService extends GenericService {
 	@Autowired // daoQualifier is specified in GenericService
 	public CardService(@Qualifier(daoQualifier) CardDao cardDao) {
 		this.cardDao = cardDao;
+	}
+	
+	public CodeMessage updateCardIndexList(IndexList indexList) {
+		log.trace("updateCardList()");
+		return cardDao.updateCardIndexList(indexList);
 	}
 	
 	public CodeMessage addCard(Card card) {

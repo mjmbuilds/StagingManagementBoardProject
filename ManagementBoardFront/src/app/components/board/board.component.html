@@ -1,50 +1,67 @@
-<div id="board-header">
-    <span id="board-header-left">
-        <select id="board-dropdown" name="boards" (change)="selectBoard($event.target.value)">
-            <option value="-1" selected="selected">Select a board</option>
-            <option *ngFor="let board of boards; let i = index" value="{{ i }}">{{ board.title }}</option>
-        </select>
-    </span>
-    <span id="board-header-center">
-        <form onsubmit="return false;" id="board-header-form" name="boardHeaderForm">
-            <button id="board-title-btn" name="boardTitleBtn" *ngIf="activeBoard && !editingTitle" (click)="editBoardTitle()">{{ boardTitle }}</button>
-            <input id="board-title-input" name="boardTitleInput" *ngIf="editingTitle" [(ngModel)]='boardTitleInput'>
-            <input type="submit" class="hidden-submit" (click)="saveBoardTitle()">
-        </form>
-    </span>
-    <span id="board-header-right">
-        <button id="add-board-btn" class="btn-general" (click)="openAddBoard()">Add Board</button>
-        <button id="delete-board-btn" [disabled]="!activeBoard" class="btn-general" (click)="deleteBoard()">Delete Board</button>
-    </span>
-</div>
+<div id="board-main-div">
+    <div id="board-header">
+        <span id="board-header-left">
+            <select id="board-dropdown" name="boards" (change)="selectBoard($event.target.value)">
+                <option value="-1" selected="selected">Select a board</option>
+                <option *ngFor="let board of boards; let i = index" value="{{ i }}">{{ board.title }}</option>
+            </select>
+        </span>
+        <span id="board-header-center">
+            <form onsubmit="return false;" id="board-header-form" name="boardHeaderForm">
+                <button id="board-title-btn" name="boardTitleBtn" *ngIf="activeBoard && !editingTitle" (click)="editBoardTitle()">{{ boardTitle }}</button>
+                <input id="board-title-input" name="boardTitleInput" *ngIf="editingTitle" [(ngModel)]='boardTitleInput'>
+                <input type="submit" class="hidden-submit" (click)="saveBoardTitle()">
+            </form>
+        </span>
+        <span id="board-header-right">
+            <button id="add-board-btn" class="btn-general" (click)="openAddBoard()">Add Board</button>
+            <button id="delete-board-btn" [disabled]="!activeBoard" class="btn-general" (click)="deleteBoard()">Delete Board</button>
+        </span>
+    </div>
 
-<div *ngIf="!showBoard" id="no-board">
-    No active board.<br>
-    Add or select a board.
-</div>
+    <div *ngIf="!showBoard" id="no-board">
+        No active board.<br>
+        Add or select a board.
+    </div>
 
-<div *ngIf="showBoard" id="board">
-    <div id="board-contents">
+    <div id="board-contents" *ngIf="showBoard">
         <app-category *ngFor="let val of categories" 
         [category]="val"
         ></app-category>
+        <div id="add-category">
+            <button id="add-category" (click)="openAddCategory()">Add Category</button>
+        </div>
+    </div>
+
+    <div *ngIf="showAddBoard" class="popup-overlay">
+        <div class="popup-container">
+            <form class="popup-form" onsubmit="return false;">
+                <h2>Add Board</h2>
+                <div class="popup-row">
+                    <label for="">Title</label>
+                    <input type="text" [(ngModel)]="addBoardTitle" name="addBoardTitle">
+                </div>
+                <div>
+                    <input type="submit" [disabled]="!addBoardTitle" class="btn-general" name="submitBoardBtn" value="Submit" (click)="submitAddBoard()">
+                    <input type="button" class="btn-general" name="closeAddBoardBtn" value="Cancel" (click)="closeAddBoard()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div *ngIf="showAddCategory" class="popup-overlay">
+        <div class="popup-container">
+            <form class="popup-form" onsubmit="return false;">
+                <h2>Add Category</h2>
+                <div class="popup-row">
+                    <label for="">Title</label>
+                    <input type="text" [(ngModel)]="addCategoryTitle" name="addCategpryTitle">
+                </div>
+                <div>
+                    <input type="submit" [disabled]="!addCategoryTitle" class="btn-general" name="submitCategoryBtn" value="Submit" (click)="submitAddCategory()">
+                    <input type="button" class="btn-general" name="closeAddCategoryBtn" value="Cancel" (click)="closeAddCategory()">
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
-<div *ngIf="showAddBoard" class="popup-overlay">
-    <div class="popup-container">
-        <form class="popup-form" onsubmit="return false;">
-            <h2>Add Board</h2>
-            <div class="popup-row">
-                <label for="">Title</label>
-                <input type="text" [(ngModel)]="addBoardTitle" name="addBoardTitle">
-            </div>
-            <div>
-                <input type="submit" [disabled]="!addBoardTitle" class="btn-general" name="submitBoardBtn" value="Submit" (click)="submitAddBoard()">
-                <input type="button" class="btn-general" name="closeAddBoardBtn" value="Cancel" (click)="closeAddBoard()">
-            </div>
-        </form>
-    </div>
-</div>
-
-

@@ -1,3 +1,10 @@
+#board-main-div {
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    bottom: 40px;
+}
+
 #board-header {
     background-color: slategrey;
     padding-left: 10px;
@@ -38,6 +45,9 @@
 
 #board-contents {
     text-align: center;
+    white-space: nowrap;
+    height: 100%;
+    overflow: auto;
 }
 
 #board-title-btn {
@@ -53,4 +63,10 @@
 #board-header-form {
     position: relative;
     top: 4px;
+}
+
+#add-category {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
 }

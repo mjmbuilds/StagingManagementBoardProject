@@ -38,11 +38,15 @@ public class Card implements Serializable {
 	@Column(name = "card_description")
 	private String description;
 
+	@Column(name = "card_index")
+	private Integer index;
+	
 	public Card() {
 		this.id = UUID.randomUUID().toString();
 		this.category = null;
 		this.title = null;
 		this.description = null;
+		this.index = null;
 	}
 
 	public Card(String title, String description) {
@@ -50,6 +54,7 @@ public class Card implements Serializable {
 		this.category = null;
 		this.title = title;
 		this.description = description;
+		this.index = null;
 	}
 
 	public Card(String title, String description, Category category) {
@@ -57,6 +62,7 @@ public class Card implements Serializable {
 		this.category = category;
 		this.title = title;
 		this.description = description;
+		this.index = null;
 	}//----------------------------------------------------------------
 
 	public String getId() {
@@ -103,6 +109,14 @@ public class Card implements Serializable {
 		this.description = description;
 	}
 
+	public Integer getIndex() {
+		return index;
+	}
+
+	public void setIndex(Integer index) {
+		this.index = index;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -110,6 +124,8 @@ public class Card implements Serializable {
 		result = prime * result + ((category == null) ? 0 : category.hashCode());
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((index == null) ? 0 : index.hashCode());
+		result = prime * result + ((owningCategoryId == null) ? 0 : owningCategoryId.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
@@ -138,6 +154,16 @@ public class Card implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (index == null) {
+			if (other.index != null)
+				return false;
+		} else if (!index.equals(other.index))
+			return false;
+		if (owningCategoryId == null) {
+			if (other.owningCategoryId != null)
+				return false;
+		} else if (!owningCategoryId.equals(other.owningCategoryId))
+			return false;
 		if (title == null) {
 			if (other.title != null)
 				return false;
@@ -149,7 +175,7 @@ public class Card implements Serializable {
 	@Override
 	public String toString() {
 		return "Card [id=" + id + ", owningCategoryId=" + owningCategoryId + ", title=" + title + ", description="
-				+ description + "]";
+				+ description + ", index=" + index + "]";
 	}
 
 }

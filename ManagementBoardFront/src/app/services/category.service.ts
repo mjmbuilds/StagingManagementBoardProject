@@ -12,9 +12,9 @@ export class CategoryService {
 
   constructor(private http: HttpClient, private urlServ: UrlService) { }
 
-  addCategory( title: string, owningBoardId: string ): Observable<CodeMessage> {
+  addCategory( title: string, owningBoardId: string, index: number ): Observable<CodeMessage> {
     const url = this.urlServ.getUrl() + 'category/add';
-    const body = { title, owningBoardId };
+    const body = { title, owningBoardId, index };
     return this.http.post<CodeMessage>(url, body);
   }
 

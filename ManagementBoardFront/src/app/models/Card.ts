@@ -3,4 +3,5 @@ export class Card {
     owningCategoryId: string;
     title: string;
     description: string;
+    index: number;
 }

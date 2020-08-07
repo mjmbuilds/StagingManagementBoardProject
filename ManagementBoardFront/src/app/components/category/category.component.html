@@ -1,8 +1,11 @@
-<div class="categoryDiv">
+<div class="category-container">
     <h2>{{ title }}</h2>
-    <div class="categoryCardDiv">
+    <div class="category-card-container">
         <app-card *ngFor="let val of cards" 
         [card]="val"
         ></app-card>
+    </div>
+    <div class="category-footer">
+        <button class="btn-general" id="add-card-btn">Add Card</button>
     </div>
 </div>

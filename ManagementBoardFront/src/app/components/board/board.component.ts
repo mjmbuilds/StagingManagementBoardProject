@@ -4,6 +4,7 @@ import { Category } from 'src/app/models/Category';
 import { Router } from '@angular/router';
 import { AuthSimpleService } from 'src/app/services/auth-simple.service';
 import { BoardService } from 'src/app/services/board.service';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-board',
@@ -22,10 +23,12 @@ export class BoardComponent implements OnInit {
   editingTitle = false;
   showAddBoard = false;
   addBoardTitle: string;
+  showAddCategory = false;
+  addCategoryTitle: string;
 
 
-
-  constructor(private router: Router, private boardServ: BoardService, private authServ: AuthSimpleService) { }
+  constructor(private router: Router, private boardServ: BoardService,
+              private categoryServ: CategoryService, private authServ: AuthSimpleService) { }
 
   ngOnInit(): void {
     if (this.authServ.hasLoggedInUser) {
@@ -55,6 +58,16 @@ export class BoardComponent implements OnInit {
     }
   }
 
+  compareCategory( a: Category, b: Category ) {
+    if ( a.index < b.index ) {
+      return -1;
+    }
+    if ( a.index > b.index ) {
+      return 1;
+    }
+    return 0;
+  }
+
   openBoard(board: Board) {
     this.activeBoard = board;
     this.boardTitle = board.title;
@@ -62,6 +75,7 @@ export class BoardComponent implements OnInit {
     this.showBoard = true;
     if (board.categories) {
       this.categories = board.categories;
+      this.categories.sort(this.compareCategory);
     }
   }
 
@@ -139,6 +153,39 @@ export class BoardComponent implements OnInit {
         }
       );
     }
+  }
+
+  openAddCategory() {
+    this.addCategoryTitle = null;
+    this.showAddCategory = true;
+  }
+
+  closeAddCategory() {
+    this.addCategoryTitle = null;
+    this.showAddCategory = false;
+  }
+
+  submitAddCategory() {
+    if (this.categories == null) {
+      this.categories = [];
+    }
+    this.categoryServ.addCategory(this.addCategoryTitle, this.activeBoard.id, this.categories.length).subscribe(
+      resp => {
+        if (resp.code === 0) {
+          const newCategory = new Category();
+          newCategory.id = resp.message;
+          newCategory.owningBoardId = this.activeBoard.id;
+          newCategory.index = this.categories.length;
+          newCategory.title = this.addCategoryTitle;
+          this.categories.push(newCategory);
+          this.closeAddCategory();
+        } else if (resp.code === -1) {
+          alert('Error adding category');
+        } else {
+          alert('Error: Unknown response');
+        }
+      }
+    );
   }
 
 }

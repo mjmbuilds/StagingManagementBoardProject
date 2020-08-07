@@ -12,9 +12,9 @@ export class CardService {
 
   constructor(private http: HttpClient, private urlServ: UrlService) { }
 
-  addCard( title: string, description: string, owningCategoryId: string ): Observable<CodeMessage> {
+  addCard( title: string, description: string, owningCategoryId: string, index: number ): Observable<CodeMessage> {
     const url = this.urlServ.getUrl() + 'card/add';
-    const body = { title, description, owningCategoryId };
+    const body = { title, description, owningCategoryId, index };
     return this.http.post<CodeMessage>(url, body);
   }
 

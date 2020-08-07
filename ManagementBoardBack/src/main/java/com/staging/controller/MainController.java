@@ -17,6 +17,7 @@ import com.staging.model.Board;
 import com.staging.model.Card;
 import com.staging.model.Category;
 import com.staging.model.CodeMessage;
+import com.staging.model.IndexList;
 import com.staging.model.User;
 import com.staging.service.BoardService;
 import com.staging.service.CardService;
@@ -117,6 +118,15 @@ public class MainController {
 	}
 	
 	//-------------------------------------------- Category
+	
+	@PostMapping("category/update-index-list")
+	public CodeMessage updateCategoryIndexList(@RequestBody IndexList indexList) {
+		log.trace("\n");
+		log.trace("updateCategoryIndexList()");
+		log.info("POST Request to '/api/category/update-index-list' ");
+		return categoryService.updateCategoryIndexList(indexList);
+	}
+	
 	@PostMapping("category/add")
 	public CodeMessage addCategory(@RequestBody Category category) {
 		log.trace("\n");
@@ -150,6 +160,15 @@ public class MainController {
 	}
 	
 	//-------------------------------------------- Card
+	
+	@PostMapping("card/update-index-list")
+	public CodeMessage updateCardIndexList(@RequestBody IndexList indexList) {
+		log.trace("\n");
+		log.trace("updateCardIndexList()");
+		log.info("POST Request to '/api/category/update-index-list' ");
+		return cardService.updateCardIndexList(indexList);
+	}
+	
 	@PostMapping("card/add")
 	public CodeMessage addCard(@RequestBody Card card) {
 		log.trace("\n");

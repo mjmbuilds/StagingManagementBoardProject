@@ -11,6 +11,7 @@ import com.staging.model.Board;
 import com.staging.model.Card;
 import com.staging.model.Category;
 import com.staging.model.CodeMessage;
+import com.staging.model.IndexList;
 import com.staging.model.User;
 
 // Temporary mock DB using a List
@@ -21,6 +22,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	private static List<User> DB = new ArrayList<>();
 	
 	//-------------------------------------------- Debug DAO
+	
 	@Override
 	public int resetDB() {
 		DB = new ArrayList<>();
@@ -63,6 +65,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 	
 	//-------------------------------------------- User DAO
+	
 	@Override
 	public CodeMessage addUser(User user) {
 		log.trace("addUser()");
@@ -104,6 +107,7 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	}
 
 	//-------------------------------------------- Board DAO
+	
 	@Override
 	public CodeMessage addBoard(Board board) {
 		log.trace("addBoard()");
@@ -134,6 +138,11 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 	//-------------------------------------------- Category DAO
 	
 	@Override
+	public CodeMessage updateCategoryIndexList(IndexList indexList) {
+		return null;
+	}
+	
+	@Override
 	public CodeMessage addCategory(Category category) {
 		log.trace("addCategory()");
 		// TODO Auto-generated method stub
@@ -160,6 +169,12 @@ public class FakeDataImpl implements UserDao, BoardDao, CategoryDao, CardDao, De
 		return null;
 	}
 	//-------------------------------------------- Card DAO
+	
+	@Override
+	public CodeMessage updateCardIndexList(IndexList indexList) {
+		return null;
+	}
+	
 	@Override
 	public CodeMessage addCard(Card card) {
 		log.trace("addCard()");

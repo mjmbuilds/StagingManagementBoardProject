@@ -23,6 +23,7 @@ CREATE TABLE mb_category (
     category_id VARCHAR2(40),
     fk_board VARCHAR2(36),
     category_title VARCHAR2(50) NOT NULL,
+    category_index NUMBER,
     CONSTRAINT pk_category PRIMARY KEY (category_id)
 );
 
@@ -31,6 +32,7 @@ CREATE TABLE mb_card (
     fk_category VARCHAR2(36),
     card_title VARCHAR2(50) NOT NULL,
     card_description VARCHAR2(1000) NOT NULL,
+    card_index NUMBER,
     CONSTRAINT pk_card PRIMARY KEY (card_id)
 );
 

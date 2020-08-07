@@ -1,6 +1,14 @@
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
+    height: 100%;
     background-color: rgb(148, 166, 180);
     margin: 0px;
+    padding: 0px;
 }
 
 .btn-general {
@@ -43,7 +51,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-
 }
 
 .popup-form {

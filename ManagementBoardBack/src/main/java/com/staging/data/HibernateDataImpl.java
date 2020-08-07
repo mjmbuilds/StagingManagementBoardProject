@@ -17,6 +17,7 @@ import com.staging.model.Board;
 import com.staging.model.Card;
 import com.staging.model.Category;
 import com.staging.model.CodeMessage;
+import com.staging.model.IndexList;
 import com.staging.model.User;
 import com.staging.util.HibernateUtil;
 
@@ -26,6 +27,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 	
 	//-------------------------------------------- User DAO
+	
 	@Override
 	public CodeMessage addUser(User user) {
 		log.trace("addUser()");
@@ -168,6 +170,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 
 	//-------------------------------------------- Board DAO
+	
 	@Override
 	public CodeMessage addBoard(Board board) {
 		log.trace("addBoard()");
@@ -272,6 +275,33 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	//-------------------------------------------- Category DAO
 	
 	@Override
+	public CodeMessage updateCategoryIndexList(IndexList indexList) {
+		log.trace("updateIndexList()");
+		Transaction transaction = null;
+		try {
+			Session session = HibernateUtil.openSession();
+			transaction = session.beginTransaction();
+			
+			List<String> idList = indexList.getIdList();
+			for (int index = 0; index < idList.size(); index++) {
+				Category pCategory = (Category) session.load(Category.class, idList.get(index));
+				pCategory.setIndex(index);
+			}
+			
+			transaction.commit();
+			log.info("Successfully updated category indexes");
+			return new CodeMessage(0);
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			log.warn("Failed to update category indexes");
+			e.printStackTrace();
+			return new CodeMessage(-1);
+		}
+	}
+	
+	@Override
 	public CodeMessage addCategory(Category category) {
 		log.trace("addCategory()");
 		Transaction transaction = null;
@@ -371,7 +401,36 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			return new CodeMessage(-1);
 		}
 	}
+	
 	//-------------------------------------------- Card DAO
+	
+	@Override
+	public CodeMessage updateCardIndexList(IndexList indexList) {
+		log.trace("updateCardList()");
+		Transaction transaction = null;
+		try {
+			Session session = HibernateUtil.openSession();
+			transaction = session.beginTransaction();
+			
+			List<String> idList = indexList.getIdList();
+			for (int index = 0; index < idList.size(); index++) {
+				Card pCard = (Card) session.load(Card.class, idList.get(index));
+				pCard.setIndex(index);
+			}
+			
+			transaction.commit();
+			log.info("Successfully updated card indexes");
+			return new CodeMessage(0);
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			log.warn("Failed to update card indexes");
+			e.printStackTrace();
+			return new CodeMessage(-1);
+		}
+	}
+	
 	@Override
 	public CodeMessage addCard(Card card) {
 		log.trace("addCard()");
@@ -475,6 +534,7 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 	}
 	
 	//-------------------------------------------- Debug DAO
+	
 	@Override
 	public int resetDB() {
 		log.warn("!!!!!!!!!! DELETE ALL USERS - RESET DATABASE !!!!!!!!!!");
@@ -508,15 +568,17 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 				addBoard(board);
 				for (int j = 1; j <= numCategories; j++) {
 					Category category = new Category("Category " + i + "-" + j, board);
-					if (j == 1) {
+					if (i == 1 && j == 1) {
 						category.setId("0ceedc63-6453-4ccb-8208-656e51be22d1");
 					}
+					category.setIndex(j - 1);
 					addCategory(category);
 					for (int k = 1; k <= numCards; k++) {
 						Card card = new Card("Task " + k, "Description of task " + i + j + k, category);
-						if (k == 1) {
+						if (i == 1 && j == 1 && k == 1) {
 							card.setId("27d7122a-9e4b-4917-9600-a7a49b3e5c2b");
 						}
+						card.setIndex(k - 1);
 						addCard(card);
 					}
 				}

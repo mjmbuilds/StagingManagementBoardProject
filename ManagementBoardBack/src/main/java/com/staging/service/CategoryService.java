@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.staging.data.CategoryDao;
 import com.staging.model.Category;
 import com.staging.model.CodeMessage;
+import com.staging.model.IndexList;
 
 @Service
 public class CategoryService extends GenericService {
@@ -19,6 +20,11 @@ public class CategoryService extends GenericService {
 	@Autowired // daoQualifier is specified in GenericService
 	public CategoryService(@Qualifier(daoQualifier) CategoryDao categoryDao) {
 		this.categoryDao = categoryDao;
+	}
+	
+	public CodeMessage updateCategoryIndexList(IndexList indexList) {
+		log.trace("updateIndexList()");
+		return categoryDao.updateCategoryIndexList(indexList);
 	}
 	
 	public CodeMessage addCategory(Category category) {

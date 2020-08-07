@@ -39,6 +39,9 @@ public class Category implements Serializable {
 	@Column(name = "category_title")
 	private String title;
 	
+	@Column(name = "category_index")
+	private Integer index;
+	
 	@OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Card> cards;
 	
@@ -46,6 +49,7 @@ public class Category implements Serializable {
 		this.id = UUID.randomUUID().toString();
 		this.board = null;
 		this.title = null;
+		this.index = null;
 		this.cards = new ArrayList<Card>();
 	}
 
@@ -53,6 +57,7 @@ public class Category implements Serializable {
 		this.id = UUID.randomUUID().toString();
 		this.board = null;
 		this.title = title;
+		this.index = null;
 		this.cards = new ArrayList<Card>();
 	}
 	
@@ -60,6 +65,7 @@ public class Category implements Serializable {
 		this.id = UUID.randomUUID().toString();
 		this.board = board;
 		this.title = title;
+		this.index = null;
 		this.cards = new ArrayList<Card>();
 	}
 	
@@ -109,6 +115,14 @@ public class Category implements Serializable {
 		this.title = title;
 	}
 
+	public Integer getIndex() {
+		return index;
+	}
+
+	public void setIndex(Integer index) {
+		this.index = index;
+	}
+
 	public List<Card> getCards() {
 		return cards;
 	}
@@ -124,6 +138,8 @@ public class Category implements Serializable {
 		result = prime * result + ((board == null) ? 0 : board.hashCode());
 		result = prime * result + ((cards == null) ? 0 : cards.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((index == null) ? 0 : index.hashCode());
+		result = prime * result + ((owningBoardId == null) ? 0 : owningBoardId.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		return result;
 	}
@@ -152,6 +168,16 @@ public class Category implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (index == null) {
+			if (other.index != null)
+				return false;
+		} else if (!index.equals(other.index))
+			return false;
+		if (owningBoardId == null) {
+			if (other.owningBoardId != null)
+				return false;
+		} else if (!owningBoardId.equals(other.owningBoardId))
+			return false;
 		if (title == null) {
 			if (other.title != null)
 				return false;
@@ -162,8 +188,8 @@ public class Category implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", owningBoardId=" + owningBoardId + ", title=" + title + ", cards=" + cards
-				+ "]";
+		return "Category [id=" + id + ", owningBoardId=" + owningBoardId + ", title=" + title + ", index=" + index
+				+ ", cards=" + cards + "]";
 	}
 
 }
