@@ -30,10 +30,10 @@ import com.staging.service.UserService;
 public class MainController {
 	
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
-	private final UserService userService;
-	private final BoardService boardService;
-	private final CategoryService categoryService;
-	private final CardService cardService;
+	private UserService userService;
+	private BoardService boardService;
+	private CategoryService categoryService;
+	private CardService cardService;
 
 	@Autowired
 	public MainController(UserService us, BoardService bs, CategoryService cts, CardService cds) {
@@ -43,6 +43,12 @@ public class MainController {
 		this.cardService = cds;
 	}
 
+	//-------------------------------------------- Check Response
+	@GetMapping("/hello")
+	public String checkResponse() {
+		return "Hello from Main Controller";
+	}
+	
 	//-------------------------------------------- User 
 	@PostMapping("user/signup")
 	public CodeMessage addUser(@RequestBody User user) {

@@ -458,9 +458,6 @@ public class HibernateDataImpl implements UserDao, BoardDao, CategoryDao, CardDa
 			Category owningCategory = new Category();
 			owningCategory.setId(card.getOwningCategoryId());
 			card.setCategory(owningCategory);
-			//if (card.getDescription() == null) {
-			//	card.setDescription("");
-			//}
 			session.save(card);
 			
 			transaction.commit();

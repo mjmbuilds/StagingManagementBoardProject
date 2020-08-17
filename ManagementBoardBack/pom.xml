@@ -37,15 +37,19 @@
 			</exclusions>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
 		<dependency>
 			<groupId>com.oracle.ojdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -55,6 +59,14 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-c3p0</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <!--version>4.13</version-->
+		    <scope>test</scope>
 		</dependency>
 		
 	</dependencies>

@@ -14,6 +14,13 @@ public class ManagementBoardBack {
 
 	private static final Logger log = LoggerFactory.getLogger(ManagementBoardBack.class);
 	
+	// message to display as response to request to root directory of api
+	private static final String message = "Management Board backend is running!";
+	
+	public static String getMessage() {
+		return message;
+	}
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ManagementBoardBack.class, args);
 		log.trace("\n");
@@ -26,7 +33,7 @@ public class ManagementBoardBack {
 	public String index() {
 		log.trace("index()");
 		log.info("Request to '/' ");
-	    return "Management Board backend is running!";
+	    return message;
 	}
 
 }
